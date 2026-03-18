@@ -591,5 +591,149 @@ function buildGantt(){
 }
 buildGantt();
 </script>
+
+<!-- COMMENTS -->
+<section id="comments" style="background:var(--bg1);padding:96px 0">
+<div class="wide">
+  <div class="reveal"><div class="eyebrow">Feedback</div><h2 class="sec-title">Kommentare & Notizen</h2><p class="sec-sub">Hinterlasse Anmerkungen, Fragen oder Ideen zu einzelnen Sektionen — gespeichert im Browser.</p></div>
+  <div class="hdiv"></div>
+
+  <!-- Form -->
+  <div class="reveal d1" style="background:var(--bg);border:1px solid var(--bd);border-radius:var(--r2);padding:24px;margin-bottom:20px">
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:12px">
+      <div style="display:flex;flex-direction:column;gap:5px">
+        <label style="font-family:var(--mono);font-size:9px;letter-spacing:.1em;text-transform:uppercase;color:var(--txt3)">Dein Name</label>
+        <input id="c-name" type="text" placeholder="z.B. Paulo" maxlength="40" style="background:var(--bg1);border:1px solid var(--bd2);border-radius:var(--r);padding:9px 12px;color:var(--txt);font-family:var(--mono);font-size:12px;outline:none;transition:border-color .15s" onfocus="this.style.borderColor='var(--acc)'" onblur="this.style.borderColor='var(--bd2)'">
+      </div>
+      <div style="display:flex;flex-direction:column;gap:5px">
+        <label style="font-family:var(--mono);font-size:9px;letter-spacing:.1em;text-transform:uppercase;color:var(--txt3)">Sektion</label>
+        <select id="c-section" style="background:var(--bg1);border:1px solid var(--bd2);border-radius:var(--r);padding:9px 12px;color:var(--txt);font-family:var(--mono);font-size:12px;outline:none;transition:border-color .15s" onfocus="this.style.borderColor='var(--acc)'" onblur="this.style.borderColor='var(--bd2)'">
+          <option value="Allgemein">Allgemein</option>
+          <option value="Workflow">Workflow</option>
+          <option value="ROI-Rechner">ROI-Rechner</option>
+          <option value="Todo-Liste">Todo-Liste</option>
+          <option value="Zeitplan">Zeitplan</option>
+          <option value="Tool-Stack">Tool-Stack</option>
+          <option value="Keyword-Strategie">Keyword-Strategie</option>
+          <option value="Customer Journey">Customer Journey</option>
+          <option value="KI-Bilder">KI-Bilder</option>
+        </select>
+      </div>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:5px;margin-bottom:14px">
+      <label style="font-family:var(--mono);font-size:9px;letter-spacing:.1em;text-transform:uppercase;color:var(--txt3)">Kommentar / Notiz</label>
+      <textarea id="c-text" rows="3" placeholder="Anmerkung, Frage oder Idee..." style="background:var(--bg1);border:1px solid var(--bd2);border-radius:var(--r);padding:9px 12px;color:var(--txt);font-family:var(--mono);font-size:12px;outline:none;resize:none;transition:border-color .15s;line-height:1.6" onfocus="this.style.borderColor='var(--acc)'" onblur="this.style.borderColor='var(--bd2)'"></textarea>
+    </div>
+    <div style="display:flex;align-items:center;gap:12px">
+      <button onclick="addCmt()" style="background:var(--acc);color:#fff;border:none;border-radius:var(--r);padding:9px 20px;font-family:var(--mono);font-size:11px;letter-spacing:.06em;cursor:pointer;font-weight:500;transition:opacity .15s" onmouseover="this.style.opacity='.85'" onmouseout="this.style.opacity='1'">Kommentar hinzufügen</button>
+      <span id="c-msg" style="font-family:var(--mono);font-size:10px;color:var(--grn);display:none">✓ Gespeichert</span>
+    </div>
+  </div>
+
+  <!-- Filter -->
+  <div id="c-filter" style="display:flex;gap:6px;margin-bottom:16px;flex-wrap:wrap" class="reveal d2"></div>
+
+  <!-- Count -->
+  <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:14px" class="reveal d2">
+    <span id="c-count" style="font-family:var(--mono);font-size:11px;color:var(--txt3)">0 Kommentare</span>
+    <button onclick="if(confirm('Alle Kommentare löschen?')){localStorage.removeItem('bey_cmt');renderCmt()}" style="font-family:var(--mono);font-size:10px;color:var(--txt3);background:none;border:none;cursor:pointer;transition:color .15s" onmouseover="this.style.color='var(--red)'" onmouseout="this.style.color='var(--txt3)'">Alle löschen</button>
+  </div>
+
+  <!-- List -->
+  <div id="c-list" class="reveal d3" style="display:flex;flex-direction:column;gap:10px"></div>
+</div>
+</section>
+
+<script>
+const CMT_COLORS=['#4A8FFF','#34D399','#A78BFA','#FBBF24','#F87171','#2DD4BF','#F472B6'];
+const CMT_SECTIONS=['Workflow','ROI-Rechner','Todo-Liste','Zeitplan','Tool-Stack','Keyword-Strategie','Customer Journey','KI-Bilder','Allgemein'];
+const CMT_SEC_COL={Workflow:'#93B9FF','ROI-Rechner':'#6EE7C0','Todo-Liste':'#FDE68A',Zeitplan:'#C4B5FD','Tool-Stack':'#99F6E4','Keyword-Strategie':'#FECACA','Customer Journey':'#F9A8D4','KI-Bilder':'#BFDBFE',Allgemein:'#6B7280'};
+let cmtFilter='Alle';
+function cmtColor(n){let h=0;for(let c of n)h=(h*31+c.charCodeAt(0))%CMT_COLORS.length;return CMT_COLORS[h]}
+function cmtInitials(n){return n.split(' ').map(w=>w[0]||'').join('').toUpperCase().slice(0,2)||'?'}
+function cmtTime(ts){const d=(Date.now()-ts)/1000;if(d<60)return 'gerade eben';if(d<3600)return Math.floor(d/60)+' Min. ago';if(d<86400)return Math.floor(d/3600)+' Std. ago';return Math.floor(d/86400)+' T. ago'}
+function loadCmt(){return JSON.parse(localStorage.getItem('bey_cmt')||'[]')}
+function saveCmt(d){localStorage.setItem('bey_cmt',JSON.stringify(d))}
+
+function addCmt(){
+  const name=document.getElementById('c-name').value.trim();
+  const text=document.getElementById('c-text').value.trim();
+  const section=document.getElementById('c-section').value;
+  if(!name||!text)return;
+  const all=loadCmt();
+  all.unshift({id:Date.now(),name,text,section,ts:Date.now(),likes:0,liked:false,replies:[]});
+  saveCmt(all);
+  document.getElementById('c-text').value='';
+  const msg=document.getElementById('c-msg');
+  msg.style.display='inline';setTimeout(()=>msg.style.display='none',2000);
+  buildCmtFilter();renderCmt();
+}
+function toggleCmtLike(id){
+  const c=loadCmt();const i=c.findIndex(x=>x.id===id);
+  if(i<0)return;c[i].liked=!c[i].liked;c[i].likes+=c[i].liked?1:-1;
+  saveCmt(c);renderCmt();
+}
+function deleteCmt(id){
+  if(!confirm('Kommentar löschen?'))return;
+  saveCmt(loadCmt().filter(c=>c.id!==id));buildCmtFilter();renderCmt();
+}
+function toggleCmtReply(id){
+  const el=document.getElementById('crf-'+id);
+  if(el)el.style.display=el.style.display==='none'?'block':'none';
+}
+function addCmtReply(id){
+  const n=document.getElementById('crn-'+id).value.trim();
+  const t=document.getElementById('crt-'+id).value.trim();
+  if(!n||!t)return;
+  const c=loadCmt();const i=c.findIndex(x=>x.id===id);
+  if(i<0)return;
+  if(!c[i].replies)c[i].replies=[];
+  c[i].replies.push({id:Date.now(),name:n,text:t,ts:Date.now()});
+  saveCmt(c);renderCmt();
+}
+function buildCmtFilter(){
+  const bar=document.getElementById('c-filter');
+  const all=loadCmt();
+  const used=['Alle',...[...new Set(all.map(c=>c.section))]];
+  bar.innerHTML=used.map(s=>`<button onclick="setCmtFilter('${s}')" style="font-family:var(--mono);font-size:10px;padding:5px 12px;border-radius:20px;border:1px solid ${s===cmtFilter?'rgba(74,143,255,.3)':'var(--bd)'};background:${s===cmtFilter?'rgba(74,143,255,.12)':'transparent'};color:${s===cmtFilter?'var(--acc)':'var(--txt3)'};cursor:pointer;transition:all .15s">${s}${s!=='Alle'?' ('+all.filter(c=>c.section===s).length+')':''}</button>`).join('');
+}
+function setCmtFilter(s){cmtFilter=s;buildCmtFilter();renderCmt()}
+function renderCmt(){
+  const all=loadCmt();
+  const filtered=cmtFilter==='Alle'?all:all.filter(c=>c.section===cmtFilter);
+  const list=document.getElementById('c-list');
+  document.getElementById('c-count').textContent=filtered.length+' Kommentar'+(filtered.length!==1?'e':'');
+  if(!filtered.length){list.innerHTML=`<div style="text-align:center;padding:40px;font-family:var(--mono);font-size:11px;color:var(--txt3)">Noch keine Kommentare${cmtFilter!=='Alle'?' in dieser Sektion':''}.</div>`;return}
+  list.innerHTML=filtered.map(c=>{
+    const col=cmtColor(c.name);
+    const secCol=CMT_SEC_COL[c.section]||'#6B7280';
+    const replies=(c.replies||[]).map(r=>`<div style="display:flex;gap:8px;align-items:flex-start"><div style="width:22px;height:22px;border-radius:50%;background:${cmtColor(r.name)}22;color:${cmtColor(r.name)};display:flex;align-items:center;justify-content:center;font-size:9px;font-weight:600;flex-shrink:0;margin-top:2px">${cmtInitials(r.name)}</div><div style="flex:1;background:var(--bg2);border-radius:8px;padding:10px 12px"><div style="font-size:11px;font-weight:500;margin-bottom:3px">${r.name}</div><div style="font-size:12px;color:var(--txt2);line-height:1.5">${r.text}</div><div style="font-family:var(--mono);font-size:9px;color:var(--txt3);margin-top:4px">${cmtTime(r.ts)}</div></div></div>`).join('');
+    return`<div style="background:var(--bg);border:1px solid var(--bd);border-radius:12px;padding:18px;transition:border-color .15s" onmouseover="this.style.borderColor='var(--bd2)'" onmouseout="this.style.borderColor='var(--bd)'">
+      <div style="display:flex;align-items:center;gap:10px;margin-bottom:10px">
+        <div style="width:32px;height:32px;border-radius:50%;background:${col}22;color:${col};display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:600;flex-shrink:0">${cmtInitials(c.name)}</div>
+        <div style="flex:1"><div style="font-size:13px;font-weight:500">${c.name}</div><div style="font-family:var(--mono);font-size:9px;color:var(--txt3);margin-top:2px">${cmtTime(c.ts)}</div></div>
+        <span style="font-family:var(--mono);font-size:9px;padding:2px 9px;border-radius:8px;background:${secCol}18;color:${secCol};border:1px solid ${secCol}40">${c.section}</span>
+      </div>
+      <div style="font-size:13px;color:var(--txt2);line-height:1.6;margin-bottom:12px">${c.text}</div>
+      <div style="display:flex;gap:12px;padding-top:10px;border-top:1px solid var(--bd)">
+        <button onclick="toggleCmtLike(${c.id})" style="font-family:var(--mono);font-size:10px;color:${c.liked?'var(--acc)':'var(--txt3)'};background:none;border:none;cursor:pointer;transition:color .15s">♥ ${c.likes>0?c.likes+' ':''} Like</button>
+        <button onclick="toggleCmtReply(${c.id})" style="font-family:var(--mono);font-size:10px;color:var(--txt3);background:none;border:none;cursor:pointer;transition:color .15s">↩ Antworten</button>
+        <button onclick="deleteCmt(${c.id})" style="font-family:var(--mono);font-size:10px;color:var(--txt3);background:none;border:none;cursor:pointer;margin-left:auto;transition:color .15s" onmouseover="this.style.color='var(--red)'" onmouseout="this.style.color='var(--txt3)'">× Löschen</button>
+      </div>
+      <div id="crf-${c.id}" style="display:none;margin-top:10px;padding:12px;background:var(--bg1);border-radius:var(--r);border:1px solid var(--bd)">
+        <div style="display:grid;grid-template-columns:1fr 2fr;gap:8px;margin-bottom:8px">
+          <input id="crn-${c.id}" type="text" placeholder="Dein Name" style="background:var(--bg);border:1px solid var(--bd2);border-radius:7px;padding:7px 10px;color:var(--txt);font-family:var(--mono);font-size:11px;outline:none">
+          <input id="crt-${c.id}" type="text" placeholder="Antwort..." style="background:var(--bg);border:1px solid var(--bd2);border-radius:7px;padding:7px 10px;color:var(--txt);font-family:var(--mono);font-size:11px;outline:none">
+        </div>
+        <button onclick="addCmtReply(${c.id})" style="background:var(--acc);color:#fff;border:none;border-radius:7px;padding:6px 14px;font-family:var(--mono);font-size:10px;cursor:pointer">Antworten</button>
+      </div>
+      ${replies?`<div style="margin-top:10px;padding-top:10px;border-top:1px solid var(--bd);display:flex;flex-direction:column;gap:8px">${replies}</div>`:''}
+    </div>`;
+  }).join('');
+}
+buildCmtFilter();renderCmt();
+// add comments to nav
+document.querySelector('.nav-links').innerHTML += '<a href="#comments">Kommentare</a>';
+</script>
 </body>
 </html>
