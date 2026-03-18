@@ -6,7 +6,7 @@
 <title>Beyonity — KI Marketing System</title>
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,300;12..96,400;12..96,500;12..96,700;12..96,800&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
-:root{--bg:#080A0F;--bg1:#0D1017;--bg2:#13192A;--card:rgba(255,255,255,.06);--bd:rgba(255,255,255,.1);--bd2:rgba(255,255,255,.2);--txt:#F2F4F8;--txt2:#B0BAC8;--txt3:#7080A0;--acc:#4A8FFF;--grn:#34D399;--amb:#FBBF24;--red:#F87171;--tl:#2DD4BF;--pu:#A78BFA;--sans:'Bricolage Grotesque',sans-serif;--mono:'DM Mono',monospace;--r:12px;--r2:16px}
+:root{--bg:#080A0F;--bg1:#0D1017;--bg2:#111520;--card:rgba(255,255,255,.06);--bd:rgba(255,255,255,.1);--bd2:rgba(255,255,255,.2);--txt:#F2F4F8;--txt2:#B0BAC8;--txt3:#7080A0;--acc:#4A8FFF;--grn:#34D399;--amb:#FBBF24;--red:#F87171;--tl:#2DD4BF;--pu:#A78BFA;--sans:'Bricolage Grotesque',sans-serif;--mono:'DM Mono',monospace;--r:12px;--r2:16px}
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
 body{background:var(--bg);color:var(--txt);font-family:var(--sans);font-size:16px;line-height:1.7;overflow-x:hidden}
@@ -15,7 +15,7 @@ body{background:var(--bg);color:var(--txt);font-family:var(--sans);font-size:16p
 nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:0 32px;height:56px;background:rgba(8,10,15,.88);backdrop-filter:blur(16px);border-bottom:1px solid var(--bd)}
 .nav-logo{font-size:15px;font-weight:700;letter-spacing:-.02em}.nav-logo span{color:var(--acc)}
 .nav-links{display:flex;gap:2px}
-.nav-links a{font-family:var(--mono);font-size:10px;letter-spacing:.07em;color:var(--txt);text-decoration:none;padding:6px 11px;border-radius:6px;transition:all .15s;text-transform:uppercase}
+.nav-links a{font-family:var(--mono);font-size:10px;letter-spacing:.07em;color:var(--txt2);text-decoration:none;padding:6px 11px;border-radius:6px;transition:all .15s;text-transform:uppercase}
 .nav-links a:hover{color:var(--txt);background:var(--card)}
 .nav-cta{font-family:var(--mono);font-size:10px;letter-spacing:.06em;color:var(--bg);background:var(--txt);text-decoration:none;padding:7px 15px;border-radius:7px;font-weight:500;transition:opacity .15s;text-transform:uppercase}
 .nav-cta:hover{opacity:.85}
@@ -24,8 +24,7 @@ section{padding:96px 0}
 .wide{max-width:1300px;margin:0 auto;padding:0 32px}
 .reveal{opacity:0;transform:translateY(18px);transition:opacity .5s ease,transform .5s ease}
 .reveal.visible{opacity:1;transform:translateY(0)}
-.d1{transition-delay:.08s}.d2{transition-delay:.16s}.d3{transition-delay:.24s}.d4{transition-delay:.32s}
-/* HERO */
+.d1{transition-delay:.08s}.d2{transition-delay:.16s}.d3{transition-delay:.24s}
 #hero{min-height:100vh;display:flex;align-items:center;position:relative;overflow:hidden;padding-top:56px}
 .hero-grid{position:absolute;inset:0;background-image:linear-gradient(rgba(74,143,255,.04) 1px,transparent 1px),linear-gradient(90deg,rgba(74,143,255,.04) 1px,transparent 1px);background-size:40px 40px;mask-image:radial-gradient(ellipse 80% 80% at 50% 50%,black 30%,transparent 100%)}
 .hero-glow{position:absolute;width:700px;height:700px;border-radius:50%;background:radial-gradient(circle,rgba(74,143,255,.1) 0%,transparent 70%);top:50%;left:50%;transform:translate(-50%,-55%);pointer-events:none}
@@ -40,13 +39,11 @@ section{padding:96px 0}
 .hstat{flex:1;background:var(--bg1);padding:18px 10px;text-align:center}
 .hstat .v{font-family:var(--mono);font-size:24px;font-weight:500;margin-bottom:3px}
 .hstat .l{font-family:var(--mono);font-size:9px;letter-spacing:.08em;color:var(--txt3);text-transform:uppercase}
-/* SECTION */
 .eyebrow{font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--acc);margin-bottom:12px;display:flex;align-items:center;gap:8px}
 .eyebrow::before{content:'';width:18px;height:1px;background:var(--acc)}
 .sec-title{font-size:clamp(24px,3.5vw,38px);font-weight:700;letter-spacing:-.025em;line-height:1.15;margin-bottom:14px}
 .sec-sub{font-size:16px;color:var(--txt2);max-width:540px;line-height:1.65}
 .hdiv{height:1px;background:var(--bd);margin:40px 0}
-/* CHIPS */
 .chip{font-family:var(--mono);font-size:10px;letter-spacing:.05em;padding:4px 9px;border-radius:5px;background:var(--card);border:1px solid var(--bd2);color:var(--txt2)}
 .c-bl{background:rgba(74,143,255,.1);border-color:rgba(74,143,255,.2);color:var(--acc)}
 .c-gn{background:rgba(52,211,153,.1);border-color:rgba(52,211,153,.2);color:var(--grn)}
@@ -54,7 +51,6 @@ section{padding:96px 0}
 .c-pu{background:rgba(167,139,250,.1);border-color:rgba(167,139,250,.2);color:var(--pu)}
 .c-tl{background:rgba(45,212,191,.1);border-color:rgba(45,212,191,.2);color:var(--tl)}
 .c-rd{background:rgba(248,113,113,.1);border-color:rgba(248,113,113,.2);color:var(--red)}
-/* WORKFLOW */
 #workflow{background:var(--bg1)}
 .ptabs{display:flex;gap:3px;margin-bottom:28px;background:var(--card);border-radius:10px;padding:4px;border:1px solid var(--bd)}
 .ptab{flex:1;padding:9px 4px;border-radius:7px;background:transparent;border:none;cursor:pointer;font-family:var(--mono);font-size:9px;letter-spacing:.06em;color:var(--txt3);text-transform:uppercase;transition:all .2s;display:flex;flex-direction:column;align-items:center;gap:3px}
@@ -63,24 +59,22 @@ section{padding:96px 0}
 .ptab:hover:not(.on){color:var(--txt2)}
 .fp{display:none;animation:fu .3s ease}.fp.on{display:block}
 @keyframes fu{from{opacity:0;transform:translateY(5px)}to{opacity:1;transform:translateY(0)}}
-/* Phase boxes */
-.pbox{border-radius:14px;padding:24px;border:1.5px solid transparent;position:relative}
+.pbox{border-radius:14px;padding:24px;border:1.5px solid transparent}
 .pb-bl{border-color:rgba(74,143,255,.3);background:rgba(74,143,255,.04)}
 .pb-am{border-color:rgba(251,191,36,.3);background:rgba(251,191,36,.04)}
 .pb-rd{border-color:rgba(248,113,113,.3);background:rgba(248,113,113,.04)}
 .pb-gn{border-color:rgba(52,211,153,.3);background:rgba(52,211,153,.04)}
 .pbox-title{font-size:14px;font-weight:600;margin-bottom:18px;display:flex;align-items:center;gap:10px;flex-wrap:wrap}
 .pbox-title .pb-badge{font-family:var(--mono);font-size:9px;letter-spacing:.08em;text-transform:uppercase;padding:2px 9px;border-radius:10px;border:1px solid currentColor;opacity:.65}
-/* Agent flow */
 .aflow{display:flex;align-items:stretch;gap:0;overflow-x:auto;padding-bottom:4px}
 .aflow::-webkit-scrollbar{height:3px}.aflow::-webkit-scrollbar-thumb{background:var(--bd2)}
 .arr{display:flex;align-items:center;padding:0 6px;flex-shrink:0;color:var(--txt3);font-size:16px}
 .anode{flex:1;min-width:150px;max-width:210px;border-radius:10px;padding:14px;border:1px solid transparent;flex-shrink:0;transition:transform .15s}
 .anode:hover{transform:translateY(-2px)}
-.an-tag{font-family:var(--mono);font-size:10px;letter-spacing:.07em;text-transform:uppercase;opacity:.6;margin-bottom:5px}
-.an-title{font-size:14px;font-weight:600;margin-bottom:4px;line-height:1.25}
-.an-body{font-size:12px;opacity:.9;line-height:1.5}
-.an-foot{margin-top:9px;padding-top:7px;border-top:1px solid rgba(255,255,255,.1);display:flex;flex-wrap:wrap;gap:3px}
+.an-tag{font-family:var(--mono);font-size:9px;letter-spacing:.07em;text-transform:uppercase;opacity:.6;margin-bottom:5px}
+.an-title{font-size:13px;font-weight:600;margin-bottom:4px;line-height:1.25}
+.an-body{font-size:12px;opacity:.85;line-height:1.5}
+.an-foot{margin-top:9px;padding-top:7px;border-top:1px solid rgba(255,255,255,.08);display:flex;flex-wrap:wrap;gap:3px}
 .an-bl{background:rgba(74,143,255,.1);border-color:rgba(74,143,255,.25);color:#93B9FF}
 .an-gn{background:rgba(52,211,153,.1);border-color:rgba(52,211,153,.25);color:#6EE7C0}
 .an-am{background:rgba(251,191,36,.1);border-color:rgba(251,191,36,.25);color:#FDE68A}
@@ -88,7 +82,6 @@ section{padding:96px 0}
 .an-tl{background:rgba(45,212,191,.1);border-color:rgba(45,212,191,.25);color:#99F6E4}
 .an-rd{background:rgba(248,113,113,.1);border-color:rgba(248,113,113,.25);color:#FECACA}
 .an-gy{background:rgba(255,255,255,.04);border-color:rgba(255,255,255,.1);color:var(--txt2)}
-/* Gate */
 .gate-wrap{position:relative;width:76px;height:76px;flex-shrink:0;display:flex;align-items:center;justify-content:center;margin:0 6px}
 .gate-d{width:72px;height:72px;border:1.5px dashed rgba(251,191,36,.4);background:rgba(251,191,36,.08);border-radius:4px;transform:rotate(45deg)}
 .gate-lbl{position:absolute;font-family:var(--mono);font-size:10px;color:var(--amb);text-align:center;font-weight:500;line-height:1.3}
@@ -98,7 +91,6 @@ section{padding:96px 0}
 .pmv{font-family:var(--mono);font-size:14px;font-weight:500}
 .pml{font-family:var(--mono);font-size:10px;letter-spacing:.07em;color:var(--txt2);text-transform:uppercase}
 .pmsep{width:1px;height:28px;background:var(--bd2);flex-shrink:0}
-/* ROI */
 #roi{background:var(--bg)}
 .roi-layout{display:grid;grid-template-columns:1fr 1fr;gap:22px;align-items:start}
 .roi-ctrl{background:var(--bg1);border:1px solid var(--bd);border-radius:var(--r2);padding:24px}
@@ -119,7 +111,6 @@ input[type=range]::-webkit-slider-thumb:hover{transform:scale(1.25)}
 .roi-mini{background:var(--bg1);border:1px solid var(--bd);border-radius:var(--r);padding:14px}
 .roi-mini .rmv{font-family:var(--mono);font-size:20px;font-weight:500;margin-bottom:2px}
 .roi-mini .rml{font-family:var(--mono);font-size:9px;letter-spacing:.07em;color:var(--txt3);text-transform:uppercase}
-/* TODO */
 #todo{background:var(--bg1)}
 .todo-stats{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-bottom:28px}
 .tstat{background:var(--bg);border:1px solid var(--bd);border-radius:var(--r);padding:14px;text-align:center}
@@ -141,12 +132,11 @@ input[type=range]::-webkit-slider-thumb:hover{transform:scale(1.25)}
 .ti.done .tichk::after{content:'';display:block;width:4px;height:8px;border:1.5px solid #000;border-top:none;border-left:none;transform:rotate(45deg) translate(1px,-1px)}
 .tichk{width:17px;height:17px;border-radius:4px;border:1.5px solid var(--bd2);flex-shrink:0;margin-top:1px;display:flex;align-items:center;justify-content:center;transition:all .12s}
 .ti-b{flex:1;min-width:0}
-.ti-title{font-size:13px;font-weight:500;line-height:1.4;margin-bottom:2px}
-.ti-sub{font-size:11px;color:var(--txt2);line-height:1.4}
+.ti-title{font-size:12px;font-weight:500;line-height:1.4;margin-bottom:2px}
+.ti-sub{font-size:10px;color:var(--txt2);line-height:1.4}
 .ti-eff{font-family:var(--mono);font-size:9px;color:var(--txt3);margin-left:auto;flex-shrink:0;padding-top:1px}
 .b-new{font-family:var(--mono);font-size:8px;padding:1px 5px;border-radius:4px;background:rgba(74,143,255,.15);color:var(--acc);border:1px solid rgba(74,143,255,.25);margin-left:4px;vertical-align:middle}
 .b-chg{font-family:var(--mono);font-size:8px;padding:1px 5px;border-radius:4px;background:rgba(251,191,36,.12);color:var(--amb);border:1px solid rgba(251,191,36,.25);margin-left:4px;vertical-align:middle}
-/* GANTT */
 #gantt{background:var(--bg)}
 .gantt-wrap{background:var(--bg1);border:1px solid var(--bd);border-radius:var(--r2);overflow:hidden;position:relative}
 .ghdr{display:grid;border-bottom:1px solid var(--bd);padding:0 20px}
@@ -154,34 +144,34 @@ input[type=range]::-webkit-slider-thumb:hover{transform:scale(1.25)}
 .ghc:first-child{border-left:none;text-align:left}
 .grow{display:grid;border-bottom:1px solid var(--bd);padding:0 20px;align-items:center;transition:background .12s}
 .grow:last-child{border-bottom:none}.grow:hover{background:var(--card)}
-.gl{padding:11px 8px 11px 0;font-size:13px;font-weight:500}
-.gl .gls{font-family:var(--mono);font-size:10px;color:var(--txt2);font-weight:400;margin-top:2px}
+.gl{padding:11px 8px 11px 0;font-size:12px;font-weight:500}
+.gl .gls{font-family:var(--mono);font-size:9px;color:var(--txt2);font-weight:400;margin-top:2px}
 .gc{padding:9px 3px;border-left:1px solid var(--bd);display:flex;align-items:center}
 .gbar{height:20px;border-radius:5px;width:100%;display:flex;align-items:center;padding:0 7px;font-family:var(--mono);font-size:8px;overflow:hidden;white-space:nowrap;cursor:default;transition:opacity .15s}
 .gbar:hover{opacity:.8}
 .today-line{position:absolute;top:0;bottom:0;width:1.5px;background:var(--red);opacity:.45;pointer-events:none;z-index:5}
 .today-lbl{position:absolute;top:0;font-family:var(--mono);font-size:8px;color:var(--red);background:var(--bg1);padding:2px 5px;border-radius:3px;transform:translateX(-50%);white-space:nowrap;z-index:6}
-/* TOOLS */
 #tools{background:var(--bg1)}
 .tgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:10px}
 .tc{background:var(--bg);border:1px solid var(--bd);border-radius:var(--r2);padding:17px;transition:border-color .15s}
 .tc:hover{border-color:var(--bd2)}
 .tc-cat{font-family:var(--mono);font-size:8px;letter-spacing:.1em;text-transform:uppercase;color:var(--txt3);margin-bottom:9px}
 .tc-name{font-size:14px;font-weight:600;margin-bottom:4px}
-.tc-desc{font-size:12px;color:var(--txt);line-height:1.5}
+.tc-desc{font-size:12px;color:var(--txt2);line-height:1.5}
 .tc-cost{margin-top:9px;font-family:var(--mono);font-size:13px;font-weight:500}
-.atl-badge{display:inline-flex;align-items:center;gap:4px;font-family:var(--mono);font-size:8px;padding:2px 7px;border-radius:9px;background:rgba(74,143,255,.12);border:1px solid rgba(74,143,255,.25);color:var(--acc)}
+.inc-badge{display:inline-flex;align-items:center;gap:4px;font-family:var(--mono);font-size:8px;padding:2px 7px;border-radius:9px;background:rgba(52,211,153,.1);border:1px solid rgba(52,211,153,.25);color:var(--grn)}
+#comments{background:var(--bg)}
 footer{border-top:1px solid var(--bd);padding:32px;text-align:center;font-family:var(--mono);font-size:11px;color:var(--txt3)}
 @media(max-width:768px){.roi-layout{grid-template-columns:1fr}.hero-stats{flex-direction:column;gap:1px}.nav-links{display:none}}
 </style>
 </head>
 <body>
-
 <nav>
   <div class="nav-logo">beyonity<span>.</span>marketing</div>
   <div class="nav-links">
     <a href="#workflow">Workflow</a><a href="#roi">ROI</a>
-    <a href="#todo">Todo</a><a href="#gantt">Zeitplan</a><a href="#tools">Tools</a>
+    <a href="#todo">Todo</a><a href="#gantt">Zeitplan</a>
+    <a href="#tools">Tools</a><a href="#comments">Kommentare</a>
   </div>
   <a class="nav-cta" href="#roi">ROI berechnen</a>
 </nav>
@@ -193,11 +183,11 @@ footer{border-top:1px solid var(--bd);padding:32px;text-align:center;font-family
   <div class="con hc">
     <div class="hero-badge reveal">KI Marketing System 2026</div>
     <h1 class="hero-title reveal d1">Agenten-gestützte<br><span class="dim">Marketingabteilung</span></h1>
-    <p class="hero-sub reveal d2">Automatisierte Content-Produktion für Blog, LinkedIn und Newsletter — mit 10 KI-Agenten, Jira Premium und Corporate Bildgenerierung.</p>
+    <p class="hero-sub reveal d2">Automatisierte Content-Produktion für Blog, LinkedIn und Newsletter — mit Claude, Gemini, 10 KI-Agenten und Jira Premium.</p>
     <div class="hero-stats reveal d3">
-      <div class="hstat"><div class="v" style="color:var(--grn)">3.208 €</div><div class="l">Ersparnis / Mo.</div></div>
-      <div class="hstat"><div class="v" style="color:var(--acc)">4 Mo.</div><div class="l">Break-even</div></div>
-      <div class="hstat"><div class="v" style="color:var(--amb)">285%</div><div class="l">ROI Jahr 1</div></div>
+      <div class="hstat"><div class="v" style="color:var(--grn)">3.326 €</div><div class="l">Ersparnis / Mo.</div></div>
+      <div class="hstat"><div class="v" style="color:var(--acc)">3 Mo.</div><div class="l">Break-even</div></div>
+      <div class="hstat"><div class="v" style="color:var(--amb)">318%</div><div class="l">ROI Jahr 1</div></div>
       <div class="hstat"><div class="v" style="color:var(--pu)">90%</div><div class="l">günstiger/Artikel</div></div>
     </div>
   </div>
@@ -206,7 +196,7 @@ footer{border-top:1px solid var(--bd);padding:32px;text-align:center;font-family
 <!-- WORKFLOW -->
 <section id="workflow">
 <div class="wide">
-  <div class="reveal"><div class="eyebrow">Content-Produktion</div><h2 class="sec-title">Gesamtworkflow</h2><p class="sec-sub">4 Phasen, 10 KI-Agenten — von der Recherche bis zum Artikel mit KI-Bild.</p></div>
+  <div class="reveal"><div class="eyebrow">Content-Produktion</div><h2 class="sec-title">Gesamtworkflow</h2><p class="sec-sub">4 Phasen, 10 KI-Agenten — Claude für Texte, Gemini für Recherche & YT-Analyse.</p></div>
   <div class="hdiv"></div>
   <div class="ptabs reveal d1">
     <button class="ptab on" onclick="setP(0)"><span class="pn">01</span>Recherche</button>
@@ -216,104 +206,85 @@ footer{border-top:1px solid var(--bd);padding:32px;text-align:center;font-family
     <button class="ptab" onclick="setP(4)"><span class="pn">↻</span>Alle Phasen</button>
   </div>
 
-  <!-- Ph 0 Recherche -->
   <div class="fp on" id="fp0">
     <div class="pbox pb-bl">
-      <div class="pbox-title" style="color:#93B9FF">Phase 1 — Keyword- &amp; Themenrecherche <span class="pb-badge" style="color:#93B9FF">wöchentlich · Mo. 06:00</span></div>
+      <div class="pbox-title" style="color:#93B9FF">Phase 1 — Recherche <span class="pb-badge" style="color:#93B9FF">Mo. 06:00 · automatisch</span></div>
       <div class="aflow">
-        <div class="anode an-bl"><div class="an-tag">Agent 01</div><div class="an-title">SEO-Agent</div><div class="an-body">Ahrefs Export<br>Top-50 Keywords</div><div class="an-foot"><span class="chip c-bl">Ahrefs API</span><span class="chip">15 Min.</span></div></div>
+        <div class="anode an-bl"><div class="an-tag">Agent 01 · SEO</div><div class="an-title">SEO-Recherche-Agent</div><div class="an-body">Ahrefs Export → Top-50 Keywords clustern, Prioritäts-Score</div><div class="an-foot"><span class="chip c-bl">Ahrefs API</span><span class="chip">15 Min.</span></div></div>
         <div class="arr">→</div>
-        <div class="anode an-tl"><div class="an-tag">Agent 02</div><div class="an-title">YT-Analyse-Agent</div><div class="an-body">Videos + Kommentare transkribieren</div><div class="an-foot"><span class="chip c-tl">Whisper</span><span class="chip">45 Min.</span></div></div>
+        <div class="anode an-tl"><div class="an-tag">Agent 02 · YT</div><div class="an-title">YT-Analyse-Agent</div><div class="an-body">Gemini 1.5 Pro transkribiert Videos nativ, Kommentar-Mining</div><div class="an-foot"><span class="chip c-tl">Gemini API</span><span class="chip">20 Min.</span></div></div>
         <div class="arr">→</div>
-        <div class="anode an-tl"><div class="an-tag">Agent 03</div><div class="an-title">Perplexity-Agent</div><div class="an-body">Top-Blogs crawlen<br>Kommentare auswerten</div><div class="an-foot"><span class="chip c-tl">Perplexity API</span><span class="chip">20 Min.</span></div></div>
+        <div class="anode an-tl"><div class="an-tag">Agent 03 · Blogs</div><div class="an-title">Perplexity-Agent</div><div class="an-body">Top-Blogs crawlen, Kommentare + Pain Points extrahieren</div><div class="an-foot"><span class="chip c-tl">Perplexity API</span><span class="chip">20 Min.</span></div></div>
         <div class="arr">→</div>
-        <div class="anode an-rd"><div class="an-tag">Orchestrator</div><div class="an-title">Themen-Shortlist</div><div class="an-body">Top-5 / Woche<br>Jira-Issues anlegen</div><div class="an-foot"><span class="chip c-rd">Jira API</span><span class="chip">5 Min.</span></div></div>
+        <div class="anode an-rd"><div class="an-tag">Orchestrator</div><div class="an-title">Themen-Shortlist</div><div class="an-body">Top-5 / Woche priorisieren, Jira-Issues anlegen</div><div class="an-foot"><span class="chip c-rd">Jira API</span><span class="chip">5 Min.</span></div></div>
       </div>
     </div>
-    <div class="pmeta"><div class="pmi"><div class="pmv" style="color:var(--acc)">~85 Min.</div><div class="pml">Laufzeit</div></div><div class="pmsep"></div><div class="pmi"><div class="pmv" style="color:var(--grn)">0 Min.</div><div class="pml">Menschl. Aufwand</div></div><div class="pmsep"></div><div class="pmi"><div class="pmv">5 Themen/Woche</div><div class="pml">Output</div></div><div class="pmsep"></div><div class="pmi"><div class="pmv">Mo. 06:00</div><div class="pml">Trigger</div></div></div>
+    <div class="pmeta"><div class="pmi"><div class="pmv" style="color:var(--acc)">~60 Min.</div><div class="pml">Laufzeit</div></div><div class="pmsep"></div><div class="pmi"><div class="pmv" style="color:var(--grn)">0 Min.</div><div class="pml">Menschl. Aufwand</div></div><div class="pmsep"></div><div class="pmi"><div class="pmv">5 Themen/Woche</div><div class="pml">Output</div></div><div class="pmsep"></div><div class="pmi"><div class="pmv">Gemini nativ</div><div class="pml">kein Whisper nötig</div></div></div>
   </div>
 
-  <!-- Ph 1 Briefing -->
   <div class="fp" id="fp1">
     <div class="pbox pb-am">
-      <div class="pbox-title" style="color:#FDE68A">Phase 2 — Content-Briefing &amp; Beyonity-Perspektive <span class="pb-badge" style="color:#FDE68A">pro Thema</span></div>
+      <div class="pbox-title" style="color:#FDE68A">Phase 2 — Briefing <span class="pb-badge" style="color:#FDE68A">pro Thema · automatisch</span></div>
       <div class="aflow">
-        <div class="anode an-am"><div class="an-tag">Agent 04</div><div class="an-title">SERP-Agent</div><div class="an-body">Top-10 analysieren<br>Struktur ableiten</div><div class="an-foot"><span class="chip c-am">Ahrefs SERP</span><span class="chip">5 Min.</span></div></div>
+        <div class="anode an-am"><div class="an-tag">Agent 04</div><div class="an-title">SERP-Agent</div><div class="an-body">Top-10 analysieren, H-Struktur ableiten</div><div class="an-foot"><span class="chip c-am">Ahrefs SERP</span><span class="chip">5 Min.</span></div></div>
         <div class="arr">→</div>
-        <div class="anode an-am"><div class="an-tag">Agent 05</div><div class="an-title">Briefing-Agent</div><div class="an-body">Beyonity-Take<br>+ Quellen</div><div class="an-foot"><span class="chip c-am">Claude Opus</span><span class="chip">8 Min.</span></div></div>
+        <div class="anode an-am"><div class="an-tag">Agent 05</div><div class="an-title">Briefing-Agent</div><div class="an-body">Claude Opus — Beyonity-Take, Quellen, Struktur</div><div class="an-foot"><span class="chip c-am">Claude Opus</span><span class="chip">8 Min.</span></div></div>
         <div class="arr">→</div>
-        <div class="anode an-am"><div class="an-tag">Agent 06</div><div class="an-title">Persona-Agent</div><div class="an-body">Zielgruppe + Region<br>anpassen</div><div class="an-foot"><span class="chip c-am">Claude Haiku</span><span class="chip">3 Min.</span></div></div>
+        <div class="anode an-am"><div class="an-tag">Agent 06</div><div class="an-title">Persona-Agent</div><div class="an-body">Zielgruppe + Region + Journey-Phase zuordnen</div><div class="an-foot"><span class="chip c-am">Claude Haiku</span><span class="chip">3 Min.</span></div></div>
         <div class="arr">→</div>
-        <div class="anode an-gy"><div class="an-tag">Output</div><div class="an-title">Briefing-Dokument</div><div class="an-body">Titel, Meta<br>Struktur, Tonalität</div><div class="an-foot"><span class="chip">Confluence</span><span class="chip">Jira-Issue</span></div></div>
+        <div class="anode an-gy"><div class="an-tag">Output</div><div class="an-title">Briefing-Dokument</div><div class="an-body">In Confluence gespeichert, Jira-Issue aktualisiert</div><div class="an-foot"><span class="chip">Confluence</span><span class="chip">Jira</span></div></div>
       </div>
     </div>
-    <div class="pmeta"><div class="pmi"><div class="pmv" style="color:var(--amb)">~16 Min.</div><div class="pml">Laufzeit / Artikel</div></div><div class="pmsep"></div><div class="pmi"><div class="pmv" style="color:var(--grn)">0 Min.</div><div class="pml">Menschl. Aufwand</div></div><div class="pmsep"></div><div class="pmi"><div class="pmv">In Confluence</div><div class="pml">gespeichert</div></div></div>
+    <div class="pmeta"><div class="pmi"><div class="pmv" style="color:var(--amb)">~16 Min.</div><div class="pml">Laufzeit</div></div><div class="pmsep"></div><div class="pmi"><div class="pmv" style="color:var(--grn)">0 Min.</div><div class="pml">Menschl. Aufwand</div></div><div class="pmsep"></div><div class="pmi"><div class="pmv">Confluence Space</div><div class="pml">Wissensbasis</div></div></div>
   </div>
 
-  <!-- Ph 2 Produktion -->
   <div class="fp" id="fp2">
     <div class="pbox pb-rd">
-      <div class="pbox-title" style="color:#FECACA">Phase 3 — Content-Produktion <span class="pb-badge" style="color:#FECACA">sequenziell</span></div>
+      <div class="pbox-title" style="color:#FECACA">Phase 3 — Produktion <span class="pb-badge" style="color:#FECACA">sequenziell + Qualitäts-Loop</span></div>
       <div class="aflow">
-        <div class="anode an-pu"><div class="an-tag">Agent 07</div><div class="an-title">Autor-Agent</div><div class="an-body">Rohentwurf<br>1.500–2.500 Wörter</div><div class="an-foot"><span class="chip c-pu">Claude Sonnet</span><span class="chip">15 Min.</span></div></div>
+        <div class="anode an-pu"><div class="an-tag">Agent 07</div><div class="an-title">Autor-Agent</div><div class="an-body">Claude Sonnet — 1.500–2.500 Wörter, SEO + Beyonity-Take</div><div class="an-foot"><span class="chip c-pu">Claude Sonnet</span><span class="chip">15 Min.</span></div></div>
         <div class="arr">→</div>
-        <div class="anode an-pu"><div class="an-tag">Agent 08</div><div class="an-title">Lektorat-Agent</div><div class="an-body">SEO-Score<br>Stil + Qualität</div><div class="an-foot"><span class="chip c-pu">Claude Haiku</span><span class="chip c-rd">Score ≥ 80</span></div></div>
+        <div class="anode an-pu"><div class="an-tag">Agent 08</div><div class="an-title">Lektorat-Agent</div><div class="an-body">Claude Haiku — SEO-Score, Stil, Qualität</div><div class="an-foot"><span class="chip c-pu">Claude Haiku</span><span class="chip c-rd">Score ≥ 80</span></div></div>
         <div class="arr">→</div>
         <div class="gate-wrap"><div class="gate-d"></div><div class="gate-lbl">Score<br>≥80?</div></div>
         <div class="arr">→</div>
-        <div class="anode an-pu"><div class="an-tag">Agent 09 optional</div><div class="an-title">Übersetzungs-Agent</div><div class="an-body">DE/EN/FR/IT</div><div class="an-foot"><span class="chip c-pu">DeepL API</span></div></div>
+        <div class="anode an-bl"><div class="an-tag">Agent 09</div><div class="an-title">Bild-Agent</div><div class="an-body">fal.ai FLUX — Hero 16:9 + LinkedIn 1:1, Corporate Stil</div><div class="an-foot"><span class="chip c-bl">fal.ai FLUX</span><span class="chip">0,04 €/Bild</span></div></div>
         <div class="arr">→</div>
-        <div class="anode an-bl"><div class="an-tag">Agent 10</div><div class="an-title">Bild-Generierungs-Agent</div><div class="an-body">Hero 16:9<br>LinkedIn 1:1</div><div class="an-foot"><span class="chip c-bl">fal.ai FLUX</span><span class="chip">0,04 €/Bild</span></div></div>
-        <div class="arr">→</div>
-        <div class="anode an-gy"><div class="an-tag">Human</div><div class="an-title">Freigabe-Check</div><div class="an-body">Qualitäts-Score<br>≥ 80 → weiter</div><div class="an-foot"><span class="chip">Jira Review</span><span class="chip c-am">15–30 Min.</span></div></div>
+        <div class="anode an-gy"><div class="an-tag">Human</div><div class="an-title">Freigabe-Check</div><div class="an-body">Inhaltliche Freigabe in Jira Review</div><div class="an-foot"><span class="chip">Jira</span><span class="chip c-am">15–30 Min.</span></div></div>
       </div>
       <div class="loop-note">↺ Score &lt; 80 → automatische Überarbeitung (max. 2 Loops)</div>
     </div>
-    <div class="pmeta"><div class="pmi"><div class="pmv" style="color:var(--pu)">~25 Min.</div><div class="pml">Laufzeit auto.</div></div><div class="pmsep"></div><div class="pmi"><div class="pmv" style="color:var(--amb)">15–30 Min.</div><div class="pml">Human Review</div></div><div class="pmsep"></div><div class="pmi"><div class="pmv">1.500–2.500</div><div class="pml">Wörter</div></div></div>
+    <div class="pmeta"><div class="pmi"><div class="pmv" style="color:var(--pu)">~25 Min.</div><div class="pml">Auto-Laufzeit</div></div><div class="pmsep"></div><div class="pmi"><div class="pmv" style="color:var(--amb)">15–30 Min.</div><div class="pml">Human Review</div></div><div class="pmsep"></div><div class="pmi"><div class="pmv">1.500–2.500</div><div class="pml">Wörter</div></div></div>
   </div>
 
-  <!-- Ph 3 Distribution -->
   <div class="fp" id="fp3">
     <div class="pbox pb-gn">
       <div class="pbox-title" style="color:#6EE7C0">Phase 4 — Distribution <span class="pb-badge" style="color:#6EE7C0">automatisch</span></div>
       <div class="aflow">
-        <div class="anode an-gn"><div class="an-tag">Agent 10a</div><div class="an-title">Blog-Publish</div><div class="an-body">CMS, SEO-Meta<br>Bild-Alt-Tags</div><div class="an-foot"><span class="chip c-gn">CMS API</span><span class="chip">5 Min.</span></div></div>
+        <div class="anode an-gn"><div class="an-tag">Agent 10a</div><div class="an-title">Blog-Publish</div><div class="an-body">CMS, SEO-Meta, Bild-Alt-Tags automatisch</div><div class="an-foot"><span class="chip c-gn">CMS API</span><span class="chip">5 Min.</span></div></div>
         <div class="arr">→</div>
-        <div class="anode an-gn"><div class="an-tag">Agent 10b</div><div class="an-title">LinkedIn-Copy</div><div class="an-body">3 Varianten<br>+ 1:1-Bild</div><div class="an-foot"><span class="chip c-gn">Claude Sonnet</span></div></div>
+        <div class="anode an-gn"><div class="an-tag">Agent 10b</div><div class="an-title">LinkedIn-Copy</div><div class="an-body">3 Varianten + 1:1-Bild → manuell in LinkedIn planen</div><div class="an-foot"><span class="chip c-gn">Claude Sonnet</span></div></div>
         <div class="arr">→</div>
-        <div class="anode an-gn"><div class="an-tag">Agent 10c</div><div class="an-title">Newsletter-Agent</div><div class="an-body">4 Sektionen<br>Hubspot-Sync</div><div class="an-foot"><span class="chip c-gn">Hubspot API</span></div></div>
+        <div class="anode an-gn"><div class="an-tag">Agent 10c</div><div class="an-title">Newsletter-Agent</div><div class="an-body">4 Sektionen, Hubspot-Sync pro Region</div><div class="an-foot"><span class="chip c-gn">Hubspot API</span></div></div>
         <div class="arr">→</div>
-        <div class="anode an-gy"><div class="an-tag">14 Tage post Publish</div><div class="an-title">Performance-Tracking</div><div class="an-body">Rankings + Traffic<br>Report in Jira</div><div class="an-foot"><span class="chip">Ahrefs</span><span class="chip">GA4</span></div></div>
+        <div class="anode an-gy"><div class="an-tag">14 Tage post Publish</div><div class="an-title">Performance-Tracking</div><div class="an-body">Rankings + Traffic → Report in Jira</div><div class="an-foot"><span class="chip">Ahrefs</span><span class="chip">GA4</span></div></div>
       </div>
     </div>
     <div class="pmeta"><div class="pmi"><div class="pmv" style="color:var(--grn)">~20 Min.</div><div class="pml">Laufzeit</div></div><div class="pmsep"></div><div class="pmi"><div class="pmv">Blog + LinkedIn + NL</div><div class="pml">Kanäle</div></div><div class="pmsep"></div><div class="pmi"><div class="pmv">2–4 Tage</div><div class="pml">Idee → Publish</div></div></div>
   </div>
 
-  <!-- Ph 4 Alle Phasen Übersicht -->
   <div class="fp" id="fp4">
     <div style="display:flex;flex-direction:column;gap:0">
-      <div class="pbox pb-bl" style="border-radius:14px 14px 0 0;border-bottom:none">
-        <div class="pbox-title" style="color:#93B9FF;font-size:13px">Phase 1 — Recherche <span style="opacity:.5;font-weight:400;font-size:12px">Mo. 06:00 · automatisch</span></div>
-        <div style="display:flex;gap:7px;flex-wrap:wrap"><span class="chip c-bl">SEO-Agent</span><span style="color:var(--txt3)">→</span><span class="chip c-tl">YT-Analyse-Agent</span><span style="color:var(--txt3)">→</span><span class="chip c-tl">Perplexity-Agent</span><span style="color:var(--txt3)">→</span><span class="chip c-rd">Orchestrator → Jira Issues</span></div>
-      </div>
+      <div class="pbox pb-bl" style="border-radius:14px 14px 0 0;border-bottom:none"><div class="pbox-title" style="color:#93B9FF;font-size:13px">Phase 1 — Recherche <span style="opacity:.5;font-weight:400;font-size:12px">Mo. 06:00 · Gemini nativ (kein Whisper)</span></div><div style="display:flex;gap:7px;flex-wrap:wrap"><span class="chip c-bl">SEO-Agent</span><span style="color:var(--txt3)">→</span><span class="chip c-tl">YT-Agent (Gemini)</span><span style="color:var(--txt3)">→</span><span class="chip c-tl">Perplexity-Agent</span><span style="color:var(--txt3)">→</span><span class="chip c-rd">Orchestrator → Jira</span></div></div>
       <div style="display:flex;justify-content:center;align-items:center;height:28px;background:linear-gradient(rgba(74,143,255,.04),rgba(251,191,36,.04));border-left:1.5px solid rgba(255,255,255,.07);border-right:1.5px solid rgba(255,255,255,.07)"><span style="color:var(--txt3);font-size:11px">↓</span></div>
-      <div class="pbox pb-am" style="border-radius:0;border-top:none;border-bottom:none">
-        <div class="pbox-title" style="color:#FDE68A;font-size:13px">Phase 2 — Briefing <span style="opacity:.5;font-weight:400;font-size:12px">pro Thema</span></div>
-        <div style="display:flex;gap:7px;flex-wrap:wrap"><span class="chip c-am">SERP-Agent</span><span style="color:var(--txt3)">→</span><span class="chip c-am">Briefing-Agent (Opus)</span><span style="color:var(--txt3)">→</span><span class="chip c-am">Persona-Agent</span><span style="color:var(--txt3)">→</span><span class="chip">Output in Confluence</span></div>
-      </div>
+      <div class="pbox pb-am" style="border-radius:0;border-top:none;border-bottom:none"><div class="pbox-title" style="color:#FDE68A;font-size:13px">Phase 2 — Briefing <span style="opacity:.5;font-weight:400;font-size:12px">Claude Opus · In Confluence</span></div><div style="display:flex;gap:7px;flex-wrap:wrap"><span class="chip c-am">SERP-Agent</span><span style="color:var(--txt3)">→</span><span class="chip c-am">Briefing-Agent (Opus)</span><span style="color:var(--txt3)">→</span><span class="chip c-am">Persona-Agent</span><span style="color:var(--txt3)">→</span><span class="chip">Confluence</span></div></div>
       <div style="display:flex;justify-content:center;align-items:center;height:28px;background:linear-gradient(rgba(251,191,36,.04),rgba(248,113,113,.04));border-left:1.5px solid rgba(255,255,255,.07);border-right:1.5px solid rgba(255,255,255,.07)"><span style="color:var(--txt3);font-size:11px">↓</span></div>
-      <div class="pbox pb-rd" style="border-radius:0;border-top:none;border-bottom:none">
-        <div class="pbox-title" style="color:#FECACA;font-size:13px">Phase 3 — Produktion <span style="opacity:.5;font-weight:400;font-size:12px">sequenziell + Qualitäts-Loop</span></div>
-        <div style="display:flex;gap:7px;flex-wrap:wrap"><span class="chip c-pu">Autor (Sonnet)</span><span style="color:var(--txt3)">→</span><span class="chip c-pu">Lektorat (Haiku)</span><span style="color:var(--txt3)">→</span><span class="chip c-rd">Score ≥ 80?</span><span style="color:var(--txt3)">→</span><span class="chip c-pu">Übersetzung opt.</span><span style="color:var(--txt3)">→</span><span class="chip c-bl">Bild fal.ai</span><span style="color:var(--txt3)">→</span><span class="chip c-am">Human Review (Jira)</span></div>
-      </div>
+      <div class="pbox pb-rd" style="border-radius:0;border-top:none;border-bottom:none"><div class="pbox-title" style="color:#FECACA;font-size:13px">Phase 3 — Produktion <span style="opacity:.5;font-weight:400;font-size:12px">Claude Sonnet + Haiku + fal.ai</span></div><div style="display:flex;gap:7px;flex-wrap:wrap"><span class="chip c-pu">Autor (Sonnet)</span><span style="color:var(--txt3)">→</span><span class="chip c-pu">Lektorat (Haiku)</span><span style="color:var(--txt3)">→</span><span class="chip c-rd">Score ≥ 80?</span><span style="color:var(--txt3)">→</span><span class="chip c-bl">Bild fal.ai</span><span style="color:var(--txt3)">→</span><span class="chip c-am">Jira Review</span></div></div>
       <div style="display:flex;justify-content:center;align-items:center;height:28px;background:linear-gradient(rgba(248,113,113,.04),rgba(52,211,153,.04));border-left:1.5px solid rgba(255,255,255,.07);border-right:1.5px solid rgba(255,255,255,.07)"><span style="color:var(--txt3);font-size:11px">↓</span></div>
-      <div class="pbox pb-gn" style="border-radius:0 0 14px 14px;border-top:none">
-        <div class="pbox-title" style="color:#6EE7C0;font-size:13px">Phase 4 — Distribution <span style="opacity:.5;font-weight:400;font-size:12px">automatisch</span></div>
-        <div style="display:flex;gap:7px;flex-wrap:wrap"><span class="chip c-gn">Blog-Publish</span><span style="color:var(--txt3)">→</span><span class="chip c-gn">LinkedIn-Copy (3 Varianten)</span><span style="color:var(--txt3)">→</span><span class="chip c-gn">Newsletter (Hubspot)</span><span style="color:var(--txt3)">→</span><span class="chip">Performance-Tracking (14 Tage)</span></div>
-      </div>
+      <div class="pbox pb-gn" style="border-radius:0 0 14px 14px;border-top:none"><div class="pbox-title" style="color:#6EE7C0;font-size:13px">Phase 4 — Distribution <span style="opacity:.5;font-weight:400;font-size:12px">automatisch</span></div><div style="display:flex;gap:7px;flex-wrap:wrap"><span class="chip c-gn">Blog-Publish</span><span style="color:var(--txt3)">→</span><span class="chip c-gn">LinkedIn-Copy (3 Varianten)</span><span style="color:var(--txt3)">→</span><span class="chip c-gn">Newsletter (Hubspot)</span><span style="color:var(--txt3)">→</span><span class="chip">Performance (14 Tage)</span></div></div>
     </div>
     <div style="margin-top:14px;padding:11px 16px;background:rgba(74,143,255,.06);border:1px solid rgba(74,143,255,.2);border-radius:var(--r);font-family:var(--mono);font-size:10px;color:rgba(74,143,255,.8);text-align:center;letter-spacing:.04em">
-      JIRA PREMIUM — Orchestrator aktualisiert alle Issues automatisch · CONFLUENCE — speichert Briefings, Prompts, Bild-Stil-Guide &amp; Performance-Reports
+      JIRA PREMIUM + CONFLUENCE — Orchestrator aktualisiert alle Issues via n8n · Briefings und Prompts in Confluence gespeichert
     </div>
   </div>
 </div>
@@ -322,7 +293,7 @@ footer{border-top:1px solid var(--bd);padding:32px;text-align:center;font-family
 <!-- ROI -->
 <section id="roi">
 <div class="con">
-  <div class="reveal"><div class="eyebrow">Kalkulation</div><h2 class="sec-title">ROI-Rechner</h2><p class="sec-sub">Passe die Parameter an — der Return berechnet sich in Echtzeit.</p></div>
+  <div class="reveal"><div class="eyebrow">Kalkulation</div><h2 class="sec-title">ROI-Rechner</h2><p class="sec-sub">249 €/Mo. Tool-Kosten · 50 €/Std. pauschal · alle Parameter anpassbar.</p></div>
   <div class="hdiv"></div>
   <div class="roi-layout reveal d1">
     <div class="roi-ctrl">
@@ -362,7 +333,7 @@ footer{border-top:1px solid var(--bd);padding:32px;text-align:center;font-family
 <!-- TODO -->
 <section id="todo">
 <div class="wide">
-  <div class="reveal"><div class="eyebrow">Implementierung</div><h2 class="sec-title">Todo-Liste</h2><p class="sec-sub">Aufgaben abhaken — Fortschritt wird lokal gespeichert. <span style="color:var(--acc)">Neu</span> / <span style="color:var(--amb)">Geändert</span> markiert Atlassian-Anpassungen.</p></div>
+  <div class="reveal"><div class="eyebrow">Implementierung</div><h2 class="sec-title">Todo-Liste</h2><p class="sec-sub">Aufgaben abhaken — Fortschritt wird lokal gespeichert.</p></div>
   <div class="hdiv"></div>
   <div class="todo-stats reveal d1">
     <div class="tstat"><div class="tsv" id="ts-total">0</div><div class="tsl">Total</div></div>
@@ -386,41 +357,60 @@ footer{border-top:1px solid var(--bd);padding:32px;text-align:center;font-family
 <!-- TOOLS -->
 <section id="tools">
 <div class="wide">
-  <div class="reveal"><div class="eyebrow">Infrastruktur</div><h2 class="sec-title">Tool-Stack · 277 €/Monat</h2><p class="sec-sub">Atlassian Premium bereits vorhanden — Trello entfällt, Jira + Confluence übernehmen alle PM-Aufgaben.</p></div>
+  <div class="reveal"><div class="eyebrow">Infrastruktur</div><h2 class="sec-title">Tool-Stack · 249 €/Monat</h2><p class="sec-sub">Atlassian Premium + Google Workspace + Claude.ai bereits vorhanden — nur API-Kosten zusätzlich.</p></div>
   <div class="hdiv"></div>
   <div class="tgrid reveal d1">
-    <div class="tc" style="border-color:rgba(74,143,255,.3)"><div class="tc-cat"><span class="atl-badge">✓ Vorhanden</span></div><div class="tc-name">Jira Premium</div><div class="tc-desc">6 Kanban-Projekte, Advanced Roadmaps, Automations, n8n REST API-Integration</div><div class="tc-cost" style="color:var(--grn)">0 € (inkl.)</div></div>
-    <div class="tc" style="border-color:rgba(74,143,255,.3)"><div class="tc-cat"><span class="atl-badge">✓ Vorhanden</span></div><div class="tc-name">Confluence Premium</div><div class="tc-desc">Briefings, Prompt-Library, Bild-Stil-Guide, Performance-Reports, Rovo AI, Whiteboards</div><div class="tc-cost" style="color:var(--grn)">0 € (inkl.)</div></div>
-    <div class="tc"><div class="tc-cat">SEO Intelligence</div><div class="tc-name">Ahrefs Lite</div><div class="tc-desc">Keyword Explorer, Content Gap, SERP-Analyse, Position Tracking</div><div class="tc-cost" style="color:var(--amb)">99 €/Mo.</div></div>
-    <div class="tc"><div class="tc-cat">Recherche</div><div class="tc-name">Perplexity API</div><div class="tc-desc">Blog-Inhalte + Kommentare strukturiert auswerten</div><div class="tc-cost" style="color:var(--amb)">20 €/Mo.</div></div>
-    <div class="tc"><div class="tc-cat">LLM Backbone</div><div class="tc-name">Claude API</div><div class="tc-desc">Sonnet 4 für Texte, Opus 4 für Briefings, Haiku für schnelle Tasks</div><div class="tc-cost" style="color:var(--amb)">80 €/Mo.</div></div>
-    <div class="tc"><div class="tc-cat">Transkription</div><div class="tc-name">Whisper API</div><div class="tc-desc">YouTube-Audio zu Text — ca. 50 Videos/Monat</div><div class="tc-cost" style="color:var(--amb)">10 €/Mo.</div></div>
-    <div class="tc" style="border-color:rgba(74,143,255,.2)"><div class="tc-cat">KI-Bildgenerierung</div><div class="tc-name">fal.ai FLUX 1.1 Pro</div><div class="tc-desc">Blog Hero 16:9 + LinkedIn 1:1 im Corporate Stil, je 3 Varianten</div><div class="tc-cost" style="color:var(--amb)">20 €/Mo.</div></div>
-    <div class="tc"><div class="tc-cat">Automatisierung</div><div class="tc-name">Make Core</div><div class="tc-desc">Jira ↔ Hubspot ↔ fal.ai — externe Verbindungen</div><div class="tc-cost" style="color:var(--amb)">9 €/Mo.</div></div>
-    <div class="tc"><div class="tc-cat">Orchestrierung</div><div class="tc-name">n8n (self-hosted)</div><div class="tc-desc">Agenten-Orchestrierung, Jira REST API-Integration</div><div class="tc-cost" style="color:var(--grn)">kostenlos</div></div>
-    <div class="tc"><div class="tc-cat">LLM-Tracing</div><div class="tc-name">LangSmith</div><div class="tc-desc">Agenten-Tracing, Prompt-Versionierung, Fehleranalyse</div><div class="tc-cost" style="color:var(--grn)">kostenlos</div></div>
-    <div class="tc"><div class="tc-cat">Kostenmonitoring</div><div class="tc-name">Helicone</div><div class="tc-desc">LLM-Kosten per Modell, Budget-Cap, Request-Logging</div><div class="tc-cost" style="color:var(--grn)">kostenlos</div></div>
-    <div class="tc" style="background:rgba(52,211,153,.04);border-color:rgba(52,211,153,.2)"><div class="tc-cat" style="color:var(--grn)">Gesamt laufend</div><div class="tc-name">Tool-Stack</div><div class="tc-desc">Atlassian Premium bereits bezahlt · Trello −15 € entfallen</div><div class="tc-cost" style="color:var(--grn);font-size:19px">277 €/Mo.</div></div>
+    <div class="tc" style="border-color:rgba(52,211,153,.3)"><div class="tc-cat"><span class="inc-badge">✓ Bereits vorhanden</span></div><div class="tc-name">Jira Premium</div><div class="tc-desc">6 Kanban-Projekte, Advanced Roadmaps, Automations, n8n REST API</div><div class="tc-cost" style="color:var(--grn)">0 € / Mo.</div></div>
+    <div class="tc" style="border-color:rgba(52,211,153,.3)"><div class="tc-cat"><span class="inc-badge">✓ Bereits vorhanden</span></div><div class="tc-name">Confluence Premium</div><div class="tc-desc">Briefings, Prompt-Library, Bild-Stil-Guide, Rovo AI, Whiteboards</div><div class="tc-cost" style="color:var(--grn)">0 € / Mo.</div></div>
+    <div class="tc" style="border-color:rgba(52,211,153,.3)"><div class="tc-cat"><span class="inc-badge">✓ Google Workspace</span></div><div class="tc-name">Gemini (YT + Recherche)</div><div class="tc-desc">Gemini 1.5 Pro via Google AI Studio API — transkribiert YT nativ, kein Whisper nötig</div><div class="tc-cost" style="color:var(--grn)">0–10 € / Mo. (Free Tier)</div></div>
+    <div class="tc" style="border-color:rgba(52,211,153,.3)"><div class="tc-cat"><span class="inc-badge">✓ Claude.ai Team Abo</span></div><div class="tc-name">Claude API (Agenten)</div><div class="tc-desc">Separates API-Konto auf console.anthropic.com — Opus für Briefings, Sonnet für Texte, Haiku für Tasks</div><div class="tc-cost" style="color:var(--amb)">~80 € / Mo. (pay-per-use)</div></div>
+    <div class="tc"><div class="tc-cat">SEO Intelligence</div><div class="tc-name">Ahrefs Lite</div><div class="tc-desc">Keyword Explorer, Content Gap, SERP-Analyse, Position Tracking</div><div class="tc-cost" style="color:var(--amb)">99 € / Mo.</div></div>
+    <div class="tc"><div class="tc-cat">Recherche</div><div class="tc-name">Perplexity API</div><div class="tc-desc">Blog-Inhalte + Kommentare strukturiert auswerten, Pain Points extrahieren</div><div class="tc-cost" style="color:var(--amb)">20 € / Mo.</div></div>
+    <div class="tc" style="border-color:rgba(74,143,255,.2)"><div class="tc-cat">KI-Bildgenerierung</div><div class="tc-name">fal.ai FLUX 1.1 Pro</div><div class="tc-desc">Blog Hero 16:9 + LinkedIn 1:1 im Corporate Stil — je 3 Varianten, ~0,04 €/Bild</div><div class="tc-cost" style="color:var(--amb)">~20 € / Mo.</div></div>
+    <div class="tc"><div class="tc-cat">Orchestrierung</div><div class="tc-name">n8n (self-hosted)</div><div class="tc-desc">Vollständige Agenten-Orchestrierung, Jira REST API, Hubspot, fal.ai</div><div class="tc-cost" style="color:var(--grn)">0 € (self-hosted)</div></div>
+    <div class="tc"><div class="tc-cat">LLM-Tracing</div><div class="tc-name">LangSmith</div><div class="tc-desc">Agenten-Tracing, Prompt-Versionierung, Fehleranalyse, A/B-Tests</div><div class="tc-cost" style="color:var(--grn)">0 € (Free Tier)</div></div>
+    <div class="tc"><div class="tc-cat">Kostenmonitoring</div><div class="tc-name">Helicone</div><div class="tc-desc">LLM + API Kostenübersicht, Budget-Cap, Request-Logging</div><div class="tc-cost" style="color:var(--grn)">0 € (Free Tier)</div></div>
+    <div class="tc" style="border-color:rgba(248,113,113,.2);opacity:.6"><div class="tc-cat">Gestrichen</div><div class="tc-name" style="text-decoration:line-through">Whisper API</div><div class="tc-desc">Nicht mehr nötig — Gemini 1.5 Pro transkribiert YouTube-Videos nativ</div><div class="tc-cost" style="color:var(--red)">−10 € gespart</div></div>
+    <div class="tc" style="border-color:rgba(248,113,113,.2);opacity:.6"><div class="tc-cat">Gestrichen</div><div class="tc-name" style="text-decoration:line-through">Make Core</div><div class="tc-desc">Nicht mehr nötig — n8n übernimmt alle Automatisierungen vollständig</div><div class="tc-cost" style="color:var(--red)">−9 € gespart</div></div>
+    <div class="tc" style="background:rgba(52,211,153,.04);border-color:rgba(52,211,153,.2)"><div class="tc-cat" style="color:var(--grn)">Gesamt laufend</div><div class="tc-name">Tool-Stack Total</div><div class="tc-desc">Whisper −10 € · Make −9 € · Atlassian 0 € · Gemini Free Tier · Claude.ai Abo bereits vorhanden</div><div class="tc-cost" style="color:var(--grn);font-size:20px">249 € / Mo.</div></div>
   </div>
 </div>
 </section>
 
-<footer>Beyonity · KI Marketing System 2026 · Atlassian Premium · <span style="color:var(--acc)">github.com/mktbey/marketing-concept</span></footer>
+<!-- COMMENTS -->
+<section id="comments" style="background:var(--bg1);padding:96px 0">
+<div class="wide">
+  <div class="reveal"><div class="eyebrow">Feedback</div><h2 class="sec-title">Kommentare & Notizen</h2><p class="sec-sub">Anmerkungen zu einzelnen Sektionen — gespeichert im Browser.</p></div>
+  <div class="hdiv"></div>
+  <div class="reveal d1" style="background:var(--bg);border:1px solid var(--bd);border-radius:var(--r2);padding:24px;margin-bottom:20px">
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:12px">
+      <div style="display:flex;flex-direction:column;gap:5px"><label style="font-family:var(--mono);font-size:9px;letter-spacing:.1em;text-transform:uppercase;color:var(--txt3)">Dein Name</label><input id="c-name" type="text" placeholder="z.B. Paulo" maxlength="40" style="background:var(--bg1);border:1px solid var(--bd2);border-radius:var(--r);padding:9px 12px;color:var(--txt);font-family:var(--mono);font-size:12px;outline:none;transition:border-color .15s" onfocus="this.style.borderColor='var(--acc)'" onblur="this.style.borderColor='var(--bd2)'"></div>
+      <div style="display:flex;flex-direction:column;gap:5px"><label style="font-family:var(--mono);font-size:9px;letter-spacing:.1em;text-transform:uppercase;color:var(--txt3)">Sektion</label><select id="c-section" style="background:var(--bg1);border:1px solid var(--bd2);border-radius:var(--r);padding:9px 12px;color:var(--txt);font-family:var(--mono);font-size:12px;outline:none"><option>Allgemein</option><option>Workflow</option><option>ROI-Rechner</option><option>Todo-Liste</option><option>Zeitplan</option><option>Tool-Stack</option><option>Keyword-Strategie</option><option>Customer Journey</option><option>KI-Bilder</option></select></div>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:5px;margin-bottom:14px"><label style="font-family:var(--mono);font-size:9px;letter-spacing:.1em;text-transform:uppercase;color:var(--txt3)">Kommentar</label><textarea id="c-text" rows="3" placeholder="Anmerkung, Frage oder Idee..." style="background:var(--bg1);border:1px solid var(--bd2);border-radius:var(--r);padding:9px 12px;color:var(--txt);font-family:var(--mono);font-size:12px;outline:none;resize:none;line-height:1.6;transition:border-color .15s" onfocus="this.style.borderColor='var(--acc)'" onblur="this.style.borderColor='var(--bd2)'"></textarea></div>
+    <div style="display:flex;align-items:center;gap:12px">
+      <button onclick="addCmt()" style="background:var(--acc);color:#fff;border:none;border-radius:var(--r);padding:9px 20px;font-family:var(--mono);font-size:11px;letter-spacing:.06em;cursor:pointer;font-weight:500;transition:opacity .15s" onmouseover="this.style.opacity='.85'" onmouseout="this.style.opacity='1'">Kommentar hinzufügen</button>
+      <span id="c-msg" style="font-family:var(--mono);font-size:10px;color:var(--grn);display:none">✓ Gespeichert</span>
+    </div>
+  </div>
+  <div id="c-filter" style="display:flex;gap:6px;margin-bottom:16px;flex-wrap:wrap" class="reveal d2"></div>
+  <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:14px" class="reveal d2">
+    <span id="c-count" style="font-family:var(--mono);font-size:11px;color:var(--txt3)">0 Kommentare</span>
+    <button onclick="if(confirm('Alle löschen?')){localStorage.removeItem('bey_cmt');renderCmt()}" style="font-family:var(--mono);font-size:10px;color:var(--txt3);background:none;border:none;cursor:pointer" onmouseover="this.style.color='var(--red)'" onmouseout="this.style.color='var(--txt3)'">Alle löschen</button>
+  </div>
+  <div id="c-list" class="reveal d3" style="display:flex;flex-direction:column;gap:10px"></div>
+</div>
+</section>
+
+<footer>Beyonity · KI Marketing System 2026 · Claude + Gemini · Atlassian Premium · <span style="color:var(--acc)">github.com/mktbey/marketing-concept</span></footer>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.js"></script>
 <script>
-/* REVEAL */
 const ro=new IntersectionObserver(e=>e.forEach(x=>{if(x.isIntersecting)x.target.classList.add('visible')}),{threshold:.07});
 document.querySelectorAll('.reveal').forEach(el=>ro.observe(el));
+function setP(i){document.querySelectorAll('.ptab').forEach((b,j)=>b.classList.toggle('on',j===i));document.querySelectorAll('.fp').forEach((c,j)=>c.classList.toggle('on',j===i))}
 
-/* PHASE TABS */
-function setP(i){
-  document.querySelectorAll('.ptab').forEach((b,j)=>b.classList.toggle('on',j===i));
-  document.querySelectorAll('.fp').forEach((c,j)=>c.classList.toggle('on',j===i));
-}
-
-/* ROI */
-const TOOLS=277;
+const TOOLS=249;
 let rChart=null;
 const fmt=n=>new Intl.NumberFormat('de-DE',{style:'currency',currency:'EUR',maximumFractionDigits:0}).format(Math.round(n));
 function calcROI(){
@@ -444,7 +434,10 @@ function calcROI(){
   document.getElementById('r-roi1').textContent=r1+'%';
   document.getElementById('r-roi3').textContent=r3+'%';
   document.getElementById('r-art').textContent=fmt(aC)+' (−'+aR+'%)';
-  document.getElementById('roi-note').innerHTML=`Setup: ${setup}T×8h×${rate}€ = ${fmt(sc)} einmalig<br>Tools: ${TOOLS}€/Mo. (Atlassian Premium bereits vorhanden)<br>Personal mit KI: ${ah}h×${rate}€ = ${fmt(ah*rate)}/Mo.`;
+  document.getElementById('roi-note').innerHTML=
+    `Tools: ${TOOLS}€/Mo. (Atlassian + Google Workspace bereits vorhanden)<br>`+
+    `Claude API: ~80€ · Ahrefs: 99€ · Perplexity: 20€ · fal.ai: ~20€<br>`+
+    `Gemini Free Tier (YT) · n8n kostenlos · LangSmith kostenlos`;
   const m36=Array.from({length:36},(_,i)=>i+1);
   const dO=m36.map(m=>Math.round(m*moO)),dN=m36.map(m=>Math.round(sc+m*moN));
   const dS=m36.map(m=>Math.max(0,Math.round(m*moO-(sc+m*moN))));
@@ -459,76 +452,71 @@ function calcROI(){
 ['s-rate','s-mh','s-ah','s-setup','s-art0','s-art'].forEach(id=>document.getElementById(id).addEventListener('input',calcROI));
 calcROI();
 
-/* TODO DATA */
 const TODOS=[
   {id:'p1',label:'Woche 1 · bis 20. März',pill:'Sofort',col:'var(--red)',items:[
-    {t:'Budget-Antrag einreichen',s:'277 €/Mo. Tool-Kosten · 10.000 € Setup-Investition',e:'20. März'},
+    {t:'Budget-Antrag einreichen',s:'249 €/Mo. Tool-Kosten · 10.000 € Setup-Investition',e:'20. März'},
     {t:'Ahrefs Lite Testaccount',s:'14 Tage kostenlos — ahrefs.com',e:'0.5 Std.'},
+    {t:'Gemini API Key einrichten',s:'Google AI Studio → API Key → in n8n hinterlegen',e:'30 Min.',b:'new'},
+    {t:'Claude API Key einrichten',s:'console.anthropic.com → API Key → separat von Claude.ai Abo',e:'30 Min.',b:'new'},
     {t:'Seed-Keywords abstimmen',s:'10–15 Kernthemen von Beyonity intern festlegen',e:'2 Std.'},
-    {t:'YouTube-Kanal-Liste erstellen',s:'15–20 PropTech/Immo-Kanäle mit hohem Engagement',e:'1 Std.'},
-    {t:'Blog-Liste für Perplexity',s:'15–20 Blogs DA > 40 im Zielmarkt',e:'1 Std.',b:'changed'},
-    {t:'Jira-Projekte anlegen (6 Boards)',s:'Blog SEO, Branding, LinkedIn, Newsletter, Recherche, Bilder',e:'2 Std.',b:'new'},
-    {t:'Confluence Spaces aufsetzen',s:'Briefings, Prompt-Library, Bild-Stil-Guide, Performance',e:'1 Std.',b:'new'},
-    {t:'Corporate Design in Confluence',s:'Farben, Fonts, Bildsprache als Prompt-Referenz dokumentieren',e:'1 Std.',b:'new'},
+    {t:'YouTube-Kanal-Liste erstellen',s:'15–20 PropTech/Immo-Kanäle — Gemini übernimmt Transkription',e:'1 Std.',b:'changed'},
+    {t:'Jira-Projekte anlegen (6 Boards)',s:'Blog SEO, Branding, LinkedIn, Newsletter, Recherche, Bilder',e:'2 Std.'},
+    {t:'Confluence Spaces aufsetzen',s:'Briefings, Prompt-Library, Bild-Stil-Guide, Performance',e:'1 Std.'},
+    {t:'Corporate Design in Confluence',s:'Farben #001A64, #3C57E1, #F9FF77 als Prompt-Referenz',e:'1 Std.'},
   ]},
   {id:'p2',label:'Woche 1–2 · bis 27. März',pill:'Strategie',col:'var(--amb)',items:[
-    {t:'Persona-Workshop durchführen',s:'3 Haupt-Personas (Rolle, Pain Points, Goals)',e:'1 Tag'},
+    {t:'Persona-Workshop durchführen',s:'3 Haupt-Personas definieren',e:'1 Tag'},
     {t:'3–5 Kunden-Interviews',s:'Customer Journey und Entscheidungsprozess erfragen',e:'2–3 Tage'},
-    {t:'Journey Map in Confluence Whiteboard',s:'5 Phasen kartieren, Lückenanalyse',e:'1 Tag',b:'new'},
+    {t:'Journey Map in Confluence Whiteboard',s:'5 Phasen kartieren, Lückenanalyse',e:'1 Tag'},
     {t:'Keyword-Cluster erstellen',s:'Ahrefs-Export, Top-500 Keywords clustern + priorisieren',e:'2 Std.'},
-    {t:'Bild-Stil-Guide erstellen',s:'Referenzbilder + Prompt-Vorlage in Confluence hinterlegen',e:'2 Std.',b:'new'},
-    {t:'Q2/2026 Redaktionsplan in Jira',s:'Erstes Quartal als Jira-Issues planen (statt Trello)',e:'0.5 Tage',b:'changed'},
+    {t:'Bild-Stil-Guide erstellen',s:'Referenzbilder + fal.ai Prompt-Vorlage in Confluence',e:'2 Std.'},
+    {t:'Q2/2026 Redaktionsplan in Jira',s:'Erstes Quartal als Jira-Issues planen',e:'0.5 Tage'},
   ]},
   {id:'p3',label:'Woche 2–3 · bis 3. April',pill:'Infrastruktur',col:'var(--acc)',items:[
-    {t:'n8n installieren + Jira REST API',s:'Self-hosted Setup, Basis-Workflows, Jira OAuth verbinden',e:'1 Tag',b:'changed'},
-    {t:'Perplexity API einrichten',s:'Ersetzt Playwright-Scraping — wöchentliche Blog-Abfragen',e:'1 Std.',b:'new'},
-    {t:'n8n Perplexity-Workflow bauen',s:'Automatische wöchentliche Themen-Abfragen konfigurieren',e:'2 Std.',b:'new'},
-    {t:'YouTube Data API v3',s:'API-Key, RSS-Trigger für Kanal-Liste in n8n',e:'2 Std.'},
-    {t:'Whisper API verbinden',s:'Transkriptions-Pipeline für YouTube-Audio',e:'2 Std.'},
-    {t:'fal.ai API + FLUX testen',s:'Corporate Stil Prompts kalibrieren, Ergebnisse prüfen',e:'1 Std.',b:'new'},
-    {t:'LangSmith einrichten',s:'Agenten-Tracing, Kosten-Dashboard aktivieren',e:'0.5 Std.'},
-    {t:'Helicone konfigurieren',s:'Budget-Cap: max. 120 €/Mo., Alert bei 80%',e:'0.5 Std.'},
-    {t:'Jira-Automations konfigurieren',s:'n8n-Webhook → Jira Status-Update nach jedem Agenten-Schritt',e:'2 Std.',b:'new'},
+    {t:'n8n installieren + Jira REST API',s:'Self-hosted Setup, OAuth verbinden',e:'1 Tag'},
+    {t:'Gemini-Workflow in n8n bauen',s:'YT Video-URLs → Gemini API → Transkript → Themen-Extrakt',e:'2 Std.',b:'new'},
+    {t:'Perplexity API einrichten',s:'Blog-Recherche-Workflow in n8n',e:'1 Std.'},
+    {t:'fal.ai API + FLUX testen',s:'Corporate Stil Prompts kalibrieren',e:'1 Std.'},
+    {t:'LangSmith einrichten',s:'Agenten-Tracing, beide APIs tracken (Claude + Gemini)',e:'0.5 Std.',b:'changed'},
+    {t:'Helicone konfigurieren',s:'Budget-Cap: max. 120 €/Mo. für Claude API',e:'0.5 Std.'},
+    {t:'Jira-Automations konfigurieren',s:'n8n-Webhook → Jira Status-Update nach jedem Agenten-Schritt',e:'2 Std.'},
   ]},
   {id:'p4',label:'Woche 3–5 · bis 17. April',pill:'Agenten',col:'var(--pu)',items:[
-    {t:'Orchestrator-Agent entwickeln',s:'Koordination, Jira-Issue-Updates, LangSmith-Tracing',e:'1 Tag',b:'changed'},
+    {t:'Orchestrator-Agent (n8n)',s:'Koordination, Jira-Issue-Updates, LangSmith-Tracing',e:'1 Tag'},
     {t:'SEO-Recherche-Agent',s:'Ahrefs Export → Keyword-Brief + Cluster-Score',e:'1 Tag'},
-    {t:'Perplexity-Analyse-Agent',s:'Strukturierte Blog/Kommentar-Abfragen → Themen-Extrakt',e:'0.5 Tage',b:'new'},
-    {t:'YT-Analyse-Agent',s:'Transkripte + Kommentare → Shortlist Top 5',e:'1 Tag'},
-    {t:'Briefing-Agent (Opus)',s:'Vollständiges Briefing + Beyonity-Take → Confluence Space',e:'1.5 Tage',b:'changed'},
-    {t:'Blog-Autor-Agent (Sonnet)',s:'Rohentwurf 1.500+ Wörter, SEO-optimiert',e:'1 Tag'},
-    {t:'Lektorat-Agent (Haiku)',s:'SEO-Score ≥ 80, Stil, Qualitätsprüfung, Loop-Logik',e:'0.5 Tage'},
-    {t:'Bild-Generierungs-Agent',s:'fal.ai FLUX: Hero 16:9 + LinkedIn 1:1 + 3 Varianten → Jira',e:'1.5 Tage',b:'new'},
-    {t:'LinkedIn-Copy-Agent',s:'3 Post-Varianten + Bild-Prompt (1:1)',e:'0.5 Tage'},
-    {t:'Newsletter-Agent',s:'4 Sektionen, Hubspot-Sync via Make',e:'0.5 Tage'},
-    {t:'Alle Agenten in LangSmith tracken',s:'Runs, Fehler, Kosten in Dashboard sichtbar',e:'1 Tag'},
+    {t:'YT-Analyse-Agent (Gemini)',s:'Gemini 1.5 Pro — Videos + Kommentare nativ analysieren',e:'1 Tag',b:'changed'},
+    {t:'Perplexity-Analyse-Agent',s:'Blog/Kommentar-Abfragen → Themen-Extrakt',e:'0.5 Tage'},
+    {t:'Briefing-Agent (Claude Opus)',s:'Beyonity-Take + Struktur → Confluence Space',e:'1.5 Tage'},
+    {t:'Blog-Autor-Agent (Claude Sonnet)',s:'Rohentwurf 1.500+ Wörter, SEO-optimiert',e:'1 Tag'},
+    {t:'Lektorat-Agent (Claude Haiku)',s:'SEO-Score ≥ 80, Stil, Loop-Logik',e:'0.5 Tage'},
+    {t:'Bild-Generierungs-Agent (fal.ai)',s:'Hero 16:9 + LinkedIn 1:1 + 3 Varianten → Jira-Anhang',e:'1.5 Tage'},
+    {t:'LinkedIn-Copy-Agent (Claude Sonnet)',s:'3 Post-Varianten + Bild-Prompt',e:'0.5 Tage'},
+    {t:'Newsletter-Agent (Claude Sonnet)',s:'4 Sektionen, Hubspot-Sync via n8n',e:'0.5 Tage'},
   ]},
   {id:'p5',label:'Woche 5–6 · bis 24. April',pill:'Pilot',col:'var(--grn)',items:[
-    {t:'Ersten SEO-Artikel durch Pipeline',s:'Komplett: Recherche → Briefing (Confluence) → Entwurf → Bild → Jira Review',e:'2 Tage'},
-    {t:'Bild-Qualität reviewen + kalibrieren',s:'Corporate Stil konsistent? Prompt-Anpassungen in Confluence',e:'1 Tag',b:'new'},
-    {t:'LinkedIn-Post mit KI-Bild testen',s:'1:1 Format, Qualität prüfen, nativ in LinkedIn planen',e:'0.5 Tage',b:'new'},
+    {t:'Ersten SEO-Artikel durch Pipeline',s:'Gemini Recherche → Claude Briefing → Claude Artikel → fal.ai Bild → Jira Review',e:'2 Tage',b:'changed'},
+    {t:'Gemini YT-Transkription prüfen',s:'Qualität vs. manuelle Transkription vergleichen',e:'1 Std.',b:'new'},
+    {t:'Bild-Qualität reviewen + kalibrieren',s:'Corporate Stil konsistent? Prompts in Confluence anpassen',e:'1 Tag'},
     {t:'Newsletter-Entwurf generieren',s:'Alle 4 Sektionen, Hubspot-Sync testen',e:'1 Tag'},
-    {t:'Perplexity-Output prüfen',s:'Recherche-Qualität vs. manuelle Recherche vergleichen',e:'0.5 Tage',b:'new'},
-    {t:'Kosten-Review in Helicone',s:'LLM + fal.ai + Perplexity vs. 277 € Budget-Cap',e:'1 Std.'},
+    {t:'Kosten-Review in Helicone',s:'Claude API vs. 249 € Budget-Ziel prüfen',e:'1 Std.',b:'changed'},
   ]},
   {id:'p6',label:'Mai – Juni',pill:'Iteration',col:'var(--txt3)',items:[
     {t:'Alle Kanäle parallel aktivieren',s:'Blog SEO + Branding, LinkedIn, Newsletter',e:'laufend'},
-    {t:'LinkedIn Bild-A/B-Test',s:'KI-Bilder vs. Text-Cards — was performt besser?',e:'laufend',b:'new'},
-    {t:'Perplexity-Prompts optimieren',s:'Strukturiertere Recherche durch verbesserte Abfragen',e:'2 Std./Wo.',b:'new'},
-    {t:'Jira Content-KPI-Dashboard',s:'Rankings, Traffic, LinkedIn-Reichweite als Jira-Report',e:'2 Std.',b:'new'},
-    {t:'Monatl. KPI-Review in Confluence',s:'Performance-Report dokumentieren und archivieren',e:'2 Std./Mo.',b:'changed'},
+    {t:'Gemini vs. Claude Qualitätsvergleich',s:'Welche Tasks welchem Modell zuweisen — optimieren',e:'2 Std.',b:'new'},
+    {t:'Jira Content-KPI-Dashboard',s:'Rankings, Traffic, LinkedIn-Reichweite als Jira-Report',e:'2 Std.'},
+    {t:'Monatl. KPI-Review in Confluence',s:'Performance dokumentieren und archivieren',e:'2 Std./Mo.'},
   ]},
   {id:'p7',label:'Ab Juli 2026',pill:'Vollbetrieb',col:'var(--grn)',items:[
-    {t:'Vollautomatischer Montags-Lauf',s:'Recherche → Briefing (Confluence) → Text → Bild → Jira',e:'5–8 Std./Wo.'},
-    {t:'Quartalsweise Bild-Stil updaten',s:'Corporate Design-Änderungen in Confluence + fal.ai Prompts',e:'0.5 T./Qu.',b:'new'},
-    {t:'Quartalsweise Keyword-Review',s:'Neue Cluster in Ahrefs, veraltete in Jira archivieren',e:'1 T./Qu.'},
+    {t:'Vollautomatischer Montags-Lauf',s:'Gemini Recherche + Claude Produktion → Jira → Publish',e:'5–8 Std./Wo.',b:'changed'},
+    {t:'Quartalsweise Bild-Stil updaten',s:'Corporate Design in Confluence + fal.ai Prompts',e:'0.5 T./Qu.'},
+    {t:'Quartalsweise Keyword-Review',s:'Neue Cluster in Ahrefs, veraltete archivieren',e:'1 T./Qu.'},
     {t:'Jährliches Journey-Mapping',s:'Neue Personas in Confluence aktualisieren',e:'1 Tag/Jahr'},
   ]},
 ];
 
 function buildTodo(){
   const con=document.getElementById('todo-con');
-  const st=JSON.parse(localStorage.getItem('bey_todo_v4')||'{}');
+  const st=JSON.parse(localStorage.getItem('bey_todo_v5')||'{}');
   let total=0,done=0,html='';
   TODOS.forEach(ph=>{
     const pd=ph.items.filter(it=>st[ph.id+'_'+it.t]).length;
@@ -536,7 +524,7 @@ function buildTodo(){
     html+=`<div class="pg"><div class="pg-hdr"><span class="pg-pill" style="color:${ph.col};border-color:${ph.col}">${ph.pill}</span><span class="pg-title">${ph.label}</span><span class="pg-cnt">${pd}/${ph.items.length}</span></div><div class="todo-grid">`;
     ph.items.forEach(it=>{
       const key=ph.id+'_'+it.t,isDone=!!st[key];
-      const bm=it.b==='new'?`<span class="b-new">neu</span>`:it.b==='changed'?`<span class="b-chg">geändert</span>`:'';
+      const bm=it.b==='new'?'<span class="b-new">neu</span>':it.b==='changed'?'<span class="b-chg">geändert</span>':'';
       html+=`<div class="ti${isDone?' done':''}" onclick="toggleT('${key}')"><div class="tichk"></div><div class="ti-b"><div class="ti-title">${it.t}${bm}</div><div class="ti-sub">${it.s}</div></div><div class="ti-eff">${it.e}</div></div>`;
     });
     html+=`</div></div>`;
@@ -549,25 +537,23 @@ function buildTodo(){
   document.getElementById('ts-pct').textContent=pct+'%';
   document.getElementById('ts-bar').style.width=pct+'%';
 }
-function toggleT(k){const s=JSON.parse(localStorage.getItem('bey_todo_v4')||'{}');s[k]=!s[k];localStorage.setItem('bey_todo_v4',JSON.stringify(s));buildTodo()}
+function toggleT(k){const s=JSON.parse(localStorage.getItem('bey_todo_v5')||'{}');s[k]=!s[k];localStorage.setItem('bey_todo_v5',JSON.stringify(s));buildTodo()}
 buildTodo();
 
-/* GANTT */
 const GD=[
-  {l:'Setup & Tools',s:'Accounts, Jira-Boards, Confluence Spaces',start:0,dur:1,c:'#F87171',e:'3–4T · 80%'},
+  {l:'Setup & Tools',s:'Jira, Confluence, Gemini API, Claude API Keys',start:0,dur:1,c:'#F87171',e:'3–4T · 80%'},
   {l:'Keyword-Strategie',s:'Personas, Journey Map, Bild-Stil-Guide',start:.5,dur:1.5,c:'#FBBF24',e:'4–5T · 80–100%'},
-  {l:'Infrastruktur',s:'n8n, Perplexity, Whisper, fal.ai, Jira API',start:1.5,dur:1.5,c:'#4A8FFF',e:'3–4T · 100%'},
-  {l:'Agenten-Entwicklung',s:'10 Agenten + Bild-Agent + LangSmith',start:2.5,dur:2.5,c:'#A78BFA',e:'8–10T · 100%'},
+  {l:'Infrastruktur',s:'n8n, Gemini-Workflow, Perplexity, fal.ai',start:1.5,dur:1.5,c:'#4A8FFF',e:'3–4T · 100%'},
+  {l:'Agenten-Entwicklung',s:'10 Agenten (Claude + Gemini) + LangSmith',start:2.5,dur:2.5,c:'#A78BFA',e:'8–10T · 100%'},
   {l:'Bild-Stil kalibrieren',s:'Corporate Prompt-Guide in Confluence',start:4,dur:1,c:'#60A5FA',e:'1–2T · 60%'},
   {l:'Pilot-Betrieb',s:'Erster Artikel + LinkedIn + Newsletter',start:5,dur:1.5,c:'#2DD4BF',e:'4–5T · 60–70%'},
-  {l:'Iteration',s:'Alle Kanäle, Prompts, Jira-Reports',start:6.5,dur:4,c:'#6B7280',e:'2–3T/Wo.'},
+  {l:'Iteration',s:'Alle Kanäle, Gemini vs. Claude optimieren',start:6.5,dur:4,c:'#6B7280',e:'2–3T/Wo.'},
   {l:'Vollbetrieb',s:'5–8 Std./Woche · Montags-Automatik',start:10.5,dur:7,c:'#34D399',e:'Dauerhaft'},
 ];
 const WK=18;
 const WL=Array.from({length:WK},(_,i)=>{const d=new Date(2026,2,18);d.setDate(d.getDate()+i*7);return d.toLocaleDateString('de-DE',{day:'2-digit',month:'2-digit'})});
 function buildGantt(){
-  const tbl=document.getElementById('gantt-tbl');
-  const LW=200;
+  const tbl=document.getElementById('gantt-tbl');const LW=200;
   let html=`<div class="ghdr" style="grid-template-columns:${LW}px repeat(${WK},1fr)"><div class="ghc" style="text-align:left;border-left:none">Aufgabe</div>`;
   WL.forEach(w=>{html+=`<div class="ghc">${w}</div>`});html+=`</div>`;
   GD.forEach(row=>{
@@ -590,123 +576,44 @@ function buildGantt(){
   tbl.appendChild(line);tbl.appendChild(lbl);
 }
 buildGantt();
-</script>
 
-<!-- COMMENTS -->
-<section id="comments" style="background:var(--bg1);padding:96px 0">
-<div class="wide">
-  <div class="reveal"><div class="eyebrow">Feedback</div><h2 class="sec-title">Kommentare & Notizen</h2><p class="sec-sub">Hinterlasse Anmerkungen, Fragen oder Ideen zu einzelnen Sektionen — gespeichert im Browser.</p></div>
-  <div class="hdiv"></div>
-
-  <!-- Form -->
-  <div class="reveal d1" style="background:var(--bg);border:1px solid var(--bd);border-radius:var(--r2);padding:24px;margin-bottom:20px">
-    <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:12px">
-      <div style="display:flex;flex-direction:column;gap:5px">
-        <label style="font-family:var(--mono);font-size:9px;letter-spacing:.1em;text-transform:uppercase;color:var(--txt3)">Dein Name</label>
-        <input id="c-name" type="text" placeholder="z.B. Paulo" maxlength="40" style="background:var(--bg1);border:1px solid var(--bd2);border-radius:var(--r);padding:9px 12px;color:var(--txt);font-family:var(--mono);font-size:12px;outline:none;transition:border-color .15s" onfocus="this.style.borderColor='var(--acc)'" onblur="this.style.borderColor='var(--bd2)'">
-      </div>
-      <div style="display:flex;flex-direction:column;gap:5px">
-        <label style="font-family:var(--mono);font-size:9px;letter-spacing:.1em;text-transform:uppercase;color:var(--txt3)">Sektion</label>
-        <select id="c-section" style="background:var(--bg1);border:1px solid var(--bd2);border-radius:var(--r);padding:9px 12px;color:var(--txt);font-family:var(--mono);font-size:12px;outline:none;transition:border-color .15s" onfocus="this.style.borderColor='var(--acc)'" onblur="this.style.borderColor='var(--bd2)'">
-          <option value="Allgemein">Allgemein</option>
-          <option value="Workflow">Workflow</option>
-          <option value="ROI-Rechner">ROI-Rechner</option>
-          <option value="Todo-Liste">Todo-Liste</option>
-          <option value="Zeitplan">Zeitplan</option>
-          <option value="Tool-Stack">Tool-Stack</option>
-          <option value="Keyword-Strategie">Keyword-Strategie</option>
-          <option value="Customer Journey">Customer Journey</option>
-          <option value="KI-Bilder">KI-Bilder</option>
-        </select>
-      </div>
-    </div>
-    <div style="display:flex;flex-direction:column;gap:5px;margin-bottom:14px">
-      <label style="font-family:var(--mono);font-size:9px;letter-spacing:.1em;text-transform:uppercase;color:var(--txt3)">Kommentar / Notiz</label>
-      <textarea id="c-text" rows="3" placeholder="Anmerkung, Frage oder Idee..." style="background:var(--bg1);border:1px solid var(--bd2);border-radius:var(--r);padding:9px 12px;color:var(--txt);font-family:var(--mono);font-size:12px;outline:none;resize:none;transition:border-color .15s;line-height:1.6" onfocus="this.style.borderColor='var(--acc)'" onblur="this.style.borderColor='var(--bd2)'"></textarea>
-    </div>
-    <div style="display:flex;align-items:center;gap:12px">
-      <button onclick="addCmt()" style="background:var(--acc);color:#fff;border:none;border-radius:var(--r);padding:9px 20px;font-family:var(--mono);font-size:11px;letter-spacing:.06em;cursor:pointer;font-weight:500;transition:opacity .15s" onmouseover="this.style.opacity='.85'" onmouseout="this.style.opacity='1'">Kommentar hinzufügen</button>
-      <span id="c-msg" style="font-family:var(--mono);font-size:10px;color:var(--grn);display:none">✓ Gespeichert</span>
-    </div>
-  </div>
-
-  <!-- Filter -->
-  <div id="c-filter" style="display:flex;gap:6px;margin-bottom:16px;flex-wrap:wrap" class="reveal d2"></div>
-
-  <!-- Count -->
-  <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:14px" class="reveal d2">
-    <span id="c-count" style="font-family:var(--mono);font-size:11px;color:var(--txt3)">0 Kommentare</span>
-    <button onclick="if(confirm('Alle Kommentare löschen?')){localStorage.removeItem('bey_cmt');renderCmt()}" style="font-family:var(--mono);font-size:10px;color:var(--txt3);background:none;border:none;cursor:pointer;transition:color .15s" onmouseover="this.style.color='var(--red)'" onmouseout="this.style.color='var(--txt3)'">Alle löschen</button>
-  </div>
-
-  <!-- List -->
-  <div id="c-list" class="reveal d3" style="display:flex;flex-direction:column;gap:10px"></div>
-</div>
-</section>
-
-<script>
 const CMT_COLORS=['#4A8FFF','#34D399','#A78BFA','#FBBF24','#F87171','#2DD4BF','#F472B6'];
-const CMT_SECTIONS=['Workflow','ROI-Rechner','Todo-Liste','Zeitplan','Tool-Stack','Keyword-Strategie','Customer Journey','KI-Bilder','Allgemein'];
-const CMT_SEC_COL={Workflow:'#93B9FF','ROI-Rechner':'#6EE7C0','Todo-Liste':'#FDE68A',Zeitplan:'#C4B5FD','Tool-Stack':'#99F6E4','Keyword-Strategie':'#FECACA','Customer Journey':'#F9A8D4','KI-Bilder':'#BFDBFE',Allgemein:'#6B7280'};
+const CMT_SEC_COL={Workflow:'#93B9FF','ROI-Rechner':'#6EE7C0','Todo-Liste':'#FDE68A',Zeitplan:'#C4B5FD','Tool-Stack':'#99F6E4','Keyword-Strategie':'#FECACA','Customer Journey':'#F9A8D4','KI-Bilder':'#BFDBFE',Allgemein:'#7080A0'};
 let cmtFilter='Alle';
 function cmtColor(n){let h=0;for(let c of n)h=(h*31+c.charCodeAt(0))%CMT_COLORS.length;return CMT_COLORS[h]}
 function cmtInitials(n){return n.split(' ').map(w=>w[0]||'').join('').toUpperCase().slice(0,2)||'?'}
 function cmtTime(ts){const d=(Date.now()-ts)/1000;if(d<60)return 'gerade eben';if(d<3600)return Math.floor(d/60)+' Min. ago';if(d<86400)return Math.floor(d/3600)+' Std. ago';return Math.floor(d/86400)+' T. ago'}
 function loadCmt(){return JSON.parse(localStorage.getItem('bey_cmt')||'[]')}
 function saveCmt(d){localStorage.setItem('bey_cmt',JSON.stringify(d))}
-
 function addCmt(){
-  const name=document.getElementById('c-name').value.trim();
-  const text=document.getElementById('c-text').value.trim();
-  const section=document.getElementById('c-section').value;
+  const name=document.getElementById('c-name').value.trim(),text=document.getElementById('c-text').value.trim(),section=document.getElementById('c-section').value;
   if(!name||!text)return;
-  const all=loadCmt();
-  all.unshift({id:Date.now(),name,text,section,ts:Date.now(),likes:0,liked:false,replies:[]});
-  saveCmt(all);
-  document.getElementById('c-text').value='';
-  const msg=document.getElementById('c-msg');
-  msg.style.display='inline';setTimeout(()=>msg.style.display='none',2000);
+  const all=loadCmt();all.unshift({id:Date.now(),name,text,section,ts:Date.now(),likes:0,liked:false,replies:[]});
+  saveCmt(all);document.getElementById('c-text').value='';
+  const msg=document.getElementById('c-msg');msg.style.display='inline';setTimeout(()=>msg.style.display='none',2000);
   buildCmtFilter();renderCmt();
 }
-function toggleCmtLike(id){
-  const c=loadCmt();const i=c.findIndex(x=>x.id===id);
-  if(i<0)return;c[i].liked=!c[i].liked;c[i].likes+=c[i].liked?1:-1;
-  saveCmt(c);renderCmt();
-}
-function deleteCmt(id){
-  if(!confirm('Kommentar löschen?'))return;
-  saveCmt(loadCmt().filter(c=>c.id!==id));buildCmtFilter();renderCmt();
-}
-function toggleCmtReply(id){
-  const el=document.getElementById('crf-'+id);
-  if(el)el.style.display=el.style.display==='none'?'block':'none';
-}
+function toggleCmtLike(id){const c=loadCmt();const i=c.findIndex(x=>x.id===id);if(i<0)return;c[i].liked=!c[i].liked;c[i].likes+=c[i].liked?1:-1;saveCmt(c);renderCmt()}
+function deleteCmt(id){if(!confirm('Löschen?'))return;saveCmt(loadCmt().filter(c=>c.id!==id));buildCmtFilter();renderCmt()}
+function toggleCmtReply(id){const el=document.getElementById('crf-'+id);if(el)el.style.display=el.style.display==='none'?'block':'none'}
 function addCmtReply(id){
-  const n=document.getElementById('crn-'+id).value.trim();
-  const t=document.getElementById('crt-'+id).value.trim();
-  if(!n||!t)return;
-  const c=loadCmt();const i=c.findIndex(x=>x.id===id);
-  if(i<0)return;
-  if(!c[i].replies)c[i].replies=[];
-  c[i].replies.push({id:Date.now(),name:n,text:t,ts:Date.now()});
-  saveCmt(c);renderCmt();
+  const n=document.getElementById('crn-'+id).value.trim(),t=document.getElementById('crt-'+id).value.trim();
+  if(!n||!t)return;const c=loadCmt();const i=c.findIndex(x=>x.id===id);if(i<0)return;
+  if(!c[i].replies)c[i].replies=[];c[i].replies.push({id:Date.now(),name:n,text:t,ts:Date.now()});saveCmt(c);renderCmt();
 }
 function buildCmtFilter(){
-  const bar=document.getElementById('c-filter');
-  const all=loadCmt();
+  const bar=document.getElementById('c-filter'),all=loadCmt();
   const used=['Alle',...[...new Set(all.map(c=>c.section))]];
   bar.innerHTML=used.map(s=>`<button onclick="setCmtFilter('${s}')" style="font-family:var(--mono);font-size:10px;padding:5px 12px;border-radius:20px;border:1px solid ${s===cmtFilter?'rgba(74,143,255,.3)':'var(--bd)'};background:${s===cmtFilter?'rgba(74,143,255,.12)':'transparent'};color:${s===cmtFilter?'var(--acc)':'var(--txt3)'};cursor:pointer;transition:all .15s">${s}${s!=='Alle'?' ('+all.filter(c=>c.section===s).length+')':''}</button>`).join('');
 }
 function setCmtFilter(s){cmtFilter=s;buildCmtFilter();renderCmt()}
 function renderCmt(){
-  const all=loadCmt();
-  const filtered=cmtFilter==='Alle'?all:all.filter(c=>c.section===cmtFilter);
+  const all=loadCmt(),filtered=cmtFilter==='Alle'?all:all.filter(c=>c.section===cmtFilter);
   const list=document.getElementById('c-list');
   document.getElementById('c-count').textContent=filtered.length+' Kommentar'+(filtered.length!==1?'e':'');
-  if(!filtered.length){list.innerHTML=`<div style="text-align:center;padding:40px;font-family:var(--mono);font-size:11px;color:var(--txt2)">Noch keine Kommentare${cmtFilter!=='Alle'?' in dieser Sektion':''}.</div>`;return}
+  if(!filtered.length){list.innerHTML=`<div style="text-align:center;padding:40px;font-family:var(--mono);font-size:11px;color:var(--txt3)">Noch keine Kommentare.</div>`;return}
   list.innerHTML=filtered.map(c=>{
-    const col=cmtColor(c.name);
-    const secCol=CMT_SEC_COL[c.section]||'#6B7280';
+    const col=cmtColor(c.name),secCol=CMT_SEC_COL[c.section]||'#7080A0';
     const replies=(c.replies||[]).map(r=>`<div style="display:flex;gap:8px;align-items:flex-start"><div style="width:22px;height:22px;border-radius:50%;background:${cmtColor(r.name)}22;color:${cmtColor(r.name)};display:flex;align-items:center;justify-content:center;font-size:9px;font-weight:600;flex-shrink:0;margin-top:2px">${cmtInitials(r.name)}</div><div style="flex:1;background:var(--bg2);border-radius:8px;padding:10px 12px"><div style="font-size:11px;font-weight:500;margin-bottom:3px">${r.name}</div><div style="font-size:12px;color:var(--txt2);line-height:1.5">${r.text}</div><div style="font-family:var(--mono);font-size:9px;color:var(--txt3);margin-top:4px">${cmtTime(r.ts)}</div></div></div>`).join('');
     return`<div style="background:var(--bg);border:1px solid var(--bd);border-radius:12px;padding:18px;transition:border-color .15s" onmouseover="this.style.borderColor='var(--bd2)'" onmouseout="this.style.borderColor='var(--bd)'">
       <div style="display:flex;align-items:center;gap:10px;margin-bottom:10px">
@@ -716,13 +623,13 @@ function renderCmt(){
       </div>
       <div style="font-size:13px;color:var(--txt2);line-height:1.6;margin-bottom:12px">${c.text}</div>
       <div style="display:flex;gap:12px;padding-top:10px;border-top:1px solid var(--bd)">
-        <button onclick="toggleCmtLike(${c.id})" style="font-family:var(--mono);font-size:10px;color:${c.liked?'var(--acc)':'var(--txt3)'};background:none;border:none;cursor:pointer;transition:color .15s">♥ ${c.likes>0?c.likes+' ':''} Like</button>
-        <button onclick="toggleCmtReply(${c.id})" style="font-family:var(--mono);font-size:10px;color:var(--txt3);background:none;border:none;cursor:pointer;transition:color .15s">↩ Antworten</button>
-        <button onclick="deleteCmt(${c.id})" style="font-family:var(--mono);font-size:10px;color:var(--txt3);background:none;border:none;cursor:pointer;margin-left:auto;transition:color .15s" onmouseover="this.style.color='var(--red)'" onmouseout="this.style.color='var(--txt3)'">× Löschen</button>
+        <button onclick="toggleCmtLike(${c.id})" style="font-family:var(--mono);font-size:10px;color:${c.liked?'var(--acc)':'var(--txt3)'};background:none;border:none;cursor:pointer">♥ ${c.likes>0?c.likes+' ':''} Like</button>
+        <button onclick="toggleCmtReply(${c.id})" style="font-family:var(--mono);font-size:10px;color:var(--txt3);background:none;border:none;cursor:pointer">↩ Antworten</button>
+        <button onclick="deleteCmt(${c.id})" style="font-family:var(--mono);font-size:10px;color:var(--txt3);background:none;border:none;cursor:pointer;margin-left:auto" onmouseover="this.style.color='var(--red)'" onmouseout="this.style.color='var(--txt3)'">× Löschen</button>
       </div>
       <div id="crf-${c.id}" style="display:none;margin-top:10px;padding:12px;background:var(--bg1);border-radius:var(--r);border:1px solid var(--bd)">
         <div style="display:grid;grid-template-columns:1fr 2fr;gap:8px;margin-bottom:8px">
-          <input id="crn-${c.id}" type="text" placeholder="Dein Name" style="background:var(--bg);border:1px solid var(--bd2);border-radius:7px;padding:7px 10px;color:var(--txt);font-family:var(--mono);font-size:11px;outline:none">
+          <input id="crn-${c.id}" type="text" placeholder="Name" style="background:var(--bg);border:1px solid var(--bd2);border-radius:7px;padding:7px 10px;color:var(--txt);font-family:var(--mono);font-size:11px;outline:none">
           <input id="crt-${c.id}" type="text" placeholder="Antwort..." style="background:var(--bg);border:1px solid var(--bd2);border-radius:7px;padding:7px 10px;color:var(--txt);font-family:var(--mono);font-size:11px;outline:none">
         </div>
         <button onclick="addCmtReply(${c.id})" style="background:var(--acc);color:#fff;border:none;border-radius:7px;padding:6px 14px;font-family:var(--mono);font-size:10px;cursor:pointer">Antworten</button>
@@ -732,8 +639,6 @@ function renderCmt(){
   }).join('');
 }
 buildCmtFilter();renderCmt();
-// add comments to nav
-document.querySelector('.nav-links').innerHTML += '<a href="#comments">Kommentare</a>';
 </script>
 </body>
 </html>
