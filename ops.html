@@ -1,0 +1,771 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BEYONITY · ops</title>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: #F0F2FC;
+  --bg1: #FFFFFF;
+  --bg2: #D7DDF9;
+  --bd: rgba(60,87,225,.15);
+  --bd2: rgba(60,87,225,.25);
+  --txt: #001A64;
+  --txt2: #3C57E1;
+  --txt3: rgba(0,26,100,.45);
+  --acc: #001A64;
+  --blue: #3C57E1;
+  --blue-bg: #D7DDF9;
+  --blue-bd: #3C57E1;
+  --blue-tx: #001A64;
+  --green: #0A6E2E;
+  --green-bg: #E0F5E9;
+  --green-bd: #6FCF97;
+  --green-tx: #0A5C26;
+  --amber: #B8A800;
+  --amber-bg: #FDFFD0;
+  --amber-bd: #F9FF77;
+  --amber-tx: #6B6200;
+  --red: #C0392B;
+  --red-bg: #FDECEA;
+  --red-bd: #E8A09A;
+  --red-tx: #922B21;
+  --pu: #3C57E1;
+  --pu-bg: #D7DDF9;
+  --pu-bd: #3C57E1;
+  --pu-tx: #001A64;
+  --sans: 'Space Grotesk', sans-serif;
+  --mono: 'DM Mono', monospace;
+  --r: 8px;
+  --r2: 12px;
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { height: 100%; overflow: hidden; font-family: var(--sans); font-size: 13px; background: var(--bg); color: var(--txt); }
+
+/* ── LAYOUT ── */
+.shell { display: grid; grid-template-columns: 220px 1fr; grid-template-rows: 48px 1fr; height: 100vh; }
+
+/* ── TOPBAR ── */
+.topbar {
+  grid-column: 1 / -1;
+  display: flex; align-items: center; padding: 0 16px; gap: 12px;
+  border-bottom: 1px solid var(--bd); background: #001A64;
+  position: relative; z-index: 20;
+}
+.tlogo { font-size: 14px; font-weight: 600; letter-spacing: -.02em; color: #FFFFFF; }
+.tlogo em { color: #F9FF77; font-style: normal; }
+.tsep { width: 1px; height: 16px; background: var(--bd2); }
+.ttag { font-size: 12px; color: rgba(255,255,255,.5); font-family: var(--mono); }
+.t-right { margin-left: auto; display: flex; align-items: center; gap: 8px; }
+.tbtn { font-size: 12px; padding: 5px 12px; border-radius: var(--r); border: 1px solid rgba(255,255,255,.2); background: transparent; cursor: pointer; color: rgba(255,255,255,.7); font-family: var(--sans); transition: all .12s; }
+.tbtn:hover { background: rgba(255,255,255,.1); color: #fff; }
+.tbtn.pri { background: #F9FF77; color: #001A64; border-color: #F9FF77; font-weight: 600; }
+.tbtn.pri:hover { opacity: .9; }
+.av { width: 28px; height: 28px; border-radius: 50%; background: #F9FF77; border: 1px solid #D4D800; display: flex; align-items: center; justify-content: center; font-size: 11px; font-weight: 600; color: #001A64; cursor: pointer; }
+
+/* ── SIDEBAR ── */
+.sidebar {
+  border-right: 1px solid var(--bd); background: #FFFFFF;
+  padding: 12px 8px; overflow-y: auto; display: flex; flex-direction: column; gap: 1px;
+}
+.ns { font-size: 10px; letter-spacing: .08em; text-transform: uppercase; color: var(--txt3); padding: 10px 8px 5px; font-family: var(--mono); }
+.ni {
+  display: flex; align-items: center; gap: 8px; padding: 7px 9px;
+  border-radius: var(--r); cursor: pointer; color: var(--txt2); transition: all .12s;
+  font-size: 13px; user-select: none;
+}
+.ni:hover { background: #D7DDF9; color: #001A64; }
+.ni.on { background: #3C57E1; color: #FFFFFF; font-weight: 500; }
+.ni-ic { width: 16px; height: 16px; flex-shrink: 0; display: flex; align-items: center; justify-content: center; }
+.ni-ic svg { width: 14px; height: 14px; stroke: currentColor; fill: none; stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round; }
+.nbadge { margin-left: auto; font-size: 10px; font-weight: 600; padding: 1px 6px; border-radius: 10px; font-family: var(--mono); }
+.nb-blue { background: #F9FF77; color: #001A64; font-weight: 600; }
+.nb-green { background: #D7DDF9; color: #001A64; font-weight: 600; }
+.nb-amber { background: #F9FF77; color: #001A64; font-weight: 600; }
+.nb-gray { background: var(--bg2); color: var(--txt3); }
+.sidebar-footer { margin-top: auto; padding: 12px 8px 4px; border-top: 1px solid rgba(60,87,225,.15); }
+.sf-user { display: flex; align-items: center; gap: 8px; font-size: 12px; color: var(--txt2); }
+
+/* ── MAIN ── */
+.main { overflow-y: auto; background: #EEF0FA; }
+.view { display: none; height: 100%; }
+.view.on { display: flex; flex-direction: column; }
+.vhead { padding: 20px 24px 0; flex-shrink: 0; }
+.vt { font-size: 18px; font-weight: 600; letter-spacing: -.02em; margin-bottom: 3px; }
+.vs { font-size: 13px; color: var(--txt2); margin-bottom: 18px; }
+.vbody { padding: 0 24px 24px; flex: 1; overflow-y: auto; }
+
+/* ── STATS ROW ── */
+.srow { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; margin-bottom: 18px; }
+.sc { background: #FFFFFF; border: 1px solid rgba(60,87,225,.15); border-radius: var(--r2); padding: 14px 16px; }
+.sv { font-size: 24px; font-weight: 600; letter-spacing: -.02em; margin-bottom: 3px; }
+.sl { font-size: 11px; color: var(--txt3); font-family: var(--mono); }
+.sc-delta { font-size: 11px; font-family: var(--mono); margin-top: 4px; }
+
+/* ── CARDS ── */
+.card { background: #FFFFFF; border: 1px solid rgba(60,87,225,.15); border-radius: var(--r2); padding: 16px 18px; margin-bottom: 12px; }
+.card-title { font-size: 13px; font-weight: 500; margin-bottom: 14px; display: flex; align-items: center; justify-content: space-between; gap: 10px; }
+.card-title-actions { display: flex; gap: 6px; }
+
+/* ── BADGES ── */
+.badge { font-size: 10px; font-weight: 500; padding: 2px 8px; border-radius: 10px; font-family: var(--mono); white-space: nowrap; }
+.b-blue { background: #D7DDF9; color: #001A64; border: 1px solid #3C57E1; }
+.b-green { background: #DFFAEB; color: #0A5C26; border: 1px solid #6FCF97; }
+.b-amber { background: #FDFFD0; color: #6B6200; border: 1px solid #D4D800; }
+.b-red { background: #FDECEA; color: #922B21; border: 1px solid #E8A09A; }
+.b-pu { background: #D7DDF9; color: #001A64; border: 1px solid #3C57E1; }
+.b-gray { background: #EEF0FA; color: rgba(0,26,100,.5); border: 1px solid rgba(60,87,225,.2); }
+
+/* ── KANBAN ── */
+.kanban { display: grid; grid-template-columns: repeat(5, 1fr); gap: 10px; align-items: start; }
+.kcol { background: #E8EBF8; border-radius: var(--r2); padding: 10px; border: 1px solid rgba(60,87,225,.15); }
+.kch { display: flex; align-items: center; justify-content: space-between; margin-bottom: 10px; padding: 0 2px; }
+.kch-label { font-size: 11px; font-weight: 500; color: #001A64; font-family: var(--mono); text-transform: uppercase; letter-spacing: .06em; }
+.kch-cnt { font-size: 10px; background: #FFFFFF; border: 1px solid rgba(60,87,225,.2); padding: 1px 6px; border-radius: 8px; color: #3C57E1; font-family: var(--mono); }
+.kcard { background: #FFFFFF; border: 1px solid rgba(60,87,225,.15); border-radius: var(--r); padding: 11px 12px; margin-bottom: 6px; cursor: pointer; transition: all .12s; }
+.kcard:last-child { margin-bottom: 0; }
+.kcard:hover { border-color: #3C57E1; box-shadow: 0 1px 4px rgba(60,87,225,.15); }
+.kcard:hover .kct { color: var(--blue); }
+.kct { font-size: 12px; font-weight: 500; line-height: 1.45; margin-bottom: 6px; color: var(--txt); transition: color .12s; }
+.kcm { font-size: 10px; color: var(--txt3); margin-bottom: 6px; font-family: var(--mono); }
+.kctags { display: flex; gap: 4px; flex-wrap: wrap; }
+.kprog { height: 3px; background: #D7DDF9; border-radius: 2px; margin-top: 8px; overflow: hidden; }
+.kprog-fill { height: 3px; border-radius: 2px; transition: width .3s; }
+
+/* ── IDEA ROWS ── */
+.idea-row { display: flex; align-items: center; gap: 12px; padding: 10px 0; border-bottom: 1px solid rgba(60,87,225,.12); }
+.idea-row:last-child { border-bottom: none; }
+.ir-score { width: 36px; height: 36px; border-radius: var(--r); display: flex; align-items: center; justify-content: center; font-size: 12px; font-weight: 600; flex-shrink: 0; font-family: var(--mono); }
+.ir-body { flex: 1; min-width: 0; }
+.ir-title { font-size: 13px; font-weight: 500; color: var(--txt); margin-bottom: 3px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.ir-meta { font-size: 11px; color: var(--txt3); font-family: var(--mono); }
+.ir-source { display: inline-flex; align-items: center; gap: 4px; font-size: 10px; padding: 2px 7px; border-radius: 6px; background: var(--bg2); color: var(--txt3); border: 1px solid var(--bd); margin-right: 4px; }
+.ir-actions { display: flex; gap: 5px; flex-shrink: 0; }
+.ia-btn { font-size: 11px; padding: 5px 10px; border-radius: var(--r); border: 1px solid var(--bd2); background: transparent; cursor: pointer; color: var(--txt3); font-family: var(--sans); transition: all .12s; }
+.ia-btn:hover { background: var(--bg2); color: var(--txt); }
+.ia-btn.go { background: #3C57E1; color: #FFFFFF; border-color: #3C57E1; font-weight: 500; }
+.ia-btn.go:hover { background: #001A64; border-color: #001A64; }
+
+/* ── TEXT REVIEW ── */
+.text-layout { display: grid; grid-template-columns: 1fr 290px; gap: 14px; height: calc(100vh - 160px); }
+.article-pane { background: #FFFFFF; border: 1px solid rgba(60,87,225,.15); border-radius: var(--r2); overflow-y: auto; padding: 28px 32px; }
+.art-eyebrow { font-family: var(--mono); font-size: 10px; letter-spacing: .1em; text-transform: uppercase; color: var(--txt3); margin-bottom: 10px; display: flex; gap: 10px; align-items: center; }
+.art-title { font-size: 20px; font-weight: 600; letter-spacing: -.02em; line-height: 1.3; margin-bottom: 12px; }
+.art-meta { display: flex; gap: 10px; align-items: center; flex-wrap: wrap; margin-bottom: 20px; padding-bottom: 16px; border-bottom: 1px solid var(--bd); }
+.art-p { font-size: 14px; line-height: 1.8; color: var(--txt); margin-bottom: 14px; }
+.art-h2 { font-size: 16px; font-weight: 600; margin: 20px 0 8px; letter-spacing: -.01em; }
+.hl { background: #FDFFD0; border-bottom: 2px solid #D4D800; cursor: pointer; border-radius: 1px; padding: 0 1px; transition: background .12s; }
+.hl:hover { background: #F9FF77; }
+.hl-blue { background: #D7DDF9; border-bottom: 2px solid #3C57E1; }
+.review-pane { display: flex; flex-direction: column; gap: 10px; overflow-y: auto; }
+.rcard { background: #FFFFFF; border: 1px solid rgba(60,87,225,.15); border-radius: var(--r2); padding: 14px 16px; flex-shrink: 0; }
+.rcard-title { font-size: 12px; font-weight: 500; margin-bottom: 12px; color: var(--txt); }
+.approve-btn { width: 100%; padding: 9px; border-radius: var(--r); border: 1px solid #F9FF77; background: #F9FF77; color: #001A64; font-size: 12px; font-weight: 500; cursor: pointer; margin-bottom: 6px; font-family: var(--sans); transition: all .12s; }
+.approve-btn:hover { background: #DCFCE7; }
+.reject-btn { width: 100%; padding: 9px; border-radius: var(--r); border: 1px solid var(--bd2); background: transparent; color: var(--txt2); font-size: 12px; cursor: pointer; font-family: var(--sans); transition: all .12s; }
+.reject-btn:hover { background: #FDECEA; color: #922B21; border-color: #E8A09A; }
+.score-ring { display: flex; align-items: center; gap: 12px; margin-bottom: 12px; }
+.ring { width: 52px; height: 52px; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; position: relative; }
+.ring-val { font-size: 15px; font-weight: 600; font-family: var(--mono); }
+.ring-label { font-size: 11px; color: var(--txt2); line-height: 1.4; }
+.ring-label strong { display: block; font-size: 12px; color: var(--txt); }
+.check-row { display: flex; align-items: center; gap: 8px; font-size: 12px; color: var(--txt2); padding: 3px 0; }
+.check-icon { width: 14px; height: 14px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 9px; flex-shrink: 0; }
+.ci-ok { background: var(--green-bg); color: var(--green-tx); }
+.ci-warn { background: var(--amber-bg); color: var(--amber-tx); }
+.comment-thread { display: flex; flex-direction: column; gap: 8px; }
+.cm-item { display: flex; gap: 8px; }
+.cm-av { width: 24px; height: 24px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 9px; font-weight: 600; flex-shrink: 0; margin-top: 1px; }
+.cm-body { flex: 1; background: #EEF0FA; border-radius: 0 var(--r) var(--r) var(--r); padding: 9px 11px; }
+.cm-author { font-size: 11px; font-weight: 500; margin-bottom: 2px; }
+.cm-text { font-size: 12px; color: var(--txt2); line-height: 1.5; }
+.cm-time { font-size: 10px; color: var(--txt3); margin-top: 3px; font-family: var(--mono); }
+.note-input { width: 100%; background: #EEF0FA; border: 1px solid rgba(60,87,225,.2); border-radius: var(--r); padding: 9px 11px; font-size: 12px; color: var(--txt); resize: none; outline: none; font-family: var(--sans); line-height: 1.5; transition: border-color .15s; }
+.note-input:focus { border-color: #3C57E1; outline: none; }
+
+/* ── IMAGE REVIEW ── */
+.img-header { display: flex; align-items: center; gap: 12px; margin-bottom: 16px; padding: 14px 16px; background: var(--bg1); border: 1px solid var(--bd); border-radius: var(--r2); }
+.img-article-title { font-size: 14px; font-weight: 500; flex: 1; }
+.img-grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-bottom: 16px; }
+.imgc { border: 1.5px solid rgba(60,87,225,.2); border-radius: var(--r2); overflow: hidden; cursor: pointer; transition: all .15s; background: #FFFFFF; }
+.imgc:hover { border-color: var(--bd2); }
+.imgc.sel { border-color: #3C57E1; border-width: 2px; }
+.imgc-thumb { height: 148px; display: flex; align-items: center; justify-content: center; position: relative; background: var(--bg2); overflow: hidden; }
+.imgc-label { position: absolute; top: 8px; left: 8px; font-family: var(--mono); font-size: 9px; padding: 2px 7px; border-radius: 6px; background: rgba(255,255,255,.9); color: var(--txt2); border: 1px solid var(--bd); }
+.imgc-sel-badge { position: absolute; top: 8px; right: 8px; font-family: var(--mono); font-size: 9px; padding: 2px 7px; border-radius: 6px; background: var(--blue); color: #fff; display: none; }
+.imgc.sel .imgc-sel-badge { display: block; }
+.imgc-info { padding: 12px 14px; }
+.imgc-name { font-size: 13px; font-weight: 500; margin-bottom: 3px; }
+.imgc-desc { font-size: 11px; color: var(--txt3); margin-bottom: 10px; font-family: var(--mono); }
+.imgc-btn { width: 100%; padding: 7px; border-radius: var(--r); border: 1px solid var(--bd2); background: transparent; font-size: 12px; font-weight: 500; cursor: pointer; font-family: var(--sans); transition: all .12s; color: var(--txt2); }
+.imgc.sel .imgc-btn { background: #3C57E1; color: #FFFFFF; border-color: #3C57E1; }
+.imgc-btn:hover:not(.imgc.sel .imgc-btn) { background: var(--bg2); }
+.sq-grid { display: grid; grid-template-columns: repeat(3, 80px); gap: 10px; }
+.sq { width: 80px; height: 80px; border-radius: var(--r); background: var(--bg2); border: 1.5px solid var(--bd); display: flex; align-items: center; justify-content: center; font-size: 10px; font-family: var(--mono); color: var(--txt3); cursor: pointer; transition: all .12s; }
+.sq:hover { border-color: var(--bd2); }
+.sq.sel { border-color: var(--blue); border-width: 2px; }
+
+/* ── PERFORMANCE ── */
+.perf-table { width: 100%; border-collapse: collapse; }
+.perf-table th { text-align: left; font-size: 10px; font-family: var(--mono); letter-spacing: .07em; text-transform: uppercase; color: var(--txt3); padding: 8px 12px; border-bottom: 1px solid var(--bd); font-weight: 500; }
+.perf-table td { padding: 10px 12px; border-bottom: 1px solid var(--bd); font-size: 12px; vertical-align: middle; }
+.perf-table tr:last-child td { border-bottom: none; }
+.perf-table tr:hover td { background: #D7DDF9; }
+.rank-chip { width: 28px; height: 28px; border-radius: var(--r); display: flex; align-items: center; justify-content: center; font-size: 11px; font-weight: 600; font-family: var(--mono); }
+.bar-wrap { height: 6px; background: #D7DDF9; border-radius: 3px; overflow: hidden; margin-top: 3px; }
+.bar-fill { height: 6px; border-radius: 3px; background: #3C57E1; }
+
+/* ── SCROLLBAR ── */
+::-webkit-scrollbar { width: 4px; height: 4px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: var(--bd2); border-radius: 2px; }
+
+/* ── TABS ── */
+.tabs { display: flex; gap: 2px; background: var(--bg2); border-radius: var(--r); padding: 3px; margin-bottom: 16px; width: fit-content; }
+.tab { font-size: 12px; padding: 5px 12px; border-radius: 6px; cursor: pointer; color: var(--txt3); transition: all .12s; user-select: none; }
+.tab.on { background: #FFFFFF; color: #001A64; font-weight: 600; box-shadow: 0 1px 2px rgba(0,0,0,.06); }
+</style>
+</head>
+<body>
+<div class="shell">
+
+<!-- TOPBAR -->
+<div class="topbar">
+  <div class="tlogo">beyonity<em>.</em>ops</div>
+  <div class="tsep"></div>
+  <div class="ttag">content operations</div>
+  <div class="t-right">
+    <button class="tbtn">KW 12 · 18. März 2026</button>
+    <button class="tbtn pri" onclick="alert('Neues Thema wird aus dem Ideen-Pool erstellt...')">+ Neues Thema</button>
+    <div class="av">PF</div>
+  </div>
+</div>
+
+<!-- SIDEBAR -->
+<div class="sidebar">
+  <div class="ns">Produktion</div>
+  <div class="ni on" onclick="show('v-pipe')">
+    <div class="ni-ic"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="18" rx="1"/><rect x="14" y="3" width="7" height="11" rx="1"/></svg></div>
+    Pipeline
+    <span class="nbadge nb-blue">8</span>
+  </div>
+  <div class="ni" onclick="show('v-ideen')">
+    <div class="ni-ic"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M4.22 4.22l2.12 2.12M17.66 17.66l2.12 2.12M2 12h3M19 12h3M4.22 19.78l2.12-2.12M17.66 6.34l2.12-2.12"/></svg></div>
+    Ideen-Pool
+    <span class="nbadge nb-amber">14</span>
+  </div>
+
+  <div class="ns">Review</div>
+  <div class="ni" onclick="show('v-text')">
+    <div class="ni-ic"><svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg></div>
+    Texte freigeben
+    <span class="nbadge nb-amber">3</span>
+  </div>
+  <div class="ni" onclick="show('v-bilder')">
+    <div class="ni-ic"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg></div>
+    Bilder auswählen
+    <span class="nbadge nb-blue">2</span>
+  </div>
+  <div class="ni" onclick="show('v-linkedin')">
+    <div class="ni-ic"><svg viewBox="0 0 24 24"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></div>
+    LinkedIn-Posts
+    <span class="nbadge nb-blue">5</span>
+  </div>
+
+  <div class="ns">Analyse</div>
+  <div class="ni" onclick="show('v-perf')">
+    <div class="ni-ic"><svg viewBox="0 0 24 24"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg></div>
+    Performance
+  </div>
+
+  <div class="sidebar-footer">
+    <div class="sf-user">
+      <div class="av">PF</div>
+      <div>
+        <div style="font-weight:500;color:#001A64;font-size:12px">Paulo F.</div>
+        <div style="font-size:10px;color:rgba(0,26,100,.45);font-family:var(--mono)">Admin</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- MAIN -->
+<div class="main">
+
+  <!-- ══ PIPELINE ══ -->
+  <div class="view on" id="v-pipe">
+    <div class="vhead">
+      <div class="vt">Content-Pipeline</div>
+      <div class="vs">Alle Artikel im laufenden Produktionszyklus — KW 12</div>
+    </div>
+    <div class="vbody">
+      <div class="srow">
+        <div class="sc"><div class="sv" style="color:#3C57E1">8</div><div class="sl">In Produktion</div><div class="sc-delta" style="color:#0A5C26">+2 diese Woche</div></div>
+        <div class="sc"><div class="sv" style="color:#6B6200">3</div><div class="sl">Warten auf Review</div><div class="sc-delta" style="color:#6B6200">seit Ø 1.2 Tagen</div></div>
+        <div class="sc"><div class="sv" style="color:#0A6E2E">5</div><div class="sl">Publiziert (März)</div><div class="sc-delta" style="color:#0A5C26">Ziel: 4 ✓</div></div>
+        <div class="sc"><div class="sv">16</div><div class="sl">LinkedIn-Posts geplant</div><div class="sc-delta" style="color:rgba(0,26,100,.45)">4 heute live</div></div>
+      </div>
+      <div class="kanban">
+        <!-- Briefing -->
+        <div class="kcol">
+          <div class="kch"><span class="kch-label">Briefing</span><span class="kch-cnt">2</span></div>
+          <div class="kcard" onclick="show('v-text')">
+            <div class="kct">PropTech Trends 2026 — Was sich grundlegend ändert</div>
+            <div class="kcm">SEO · DE · Gemini Briefing</div>
+            <div class="kctags"><span class="badge b-blue">Blog SEO</span><span class="badge b-gray">ToFu</span></div>
+          </div>
+          <div class="kcard">
+            <div class="kct">KI im Immobilien-Vertrieb: 3 Praxisbeispiele aus DACH</div>
+            <div class="kcm">Branding · DE/EN · In Bearbeitung</div>
+            <div class="kctags"><span class="badge b-pu">Branding</span><span class="badge b-gray">MoFu</span></div>
+          </div>
+        </div>
+        <!-- Entwurf -->
+        <div class="kcol">
+          <div class="kch"><span class="kch-label">Entwurf</span><span class="kch-cnt">2</span></div>
+          <div class="kcard">
+            <div class="kct">Digitale Vermarktung: ROI-Analyse für Immobilienmakler</div>
+            <div class="kcm">Claude Sonnet · läuft · 68%</div>
+            <div class="kctags"><span class="badge b-blue">SEO</span></div>
+            <div class="kprog"><div class="kprog-fill" style="width:68%;background:var(--blue)"></div></div>
+          </div>
+          <div class="kcard">
+            <div class="kct">CRM-Systeme im Vergleich — Immobilien 2026</div>
+            <div class="kcm">Claude Sonnet · fertig · 100%</div>
+            <div class="kctags"><span class="badge b-green">Fertig</span></div>
+            <div class="kprog"><div class="kprog-fill" style="width:100%;background:var(--green)"></div></div>
+          </div>
+        </div>
+        <!-- Lektorat -->
+        <div class="kcol">
+          <div class="kch"><span class="kch-label">Lektorat</span><span class="kch-cnt">2</span></div>
+          <div class="kcard" onclick="show('v-text')">
+            <div class="kct">Nachhaltigkeit im PropTech — Die Beyonity Perspektive</div>
+            <div class="kcm">Score: 78 · Loop 1 von 2</div>
+            <div class="kctags"><span class="badge b-amber">Überarbeitung</span></div>
+            <div class="kprog"><div class="kprog-fill" style="width:78%;background:var(--amber)"></div></div>
+          </div>
+          <div class="kcard" onclick="show('v-bilder')">
+            <div class="kct">5 Fehler bei der Immobilien-Digitalisierung</div>
+            <div class="kcm">Score: 88 · Bild ausstehend</div>
+            <div class="kctags"><span class="badge b-green">Score OK</span><span class="badge b-amber">Bild fehlt</span></div>
+          </div>
+        </div>
+        <!-- Freigabe -->
+        <div class="kcol">
+          <div class="kch"><span class="kch-label">Freigabe</span><span class="kch-cnt">2</span></div>
+          <div class="kcard" onclick="show('v-text')">
+            <div class="kct">Beyonity Case Study: +40% Effizienz bei Kunde X</div>
+            <div class="kcm">Wartet auf · Paulo F.</div>
+            <div class="kctags"><span class="badge b-amber">Freigabe</span></div>
+          </div>
+          <div class="kcard">
+            <div class="kct">Newsletter März — Alle 4 Sektionen komplett</div>
+            <div class="kcm">Hubspot bereit · Versand: 25. März</div>
+            <div class="kctags"><span class="badge b-pu">Newsletter</span><span class="badge b-green">Bereit</span></div>
+          </div>
+        </div>
+        <!-- Publiziert -->
+        <div class="kcol">
+          <div class="kch"><span class="kch-label">Live</span><span class="kch-cnt">2</span></div>
+          <div class="kcard">
+            <div class="kct">PropTech Revolution: Was Makler jetzt wissen müssen</div>
+            <div class="kcm" style="color:#0A5C26">Rang #2 · 480 Klicks · Mo.</div>
+            <div class="kctags"><span class="badge b-green">Live</span><span class="badge b-gray">↑ +3</span></div>
+          </div>
+          <div class="kcard">
+            <div class="kct">Immobilien-KI 2026: 6 Tools im Überblick</div>
+            <div class="kcm" style="color:#0A5C26">Rang #7 · 312 Klicks · Di.</div>
+            <div class="kctags"><span class="badge b-green">Live</span><span class="badge b-blue">Neu</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══ IDEEN-POOL ══ -->
+  <div class="view" id="v-ideen">
+    <div class="vhead">
+      <div class="vt">Ideen-Pool</div>
+      <div class="vs">14 neue Themen aus YT-Analyse, Perplexity und SEO-Agent — automatisch priorisiert</div>
+    </div>
+    <div class="vbody">
+      <div class="srow" style="grid-template-columns:repeat(3,1fr)">
+        <div class="sc"><div class="sv" style="color:#3C57E1">6</div><div class="sl">Aus YT-Analyse</div><div class="sc-delta" style="color:rgba(0,26,100,.45)">Gemini · heute 06:12</div></div>
+        <div class="sc"><div class="sv" style="color:var(--pu)">5</div><div class="sl">Aus Perplexity</div><div class="sc-delta" style="color:rgba(0,26,100,.45)">Blog-Crawl · heute 06:31</div></div>
+        <div class="sc"><div class="sv" style="color:#0A6E2E">3</div><div class="sl">Aus SEO-Gap-Analyse</div><div class="sc-delta" style="color:rgba(0,26,100,.45)">Ahrefs · heute 06:45</div></div>
+      </div>
+      <div class="tabs">
+        <div class="tab on">Alle (14)</div>
+        <div class="tab">Score &gt; 80</div>
+        <div class="tab">YouTube</div>
+        <div class="tab">Perplexity</div>
+        <div class="tab">SEO-Gap</div>
+      </div>
+      <div class="card" style="padding:0 18px">
+        <div style="padding:14px 0 0;font-size:11px;font-family:var(--mono);letter-spacing:.07em;text-transform:uppercase;color:rgba(0,26,100,.45);display:grid;grid-template-columns:36px 1fr 120px 100px 80px;gap:12px;padding-bottom:8px;border-bottom:1px solid var(--bd)">
+          <span>Score</span><span>Thema</span><span>Quelle</span><span>Keywords</span><span></span>
+        </div>
+        <div class="idea-row" style="display:grid;grid-template-columns:36px 1fr 120px 100px 80px;gap:12px;padding:11px 0">
+          <div class="ir-score" style="background:#DFFAEB;color:#0A5C26">94</div>
+          <div><div class="ir-title" style="white-space:normal;margin-bottom:3px">Warum 73% der Makler KI falsch einsetzen — und was wirklich funktioniert</div><div class="ir-meta">Beyonity-Take vorhanden · KD 28 · DE</div></div>
+          <div style="display:flex;align-items:center"><span class="ir-source">YT-Kommentar</span></div>
+          <div style="display:flex;align-items:center;font-size:11px;color:#3C57E1;font-family:var(--mono)">2.4k/Mo.</div>
+          <div style="display:flex;align-items:center;gap:4px"><button class="ia-btn">Später</button><button class="ia-btn go" onclick="alert('Briefing wird erstellt...')">Briefing →</button></div>
+        </div>
+        <div class="idea-row" style="display:grid;grid-template-columns:36px 1fr 120px 100px 80px;gap:12px;padding:11px 0">
+          <div class="ir-score" style="background:#DFFAEB;color:#0A5C26">89</div>
+          <div><div class="ir-title" style="white-space:normal;margin-bottom:3px">PropTech vs. klassische Immobiliensoftware: Der ehrliche Vergleich 2026</div><div class="ir-meta">Wettbewerber-Gap · KD 34 · DE/EN</div></div>
+          <div style="display:flex;align-items:center"><span class="ir-source" style="background:#D7DDF9;border-color:var(--pu-bd);color:#001A64">Perplexity</span></div>
+          <div style="display:flex;align-items:center;font-size:11px;color:#3C57E1;font-family:var(--mono)">1.8k/Mo.</div>
+          <div style="display:flex;align-items:center;gap:4px"><button class="ia-btn">Später</button><button class="ia-btn go" onclick="alert('Briefing wird erstellt...')">Briefing →</button></div>
+        </div>
+        <div class="idea-row" style="display:grid;grid-template-columns:36px 1fr 120px 100px 80px;gap:12px;padding:11px 0">
+          <div class="ir-score" style="background:#DFFAEB;color:#0A5C26">84</div>
+          <div><div class="ir-title" style="white-space:normal;margin-bottom:3px">Immobilien-CRM 2026: Was Entscheider wirklich brauchen</div><div class="ir-meta">YouTube PropTech Summit · KD 31 · DE</div></div>
+          <div style="display:flex;align-items:center"><span class="ir-source">YT-Transkript</span></div>
+          <div style="display:flex;align-items:center;font-size:11px;color:#3C57E1;font-family:var(--mono)">3.1k/Mo.</div>
+          <div style="display:flex;align-items:center;gap:4px"><button class="ia-btn">Später</button><button class="ia-btn go">Briefing →</button></div>
+        </div>
+        <div class="idea-row" style="display:grid;grid-template-columns:36px 1fr 120px 100px 80px;gap:12px;padding:11px 0">
+          <div class="ir-score" style="background:#FDFFD0;color:#6B6200">76</div>
+          <div><div class="ir-title" style="white-space:normal;margin-bottom:3px">Digitale Besichtigung: Wie VR den Immobilienmarkt verändert</div><div class="ir-meta">Kommentar-Frage: 47 Upvotes · KD 44</div></div>
+          <div style="display:flex;align-items:center"><span class="ir-source">YT-Kommentar</span></div>
+          <div style="display:flex;align-items:center;font-size:11px;color:#3C57E1;font-family:var(--mono)">1.2k/Mo.</div>
+          <div style="display:flex;align-items:center;gap:4px"><button class="ia-btn">Später</button><button class="ia-btn go">Briefing →</button></div>
+        </div>
+        <div class="idea-row" style="display:grid;grid-template-columns:36px 1fr 120px 100px 80px;gap:12px;padding:11px 0">
+          <div class="ir-score" style="background:#FDFFD0;color:#6B6200">71</div>
+          <div><div class="ir-title" style="white-space:normal;margin-bottom:3px">ESG-Reporting für Immobilienunternehmen: Pflicht oder strategische Chance?</div><div class="ir-meta">Blog-Analyse INMAN · KD 38 · DE</div></div>
+          <div style="display:flex;align-items:center"><span class="ir-source" style="background:#D7DDF9;border-color:var(--pu-bd);color:#001A64">Perplexity</span></div>
+          <div style="display:flex;align-items:center;font-size:11px;color:#3C57E1;font-family:var(--mono)">890/Mo.</div>
+          <div style="display:flex;align-items:center;gap:4px"><button class="ia-btn">Ablehnen</button><button class="ia-btn go">Briefing →</button></div>
+        </div>
+        <div class="idea-row" style="display:grid;grid-template-columns:36px 1fr 120px 100px 80px;gap:12px;padding:11px 0">
+          <div class="ir-score" style="background:#EEF0FA;color:rgba(0,26,100,.4)">58</div>
+          <div><div class="ir-title" style="white-space:normal;margin-bottom:3px">Co-Working Spaces in ehemaligen Bürogebäuden — ein neuer Trend?</div><div class="ir-meta">Niedrige Beyonity-Relevanz · KD 52</div></div>
+          <div style="display:flex;align-items:center"><span class="ir-source" style="background:var(--green-bg);border-color:#6FCF97;color:#0A5C26">SEO-Gap</span></div>
+          <div style="display:flex;align-items:center;font-size:11px;color:#3C57E1;font-family:var(--mono)">620/Mo.</div>
+          <div style="display:flex;align-items:center;gap:4px"><button class="ia-btn">Ablehnen</button><button class="ia-btn go">Briefing →</button></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══ TEXT REVIEW ══ -->
+  <div class="view" id="v-text">
+    <div class="vhead">
+      <div style="display:flex;align-items:center;gap:10px;margin-bottom:14px">
+        <button class="tbtn" onclick="show('v-pipe')">← Pipeline</button>
+        <span class="badge b-amber">Freigabe ausstehend</span>
+        <span class="badge b-blue">Blog SEO · DE</span>
+        <span style="margin-left:auto;font-size:12px;color:rgba(0,26,100,.45);font-family:var(--mono)">1 von 3 in Review</span>
+        <button class="tbtn">Nächster →</button>
+      </div>
+    </div>
+    <div class="vbody" style="padding-top:0">
+      <div class="text-layout">
+        <div class="article-pane">
+          <div class="art-eyebrow">
+            <span>Claude Sonnet 4</span><span>·</span><span>1.847 Wörter</span><span>·</span><span style="color:#0A5C26">Score 86/100</span>
+          </div>
+          <div class="art-title">Beyonity Case Study: Wie Kunde X mit KI-gestütztem CRM die Vertriebseffizienz um 40% steigerte</div>
+          <div class="art-meta">
+            <span class="badge b-blue">SEO · KD 31</span>
+            <span class="badge b-pu">MoFu · Consideration</span>
+            <span class="badge b-gray">Target: Immobilien-Entscheider</span>
+          </div>
+          <div class="art-p">In einer Branche, die traditionell auf persönliche Beziehungen und manuelle Prozesse setzt, zeigt das Beispiel von <span class="hl" onclick="alert('Kommentar: Namen anonymisieren oder durch Genehmigung ersetzen')">Kunde X</span> eindrucksvoll, was möglich ist, wenn digitale Tools konsequent und strategisch eingesetzt werden. Innerhalb von nur sechs Monaten nach Einführung der Beyonity-Plattform konnte das Unternehmen seine Vertriebseffizienz um bemerkenswerte 40% steigern.</div>
+          <div class="art-p">Der Schlüssel lag nicht allein in der Technologie — sondern in der <span class="hl hl-blue" onclick="alert('SEO-Agent: Keyword «CRM Immobilien» hier einbauen für bessere Density')">richtigen Implementierungsstrategie</span>. Viele Unternehmen scheitern an der Einführung digitaler Tools, weil sie den menschlichen Faktor vernachlässigen. Beyonity verfolgt hier einen anderen Ansatz: Die Plattform passt sich dem bestehenden Workflow an, nicht umgekehrt.</div>
+          <div class="art-h2">Was hat Kunde X konkret verändert?</div>
+          <div class="art-p">Konkret bedeutete das für Kunde X: Automatisierte Lead-Qualifizierung, die das Vertriebsteam von 12 Stunden wöchentlicher Recherche befreit. KI-gestützte Gesprächsvorbereitung, die die Abschlussrate um 23% erhöhte. Und ein integriertes Reporting-Dashboard, das Entscheidungen in Echtzeit ermöglicht — statt einmal monatlich beim Management-Meeting.</div>
+          <div class="art-p">«Wir haben nicht einfach eine Software eingeführt», erklärt der Vertriebsleiter. «Wir haben unsere Art zu arbeiten neu gedacht. Beyonity war der Katalysator dafür.» Diese Haltung ist <span class="hl" onclick="alert('Lektorat-Agent: Zitat bitte freigeben lassen — direkte Rede braucht Genehmigung')">entscheidend</span> für den Erfolg.</div>
+          <div class="art-h2">Der Beyonity-Ansatz im Detail</div>
+          <div class="art-p">Was unterscheidet Beyonity von klassischen CRM-Systemen? Im Kern sind es drei Faktoren: erstens die nahtlose Integration in bestehende Immobilien-Workflows ohne aufwendige Anpassungen, zweitens KI-gestützte Analysen die nicht nur Daten zeigen, sondern konkrete Handlungsempfehlungen liefern, und drittens ein Onboarding-Prozess der Teams in durchschnittlich 14 Tagen produktiv macht.</div>
+        </div>
+        <div class="review-pane">
+          <div class="rcard">
+            <div class="rcard-title">Freigabe-Entscheidung</div>
+            <button class="approve-btn" onclick="alert('✓ Artikel freigegeben — wird zur Publish-Queue hinzugefügt.')">✓ Freigeben &amp; publizieren</button>
+            <button class="reject-btn" onclick="alert('↩ Artikel zurückgesendet — Überarbeitung angefordert.')">↩ Überarbeitung anfordern</button>
+          </div>
+          <div class="rcard">
+            <div class="rcard-title">Qualitäts-Check</div>
+            <div class="score-ring">
+              <div class="ring" style="background:var(--green-bg);border:2px solid var(--green-bd)">
+                <div class="ring-val" style="color:#0A5C26">86</div>
+              </div>
+              <div class="ring-label"><strong>SEO-Score</strong>Lektorat abgeschlossen · 1 Loop</div>
+            </div>
+            <div class="check-row"><div class="check-icon ci-ok">✓</div>Länge: 1.847 Wörter</div>
+            <div class="check-row"><div class="check-icon ci-ok">✓</div>H2/H3-Struktur vollständig</div>
+            <div class="check-row"><div class="check-icon ci-ok">✓</div>Keyword-Density 1.8%</div>
+            <div class="check-row"><div class="check-icon ci-ok">✓</div>Beyonity-Take integriert</div>
+            <div class="check-row"><div class="check-icon ci-warn">!</div>Zitat-Freigabe ausstehend</div>
+            <div class="check-row"><div class="check-icon ci-warn">!</div>Kundenname anonymisieren?</div>
+          </div>
+          <div class="rcard">
+            <div class="rcard-title">Kommentare (3)</div>
+            <div class="comment-thread">
+              <div class="cm-item">
+                <div class="cm-av" style="background:#D7DDF9;color:#001A64">LA</div>
+                <div class="cm-body">
+                  <div class="cm-author">Lektorat-Agent</div>
+                  <div class="cm-text">Kundennamen sollten geprüft werden — anonymisieren oder Genehmigung einholen.</div>
+                  <div class="cm-time">heute 07:14</div>
+                </div>
+              </div>
+              <div class="cm-item">
+                <div class="cm-av" style="background:#DFFAEB;color:#0A5C26">SA</div>
+                <div class="cm-body">
+                  <div class="cm-author">SEO-Agent</div>
+                  <div class="cm-text">«CRM Immobilien» als Keyword in H2 ergänzen für bessere Density.</div>
+                  <div class="cm-time">heute 07:18</div>
+                </div>
+              </div>
+              <div class="cm-item">
+                <div class="cm-av" style="background:#D7DDF9;color:#001A64">PF</div>
+                <div class="cm-body">
+                  <div class="cm-author">Paulo F.</div>
+                  <div class="cm-text">Zitat bitte durch Testimonial-Freigabe von Kunde X ersetzen.</div>
+                  <div class="cm-time">heute 09:42</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="rcard">
+            <div class="rcard-title">Notiz hinzufügen</div>
+            <textarea class="note-input" rows="3" placeholder="Kommentar oder Korrektur..."></textarea>
+            <button class="tbtn" style="margin-top:8px;width:100%">Senden</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══ BILDER ══ -->
+  <div class="view" id="v-bilder">
+    <div class="vhead">
+      <div class="vt">Bild-Varianten auswählen</div>
+      <div class="vs">5 Fehler bei der Immobilien-Digitalisierung — fal.ai FLUX 1.1 Pro generiert</div>
+    </div>
+    <div class="vbody">
+      <div class="img-header">
+        <div>
+          <div class="img-article-title">5 Fehler bei der Immobilien-Digitalisierung</div>
+          <div style="font-size:11px;color:rgba(0,26,100,.45);font-family:var(--mono);margin-top:2px">Blog Hero · 1792×1024px · Corporate Stil · 3 Varianten</div>
+        </div>
+        <span class="badge b-amber">Auswahl ausstehend</span>
+      </div>
+      <div class="img-grid-3" id="imgGrid">
+        <div class="imgc sel" id="ic0" onclick="selImg(0)">
+          <div class="imgc-thumb" style="background:linear-gradient(135deg,#EFF6FF,#DBEAFE)">
+            <div style="width:72%;height:68%;background:white;border-radius:8px;display:flex;flex-direction:column;gap:8px;padding:14px;border:1px solid #BFDBFE">
+              <div style="height:8px;width:50%;background:#2563EB;border-radius:4px;opacity:.7"></div>
+              <div style="flex:1;background:#EFF6FF;border-radius:4px"></div>
+              <div style="height:6px;width:70%;background:#93C5FD;border-radius:3px;opacity:.5"></div>
+            </div>
+            <div class="imgc-label">Variante A</div>
+            <div class="imgc-sel-badge">✓ Gewählt</div>
+          </div>
+          <div class="imgc-info">
+            <div class="imgc-name">Büro-Minimal</div>
+            <div class="imgc-desc">Corporate · Clean · B2B · 1792×1024</div>
+            <button class="imgc-btn">✓ Ausgewählt</button>
+          </div>
+        </div>
+        <div class="imgc" id="ic1" onclick="selImg(1)">
+          <div class="imgc-thumb" style="background:linear-gradient(135deg,#F0FDF4,#DCFCE7)">
+            <div style="width:72%;height:68%;display:grid;grid-template-columns:1fr 1fr;grid-template-rows:1fr 1fr;gap:6px">
+              <div style="background:rgba(37,99,235,.12);border-radius:6px;display:flex;align-items:center;justify-content:center"><div style="width:60%;height:4px;background:#2563EB;border-radius:2px;opacity:.5"></div></div>
+              <div style="background:rgba(22,163,74,.12);border-radius:6px;display:flex;align-items:center;justify-content:center"><div style="width:60%;height:4px;background:#16A34A;border-radius:2px;opacity:.5"></div></div>
+              <div style="background:rgba(217,119,6,.12);border-radius:6px;display:flex;align-items:center;justify-content:center"><div style="width:60%;height:4px;background:#D97706;border-radius:2px;opacity:.5"></div></div>
+              <div style="background:rgba(220,38,38,.12);border-radius:6px;display:flex;align-items:center;justify-content:center"><div style="width:60%;height:4px;background:#DC2626;border-radius:2px;opacity:.5"></div></div>
+            </div>
+            <div class="imgc-label">Variante B</div>
+            <div class="imgc-sel-badge">✓ Gewählt</div>
+          </div>
+          <div class="imgc-info">
+            <div class="imgc-name">Data-Visualisierung</div>
+            <div class="imgc-desc">Infografik-Stil · Abstract · 1792×1024</div>
+            <button class="imgc-btn">Auswählen</button>
+          </div>
+        </div>
+        <div class="imgc" id="ic2" onclick="selImg(2)">
+          <div class="imgc-thumb" style="background:linear-gradient(135deg,#F5F3FF,#EDE9FE)">
+            <div style="width:72%;height:68%;background:white;border-radius:8px;padding:12px;border:1px solid #DDD6FE;display:flex;flex-direction:column;gap:8px;justify-content:center">
+              <div style="display:flex;align-items:center;gap:6px"><div style="width:18px;height:18px;border-radius:50%;background:#EFF6FF;border:1px solid #BFDBFE"></div><div style="flex:1;height:5px;background:#DBEAFE;border-radius:3px"></div></div>
+              <div style="display:flex;align-items:center;gap:6px"><div style="width:18px;height:18px;border-radius:50%;background:#F0FDF4;border:1px solid #BBF7D0"></div><div style="flex:1;height:5px;background:#DCFCE7;border-radius:3px"></div></div>
+              <div style="display:flex;align-items:center;gap:6px"><div style="width:18px;height:18px;border-radius:50%;background:#FFFBEB;border:1px solid #FDE68A"></div><div style="flex:1;height:5px;background:#FEF9C3;border-radius:3px"></div></div>
+            </div>
+            <div class="imgc-label">Variante C</div>
+            <div class="imgc-sel-badge">✓ Gewählt</div>
+          </div>
+          <div class="imgc-info">
+            <div class="imgc-name">Liste &amp; Struktur</div>
+            <div class="imgc-desc">Checklisten-Stil · Klar · 1792×1024</div>
+            <button class="imgc-btn">Auswählen</button>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-title">LinkedIn-Format (1:1 · 1080×1080px) — gleiche Varianten</div>
+        <div class="sq-grid" id="sqGrid">
+          <div class="sq sel" id="sq0" onclick="selSq(0)" style="background:linear-gradient(135deg,#EFF6FF,#DBEAFE);border-color:#3C57E1;border-width:2px;font-size:9px;color:#001A64">A · Gewählt</div>
+          <div class="sq" id="sq1" onclick="selSq(1)" style="background:linear-gradient(135deg,#F0FDF4,#DCFCE7)">B</div>
+          <div class="sq" id="sq2" onclick="selSq(2)" style="background:linear-gradient(135deg,#F5F3FF,#EDE9FE)">C</div>
+        </div>
+        <div style="margin-top:12px;display:flex;gap:8px">
+          <button class="tbtn" onclick="alert('Neue Varianten werden mit angepasstem Prompt generiert...')">Neue Varianten anfordern</button>
+          <button class="tbtn pri" onclick="alert('Bild A ausgewählt — wird dem Artikel zugewiesen.')">Auswahl bestätigen</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══ LINKEDIN ══ -->
+  <div class="view" id="v-linkedin">
+    <div class="vhead">
+      <div class="vt">LinkedIn-Posts</div>
+      <div class="vs">5 Posts bereit zur manuellen Planung in LinkedIn — aus aktuellen Artikeln</div>
+    </div>
+    <div class="vbody">
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px">
+        <div class="card">
+          <div class="card-title">PropTech Revolution: Was Makler jetzt wissen müssen <span class="badge b-green">Artikel live</span></div>
+          <div style="font-size:13px;line-height:1.7;color:#001A64;margin-bottom:12px;padding:14px;background:var(--bg2);border-radius:var(--r);border:1px solid var(--bd)">
+            <strong style="font-size:12px;color:#3C57E1;display:block;margin-bottom:6px">Variante A — Hook</strong>
+            73% der Immobilienmakler nutzen KI — aber die meisten falsch. ↓<br><br>
+            Wir haben analysiert, was wirklich funktioniert. Das Ergebnis überrascht:<br><br>
+            Nicht das Tool entscheidet. Sondern wie du es in deinen Workflow integrierst.<br><br>
+            Beyonity-Kunden steigern ihre Effizienz im Schnitt um 40% — nicht durch mehr Technik, sondern durch smartere Prozesse.<br><br>
+            Was ist dein größtes CRM-Problem? ↓ Kommentar
+          </div>
+          <div style="display:flex;gap:6px;flex-wrap:wrap">
+            <span class="badge b-gray">1:1 Bild bereit</span>
+            <span class="badge b-blue">Hook-Format</span>
+            <span class="badge b-pu">Thought Leadership</span>
+          </div>
+          <div style="display:flex;gap:6px;margin-top:12px">
+            <button class="tbtn">Variante B</button>
+            <button class="tbtn">Variante C</button>
+            <button class="tbtn pri" style="margin-left:auto" onclick="alert('Wird für LinkedIn-Planung freigegeben...')">In LinkedIn planen</button>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-title">Beyonity Case Study: +40% Effizienz <span class="badge b-amber">Freigabe ausstehend</span></div>
+          <div style="font-size:13px;line-height:1.7;color:#001A64;margin-bottom:12px;padding:14px;background:var(--bg2);border-radius:var(--r);border:1px solid var(--bd)">
+            <strong style="font-size:12px;color:#3C57E1;display:block;margin-bottom:6px">Variante A — Referenz</strong>
+            Ein Immobilienunternehmen, 6 Monate, +40% Vertriebseffizienz.<br><br>
+            Kein Zufall. Kein Hype. Eine klare Strategie.<br><br>
+            Was sich geändert hat: 12 Stunden Recherche pro Woche → 0. Abschlussrate → +23%. Reporting → Echtzeit statt monatlich.<br><br>
+            Die vollständige Case Study ist jetzt live auf unserem Blog →
+          </div>
+          <div style="display:flex;gap:6px;flex-wrap:wrap">
+            <span class="badge b-gray">1:1 Bild bereit</span>
+            <span class="badge b-amber">Artikel-Freigabe ausstehend</span>
+          </div>
+          <div style="display:flex;gap:6px;margin-top:12px">
+            <button class="tbtn">Variante B</button>
+            <button class="tbtn" onclick="show('v-text')">Artikel freigeben →</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══ PERFORMANCE ══ -->
+  <div class="view" id="v-perf">
+    <div class="vhead">
+      <div class="vt">Performance</div>
+      <div class="vs">Content-KPIs März 2026 — Ahrefs + GA4</div>
+    </div>
+    <div class="vbody">
+      <div class="srow">
+        <div class="sc"><div class="sv" style="color:#0A6E2E">5</div><div class="sl">Artikel live</div><div class="sc-delta" style="color:#0A5C26">Ziel 4 ✓ übertroffen</div></div>
+        <div class="sc"><div class="sv" style="color:#3C57E1">+4.280</div><div class="sl">Organischer Traffic</div><div class="sc-delta" style="color:#0A5C26">↑ +62% vs. Feb.</div></div>
+        <div class="sc"><div class="sv">Ø #4.8</div><div class="sl">Ranking-Position</div><div class="sc-delta" style="color:#0A5C26">↑ von Ø #9.2</div></div>
+        <div class="sc"><div class="sv">31%</div><div class="sl">Newsletter-Öffnungsrate</div><div class="sc-delta" style="color:#0A5C26">↑ +4pp vs. Feb.</div></div>
+      </div>
+      <div class="card" style="padding:0 18px 0">
+        <div style="padding:14px 0 0" class="card-title">Publizierte Artikel — Rankings &amp; Traffic</div>
+        <table class="perf-table" style="width:100%">
+          <tr><th>Artikel</th><th>Rang</th><th>Klicks/Woche</th><th>CTR</th><th>Trend</th></tr>
+          <tr>
+            <td style="max-width:260px"><div style="font-weight:500;font-size:12px;margin-bottom:2px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">PropTech Revolution: Was Makler jetzt wissen müssen</div><div style="font-size:10px;color:rgba(0,26,100,.45);font-family:var(--mono)">live seit 5 Tagen · SEO · DE</div></td>
+            <td><div class="rank-chip" style="background:#DFFAEB;color:#0A5C26">#2</div></td>
+            <td><div style="font-size:13px;font-weight:500">480</div><div class="bar-wrap" style="width:80px"><div class="bar-fill" style="width:80%;background:var(--green)"></div></div></td>
+            <td><span style="font-family:var(--mono);font-size:12px">3.2%</span></td>
+            <td><span class="badge b-green">↑ +3</span></td>
+          </tr>
+          <tr>
+            <td><div style="font-weight:500;font-size:12px;margin-bottom:2px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">Immobilien-KI 2026: 6 Tools im Überblick</div><div style="font-size:10px;color:rgba(0,26,100,.45);font-family:var(--mono)">live seit 3 Tagen · SEO · DE</div></td>
+            <td><div class="rank-chip" style="background:#DFFAEB;color:#0A5C26">#7</div></td>
+            <td><div style="font-size:13px;font-weight:500">312</div><div class="bar-wrap" style="width:80px"><div class="bar-fill" style="width:52%;background:var(--green)"></div></div></td>
+            <td><span style="font-family:var(--mono);font-size:12px">2.8%</span></td>
+            <td><span class="badge b-blue">Neu</span></td>
+          </tr>
+          <tr>
+            <td><div style="font-weight:500;font-size:12px;margin-bottom:2px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">CRM-Systeme im Vergleich — Immobilien 2026</div><div style="font-size:10px;color:rgba(0,26,100,.45);font-family:var(--mono)">live seit 1 Tag · SEO · DE</div></td>
+            <td><div class="rank-chip" style="background:#FDFFD0;color:#6B6200">#11</div></td>
+            <td><div style="font-size:13px;font-weight:500">124</div><div class="bar-wrap" style="width:80px"><div class="bar-fill" style="width:21%;background:var(--amber)"></div></div></td>
+            <td><span style="font-family:var(--mono);font-size:12px">1.9%</span></td>
+            <td><span class="badge b-blue">Neu</span></td>
+          </tr>
+          <tr>
+            <td><div style="font-weight:500;font-size:12px;margin-bottom:2px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">5 Fehler bei der Immobilien-Digitalisierung</div><div style="font-size:10px;color:rgba(0,26,100,.45);font-family:var(--mono)">live seit 8 Tagen · SEO · DE</div></td>
+            <td><div class="rank-chip" style="background:#DFFAEB;color:#0A5C26">#5</div></td>
+            <td><div style="font-size:13px;font-weight:500">394</div><div class="bar-wrap" style="width:80px"><div class="bar-fill" style="width:66%;background:var(--green)"></div></div></td>
+            <td><span style="font-family:var(--mono);font-size:12px">2.6%</span></td>
+            <td><span class="badge b-green">↑ +6</span></td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </div>
+
+</div>
+</div>
+
+<script>
+function show(id){
+  document.querySelectorAll('.view').forEach(v=>v.classList.remove('on'));
+  document.querySelectorAll('.ni').forEach(n=>n.classList.remove('on'));
+  document.getElementById(id).classList.add('on');
+  const map={
+    'v-pipe':0,'v-ideen':1,'v-text':2,'v-bilder':3,'v-linkedin':4,'v-perf':5
+  };
+  const idx=map[id];
+  if(idx!==undefined) document.querySelectorAll('.ni')[idx]?.classList.add('on');
+}
+function selImg(i){
+  ['ic0','ic1','ic2'].forEach((id,j)=>{
+    const el=document.getElementById(id);
+    el.classList.toggle('sel',j===i);
+    el.querySelector('.imgc-btn').textContent=j===i?'✓ Ausgewählt':'Auswählen';
+  });
+  selSq(i);
+}
+function selSq(i){
+  const bgs=['linear-gradient(135deg,#EFF6FF,#DBEAFE)','linear-gradient(135deg,#F0FDF4,#DCFCE7)','linear-gradient(135deg,#F5F3FF,#EDE9FE)'];
+  const labels=['A · Gewählt','B','C'];
+  const cols=['var(--blue-tx)','var(--green-tx)','var(--pu-tx)'];
+  ['sq0','sq1','sq2'].forEach((id,j)=>{
+    const el=document.getElementById(id);
+    el.classList.toggle('sel',j===i);
+    el.style.borderColor=j===i?'var(--blue)':'var(--bd)';
+    el.style.borderWidth=j===i?'2px':'1.5px';
+    el.style.background=bgs[j];
+    el.style.color=j===i?cols[j]:'var(--txt3)';
+    el.style.fontSize=j===i?'9px':'10px';
+    el.textContent=j===i?labels[j]:labels[j].split(' ')[0];
+  });
+}
+document.querySelectorAll('.tab').forEach((t,i,arr)=>{
+  t.addEventListener('click',()=>{arr.forEach(x=>x.classList.remove('on'));t.classList.add('on')});
+});
+</script>
+</body>
+</html>
