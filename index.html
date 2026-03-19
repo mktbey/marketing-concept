@@ -9,15 +9,15 @@
 :root{--bg:#080A0F;--bg1:#0D1017;--bg2:#111520;--card:rgba(255,255,255,.06);--bd:rgba(255,255,255,.1);--bd2:rgba(255,255,255,.2);--txt:#F2F4F8;--txt2:#B0BAC8;--txt3:#7080A0;--acc:#4A8FFF;--grn:#34D399;--amb:#FBBF24;--red:#F87171;--tl:#2DD4BF;--pu:#A78BFA;--sans:'Bricolage Grotesque',sans-serif;--mono:'DM Mono',monospace;--r:12px;--r2:16px}
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
-body{background:var(--bg);color:var(--txt);font-family:var(--sans);font-size:16px;line-height:1.7;overflow-x:hidden}
+body{background:var(--bg);color:var(--txt);font-family:var(--sans);font-size:15px;line-height:1.75;overflow-x:hidden}
 ::selection{background:rgba(74,143,255,.3)}
 ::-webkit-scrollbar{width:4px}::-webkit-scrollbar-track{background:var(--bg)}::-webkit-scrollbar-thumb{background:var(--bd2);border-radius:2px}
 nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:0 32px;height:56px;background:rgba(8,10,15,.88);backdrop-filter:blur(16px);border-bottom:1px solid var(--bd)}
-.nav-logo{font-size:15px;font-weight:700;letter-spacing:-.02em}.nav-logo span{color:var(--acc)}
+.nav-logo{font-size:16px;font-weight:700;letter-spacing:-.02em}.nav-logo span{color:var(--acc)}
 .nav-links{display:flex;gap:2px}
-.nav-links a{font-family:var(--mono);font-size:10px;letter-spacing:.07em;color:var(--txt2);text-decoration:none;padding:6px 11px;border-radius:6px;transition:all .15s;text-transform:uppercase}
+.nav-links a{font-family:var(--mono);font-size:12px;letter-spacing:.07em;color:var(--txt2);text-decoration:none;padding:6px 11px;border-radius:6px;transition:all .15s;text-transform:uppercase}
 .nav-links a:hover{color:var(--txt);background:var(--card)}
-.nav-cta{font-family:var(--mono);font-size:10px;letter-spacing:.06em;color:var(--bg);background:var(--txt);text-decoration:none;padding:7px 15px;border-radius:7px;font-weight:500;transition:opacity .15s;text-transform:uppercase}
+.nav-cta{font-family:var(--mono);font-size:12px;letter-spacing:.06em;color:var(--bg);background:var(--txt);text-decoration:none;padding:7px 15px;border-radius:7px;font-weight:500;transition:opacity .15s;text-transform:uppercase}
 .nav-cta:hover{opacity:.85}
 section{padding:96px 0}
 .con{max-width:1100px;margin:0 auto;padding:0 32px}
@@ -37,14 +37,14 @@ section{padding:96px 0}
 .hero-sub{font-size:17px;color:var(--txt2);max-width:540px;margin:0 auto 44px;line-height:1.65;font-weight:400}
 .hero-stats{display:flex;gap:1px;justify-content:center;background:var(--bd);border-radius:var(--r2);border:1px solid var(--bd);overflow:hidden;max-width:600px;margin:0 auto}
 .hstat{flex:1;background:var(--bg1);padding:18px 10px;text-align:center}
-.hstat .v{font-family:var(--mono);font-size:24px;font-weight:500;margin-bottom:3px}
-.hstat .l{font-family:var(--mono);font-size:9px;letter-spacing:.08em;color:var(--txt3);text-transform:uppercase}
-.eyebrow{font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--acc);margin-bottom:12px;display:flex;align-items:center;gap:8px}
+.hstat .v{font-family:var(--mono);font-size:26px;font-weight:500;margin-bottom:3px}
+.hstat .l{font-family:var(--mono);font-size:11px;letter-spacing:.08em;color:var(--txt3);text-transform:uppercase}
+.eyebrow{font-family:var(--mono);font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--acc);margin-bottom:12px;display:flex;align-items:center;gap:8px}
 .eyebrow::before{content:'';width:18px;height:1px;background:var(--acc)}
 .sec-title{font-size:clamp(24px,3.5vw,38px);font-weight:700;letter-spacing:-.025em;line-height:1.15;margin-bottom:14px}
-.sec-sub{font-size:16px;color:var(--txt2);max-width:540px;line-height:1.65}
+.sec-sub{font-size:15px;color:var(--txt2);max-width:540px;line-height:1.65}
 .hdiv{height:1px;background:var(--bd);margin:40px 0}
-.chip{font-family:var(--mono);font-size:10px;letter-spacing:.05em;padding:4px 9px;border-radius:5px;background:var(--card);border:1px solid var(--bd2);color:var(--txt2)}
+.chip{font-family:var(--mono);font-size:11px;letter-spacing:.05em;padding:4px 9px;border-radius:5px;background:var(--card);border:1px solid var(--bd2);color:var(--txt2)}
 .c-bl{background:rgba(74,143,255,.1);border-color:rgba(74,143,255,.2);color:var(--acc)}
 .c-gn{background:rgba(52,211,153,.1);border-color:rgba(52,211,153,.2);color:var(--grn)}
 .c-am{background:rgba(251,191,36,.1);border-color:rgba(251,191,36,.2);color:var(--amb)}
@@ -64,16 +64,16 @@ section{padding:96px 0}
 .pb-am{border-color:rgba(251,191,36,.3);background:rgba(251,191,36,.04)}
 .pb-rd{border-color:rgba(248,113,113,.3);background:rgba(248,113,113,.04)}
 .pb-gn{border-color:rgba(52,211,153,.3);background:rgba(52,211,153,.04)}
-.pbox-title{font-size:14px;font-weight:600;margin-bottom:18px;display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+.pbox-title{font-size:15px;font-weight:600;margin-bottom:18px;display:flex;align-items:center;gap:10px;flex-wrap:wrap}
 .pbox-title .pb-badge{font-family:var(--mono);font-size:9px;letter-spacing:.08em;text-transform:uppercase;padding:2px 9px;border-radius:10px;border:1px solid currentColor;opacity:.65}
 .aflow{display:flex;align-items:stretch;gap:0;overflow-x:auto;padding-bottom:4px}
 .aflow::-webkit-scrollbar{height:3px}.aflow::-webkit-scrollbar-thumb{background:var(--bd2)}
 .arr{display:flex;align-items:center;padding:0 6px;flex-shrink:0;color:var(--txt3);font-size:16px}
 .anode{flex:1;min-width:150px;max-width:210px;border-radius:10px;padding:14px;border:1px solid transparent;flex-shrink:0;transition:transform .15s}
 .anode:hover{transform:translateY(-2px)}
-.an-tag{font-family:var(--mono);font-size:9px;letter-spacing:.07em;text-transform:uppercase;opacity:.6;margin-bottom:5px}
-.an-title{font-size:13px;font-weight:600;margin-bottom:4px;line-height:1.25}
-.an-body{font-size:12px;opacity:.85;line-height:1.5}
+.an-tag{font-family:var(--mono);font-size:11px;letter-spacing:.07em;text-transform:uppercase;opacity:.6;margin-bottom:5px}
+.an-title{font-size:14px;font-weight:600;margin-bottom:4px;line-height:1.25}
+.an-body{font-size:13px;opacity:.85;line-height:1.5}
 .an-foot{margin-top:9px;padding-top:7px;border-top:1px solid rgba(255,255,255,.08);display:flex;flex-wrap:wrap;gap:3px}
 .an-bl{background:rgba(74,143,255,.1);border-color:rgba(74,143,255,.25);color:#93B9FF}
 .an-gn{background:rgba(52,211,153,.1);border-color:rgba(52,211,153,.25);color:#6EE7C0}
@@ -88,41 +88,41 @@ section{padding:96px 0}
 .loop-note{font-family:var(--mono);font-size:10px;color:var(--red);margin-top:10px;padding:6px 12px;border-radius:6px;background:rgba(248,113,113,.07);border:1px solid rgba(248,113,113,.15);text-align:center}
 .pmeta{display:flex;align-items:center;gap:16px;margin-top:16px;padding:12px 16px;background:var(--card);border-radius:var(--r);border:1px solid var(--bd);flex-wrap:wrap}
 .pmi{display:flex;flex-direction:column;gap:2px}
-.pmv{font-family:var(--mono);font-size:14px;font-weight:500}
-.pml{font-family:var(--mono);font-size:10px;letter-spacing:.07em;color:var(--txt2);text-transform:uppercase}
+.pmv{font-family:var(--mono);font-size:15px;font-weight:500}
+.pml{font-family:var(--mono);font-size:11px;letter-spacing:.07em;color:var(--txt2);text-transform:uppercase}
 .pmsep{width:1px;height:28px;background:var(--bd2);flex-shrink:0}
 #roi{background:var(--bg)}
 .roi-layout{display:grid;grid-template-columns:1fr 1fr;gap:22px;align-items:start}
 .roi-ctrl{background:var(--bg1);border:1px solid var(--bd);border-radius:var(--r2);padding:24px}
-.roi-ctrl h3{font-size:15px;font-weight:600;margin-bottom:20px;letter-spacing:-.01em}
+.roi-ctrl h3{font-size:16px;font-weight:600;margin-bottom:20px;letter-spacing:-.01em}
 .sg{margin-bottom:16px}
 .sg-row{display:flex;justify-content:space-between;align-items:center;margin-bottom:6px}
-.sg-row span:first-child{font-size:13px;color:var(--txt2)}
-.sv{font-family:var(--mono);font-size:12px;font-weight:500;color:var(--txt);background:var(--card);border:1px solid var(--bd);padding:2px 8px;border-radius:5px}
+.sg-row span:first-child{font-size:14px;color:var(--txt2)}
+.sv{font-family:var(--mono);font-size:13px;font-weight:500;color:var(--txt);background:var(--card);border:1px solid var(--bd);padding:2px 8px;border-radius:5px}
 input[type=range]{width:100%;height:4px;-webkit-appearance:none;background:var(--bd2);border-radius:2px;outline:none;cursor:pointer}
 input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:15px;height:15px;background:var(--acc);border-radius:50%;border:2px solid var(--bg1);transition:transform .15s}
 input[type=range]::-webkit-slider-thumb:hover{transform:scale(1.25)}
-.roi-note{margin-top:16px;padding:12px;background:var(--card);border:1px solid var(--bd);border-radius:var(--r);font-family:var(--mono);font-size:11px;color:var(--txt2);line-height:1.7}
+.roi-note{margin-top:16px;padding:12px;background:var(--card);border:1px solid var(--bd);border-radius:var(--r);font-family:var(--mono);font-size:13px;color:var(--txt2);line-height:1.75}
 .roi-res{display:flex;flex-direction:column;gap:10px}
 .roi-big{background:var(--bg1);border:1px solid var(--bd);border-radius:var(--r2);padding:20px;text-align:center}
-.roi-big .rv{font-family:var(--mono);font-size:42px;font-weight:500;line-height:1;margin-bottom:4px}
-.roi-big .rl{font-family:var(--mono);font-size:9px;letter-spacing:.08em;color:var(--txt3);text-transform:uppercase}
+.roi-big .rv{font-family:var(--mono);font-size:44px;font-weight:500;line-height:1;margin-bottom:4px}
+.roi-big .rl{font-family:var(--mono);font-size:11px;letter-spacing:.08em;color:var(--txt3);text-transform:uppercase}
 .roi-g2{display:grid;grid-template-columns:1fr 1fr;gap:10px}
 .roi-mini{background:var(--bg1);border:1px solid var(--bd);border-radius:var(--r);padding:14px}
-.roi-mini .rmv{font-family:var(--mono);font-size:20px;font-weight:500;margin-bottom:2px}
-.roi-mini .rml{font-family:var(--mono);font-size:9px;letter-spacing:.07em;color:var(--txt3);text-transform:uppercase}
+.roi-mini .rmv{font-family:var(--mono);font-size:24px;font-weight:500;margin-bottom:2px}
+.roi-mini .rml{font-family:var(--mono);font-size:11px;letter-spacing:.07em;color:var(--txt3);text-transform:uppercase}
 #todo{background:var(--bg1)}
 .todo-stats{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-bottom:28px}
 .tstat{background:var(--bg);border:1px solid var(--bd);border-radius:var(--r);padding:14px;text-align:center}
-.tstat .tsv{font-family:var(--mono);font-size:22px;font-weight:500;margin-bottom:3px}
-.tstat .tsl{font-family:var(--mono);font-size:9px;letter-spacing:.08em;color:var(--txt3);text-transform:uppercase}
+.tstat .tsv{font-family:var(--mono);font-size:24px;font-weight:500;margin-bottom:3px}
+.tstat .tsl{font-family:var(--mono);font-size:11px;letter-spacing:.08em;color:var(--txt3);text-transform:uppercase}
 .prog-w{height:3px;background:var(--bd);border-radius:2px;margin-top:6px}
 .prog-f{height:3px;border-radius:2px;background:var(--grn);transition:width .4s ease}
 .pg{margin-bottom:24px}
 .pg-hdr{display:flex;align-items:center;gap:10px;margin-bottom:10px;padding-bottom:10px;border-bottom:1px solid var(--bd)}
 .pg-pill{font-family:var(--mono);font-size:9px;letter-spacing:.09em;text-transform:uppercase;padding:3px 11px;border-radius:12px;border:1px solid currentColor;flex-shrink:0}
-.pg-title{font-size:13px;font-weight:500}
-.pg-cnt{font-family:var(--mono);font-size:10px;color:var(--txt3);margin-left:auto}
+.pg-title{font-size:14px;font-weight:500}
+.pg-cnt{font-family:var(--mono);font-size:12px;color:var(--txt3);margin-left:auto}
 .todo-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(270px,1fr));gap:7px}
 .ti{display:flex;align-items:flex-start;gap:9px;padding:11px 13px;border-radius:var(--r);border:1px solid var(--bd);background:var(--bg);cursor:pointer;transition:border-color .12s,background .12s;user-select:none}
 .ti:hover{border-color:var(--bd2);background:var(--card)}
@@ -132,9 +132,9 @@ input[type=range]::-webkit-slider-thumb:hover{transform:scale(1.25)}
 .ti.done .tichk::after{content:'';display:block;width:4px;height:8px;border:1.5px solid #000;border-top:none;border-left:none;transform:rotate(45deg) translate(1px,-1px)}
 .tichk{width:17px;height:17px;border-radius:4px;border:1.5px solid var(--bd2);flex-shrink:0;margin-top:1px;display:flex;align-items:center;justify-content:center;transition:all .12s}
 .ti-b{flex:1;min-width:0}
-.ti-title{font-size:12px;font-weight:500;line-height:1.4;margin-bottom:2px}
-.ti-sub{font-size:10px;color:var(--txt2);line-height:1.4}
-.ti-eff{font-family:var(--mono);font-size:9px;color:var(--txt3);margin-left:auto;flex-shrink:0;padding-top:1px}
+.ti-title{font-size:13px;font-weight:500;line-height:1.4;margin-bottom:2px}
+.ti-sub{font-size:12px;color:var(--txt2);line-height:1.4}
+.ti-eff{font-family:var(--mono);font-size:12px;color:var(--txt3);margin-left:auto;flex-shrink:0;padding-top:1px}
 .b-new{font-family:var(--mono);font-size:8px;padding:1px 5px;border-radius:4px;background:rgba(74,143,255,.15);color:var(--acc);border:1px solid rgba(74,143,255,.25);margin-left:4px;vertical-align:middle}
 .b-chg{font-family:var(--mono);font-size:8px;padding:1px 5px;border-radius:4px;background:rgba(251,191,36,.12);color:var(--amb);border:1px solid rgba(251,191,36,.25);margin-left:4px;vertical-align:middle}
 #gantt{background:var(--bg)}
@@ -144,8 +144,8 @@ input[type=range]::-webkit-slider-thumb:hover{transform:scale(1.25)}
 .ghc:first-child{border-left:none;text-align:left}
 .grow{display:grid;border-bottom:1px solid var(--bd);padding:0 20px;align-items:center;transition:background .12s}
 .grow:last-child{border-bottom:none}.grow:hover{background:var(--card)}
-.gl{padding:11px 8px 11px 0;font-size:12px;font-weight:500}
-.gl .gls{font-family:var(--mono);font-size:9px;color:var(--txt2);font-weight:400;margin-top:2px}
+.gl{padding:11px 8px 11px 0;font-size:13px;font-weight:500}
+.gl .gls{font-family:var(--mono);font-size:12px;color:var(--txt2);font-weight:400;margin-top:2px}
 .gc{padding:9px 3px;border-left:1px solid var(--bd);display:flex;align-items:center}
 .gbar{height:20px;border-radius:5px;width:100%;display:flex;align-items:center;padding:0 7px;font-family:var(--mono);font-size:8px;overflow:hidden;white-space:nowrap;cursor:default;transition:opacity .15s}
 .gbar:hover{opacity:.8}
@@ -156,12 +156,12 @@ input[type=range]::-webkit-slider-thumb:hover{transform:scale(1.25)}
 .tc{background:var(--bg);border:1px solid var(--bd);border-radius:var(--r2);padding:17px;transition:border-color .15s}
 .tc:hover{border-color:var(--bd2)}
 .tc-cat{font-family:var(--mono);font-size:8px;letter-spacing:.1em;text-transform:uppercase;color:var(--txt3);margin-bottom:9px}
-.tc-name{font-size:14px;font-weight:600;margin-bottom:4px}
-.tc-desc{font-size:12px;color:var(--txt2);line-height:1.5}
-.tc-cost{margin-top:9px;font-family:var(--mono);font-size:13px;font-weight:500}
+.tc-name{font-size:15px;font-weight:600;margin-bottom:4px}
+.tc-desc{font-size:13px;color:var(--txt2);line-height:1.5}
+.tc-cost{margin-top:9px;font-family:var(--mono);font-size:14px;font-weight:500}
 .inc-badge{display:inline-flex;align-items:center;gap:4px;font-family:var(--mono);font-size:8px;padding:2px 7px;border-radius:9px;background:rgba(52,211,153,.1);border:1px solid rgba(52,211,153,.25);color:var(--grn)}
 #comments{background:var(--bg)}
-footer{border-top:1px solid var(--bd);padding:32px;text-align:center;font-family:var(--mono);font-size:11px;color:var(--txt3)}
+footer{border-top:1px solid var(--bd);padding:32px;text-align:center;font-family:var(--mono);font-size:12px;color:var(--txt3)}
 @media(max-width:768px){.roi-layout{grid-template-columns:1fr}.hero-stats{flex-direction:column;gap:1px}.nav-links{display:none}}
 </style>
 </head>
@@ -413,37 +413,37 @@ footer{border-top:1px solid var(--bd);padding:32px;text-align:center;font-family
 
   <!-- Branding-Kalkulation -->
   <div style="background:var(--bg1);border:1px solid var(--bd);border-radius:var(--r2);padding:24px;margin-bottom:28px" class="reveal d1">
-    <div style="font-size:14px;font-weight:600;margin-bottom:18px;display:flex;align-items:center;gap:10px">
+    <div style="font-size:15px;font-weight:600;margin-bottom:18px;display:flex;align-items:center;gap:10px">
       Branding-Effekte durch GEO + SEO — Wertberechnung
       <span style="font-family:var(--mono);font-size:9px;padding:2px 8px;border-radius:8px;background:rgba(251,191,36,.1);border:1px solid rgba(251,191,36,.2);color:var(--amb)">konservativ geschätzt</span>
     </div>
     <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-bottom:20px">
       <div style="background:var(--bg);border:1px solid var(--bd);border-radius:var(--r);padding:14px;text-align:center">
-        <div style="font-family:var(--mono);font-size:22px;font-weight:500;color:var(--grn);margin-bottom:3px">8–12</div>
-        <div style="font-family:var(--mono);font-size:9px;letter-spacing:.07em;color:var(--txt3);text-transform:uppercase">KI-Zitationen/Mo.</div>
-        <div style="font-size:11px;color:var(--txt3);margin-top:5px;line-height:1.4">ChatGPT, Perplexity, Claude — je Artikel</div>
+        <div style="font-family:var(--mono);font-size:24px;font-weight:500;color:var(--grn);margin-bottom:3px">8–12</div>
+        <div style="font-family:var(--mono);font-size:11px;letter-spacing:.07em;color:var(--txt3);text-transform:uppercase">KI-Zitationen/Mo.</div>
+        <div style="font-size:12px;color:var(--txt3);margin-top:5px;line-height:1.4">ChatGPT, Perplexity, Claude — je Artikel</div>
       </div>
       <div style="background:var(--bg);border:1px solid var(--bd);border-radius:var(--r);padding:14px;text-align:center">
-        <div style="font-family:var(--mono);font-size:22px;font-weight:500;color:var(--acc);margin-bottom:3px">~2.400</div>
-        <div style="font-family:var(--mono);font-size:9px;letter-spacing:.07em;color:var(--txt3);text-transform:uppercase">Impressionen/Mo.</div>
-        <div style="font-size:11px;color:var(--txt3);margin-top:5px;line-height:1.4">Hochwertige B2B-Zielgruppe in Entscheidungsphase</div>
+        <div style="font-family:var(--mono);font-size:24px;font-weight:500;color:var(--acc);margin-bottom:3px">~2.400</div>
+        <div style="font-family:var(--mono);font-size:11px;letter-spacing:.07em;color:var(--txt3);text-transform:uppercase">Impressionen/Mo.</div>
+        <div style="font-size:12px;color:var(--txt3);margin-top:5px;line-height:1.4">Hochwertige B2B-Zielgruppe in Entscheidungsphase</div>
       </div>
       <div style="background:var(--bg);border:1px solid var(--bd);border-radius:var(--r);padding:14px;text-align:center">
-        <div style="font-family:var(--mono);font-size:22px;font-weight:500;color:var(--pu);margin-bottom:3px">+35%</div>
-        <div style="font-family:var(--mono);font-size:9px;letter-spacing:.07em;color:var(--txt3);text-transform:uppercase">Brand Authority</div>
-        <div style="font-size:11px;color:var(--txt3);margin-top:5px;line-height:1.4">Wenn KI empfiehlt, gilt Beyonity als Marktführer</div>
+        <div style="font-family:var(--mono);font-size:24px;font-weight:500;color:var(--pu);margin-bottom:3px">+35%</div>
+        <div style="font-family:var(--mono);font-size:11px;letter-spacing:.07em;color:var(--txt3);text-transform:uppercase">Brand Authority</div>
+        <div style="font-size:12px;color:var(--txt3);margin-top:5px;line-height:1.4">Wenn KI empfiehlt, gilt Beyonity als Marktführer</div>
       </div>
       <div style="background:var(--bg);border:1px solid var(--bd);border-radius:var(--r);padding:14px;text-align:center">
-        <div style="font-family:var(--mono);font-size:22px;font-weight:500;color:var(--amb);margin-bottom:3px">1.200 €</div>
-        <div style="font-family:var(--mono);font-size:9px;letter-spacing:.07em;color:var(--txt3);text-transform:uppercase">Äquivalenter Werbewert</div>
-        <div style="font-size:11px;color:var(--txt3);margin-top:5px;line-height:1.4">vs. bezahlte Sichtbarkeit in gleicher Zielgruppe</div>
+        <div style="font-family:var(--mono);font-size:24px;font-weight:500;color:var(--amb);margin-bottom:3px">1.200 €</div>
+        <div style="font-family:var(--mono);font-size:11px;letter-spacing:.07em;color:var(--txt3);text-transform:uppercase">Äquivalenter Werbewert</div>
+        <div style="font-size:12px;color:var(--txt3);margin-top:5px;line-height:1.4">vs. bezahlte Sichtbarkeit in gleicher Zielgruppe</div>
       </div>
     </div>
     <!-- Erklärung Kalkulation -->
     <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px">
       <div style="background:var(--bg);border:1px solid var(--bd);border-radius:var(--r);padding:14px">
         <div style="font-family:var(--mono);font-size:10px;letter-spacing:.07em;text-transform:uppercase;color:var(--txt3);margin-bottom:8px">SEO-Branding-Effekt</div>
-        <div style="font-size:12px;color:var(--txt2);line-height:1.7">
+        <div style="font-size:13px;color:var(--txt2);line-height:1.75">
           4 Artikel/Mo. × Ø 800 org. Impressionen = <strong style="color:var(--txt)">3.200 Brand-Kontakte</strong><br>
           Keyword-Positionierungen Top-5 = <strong style="color:var(--txt)">+40% CTR vs. Position 6–10</strong><br>
           Jeder Artikel rankt für 3–8 Keywords → <strong style="color:var(--txt)">20–35 Keywords aktiv</strong><br>
@@ -452,7 +452,7 @@ footer{border-top:1px solid var(--bd);padding:32px;text-align:center;font-family
       </div>
       <div style="background:var(--bg);border:1px solid var(--bd);border-radius:var(--r);padding:14px">
         <div style="font-family:var(--mono);font-size:10px;letter-spacing:.07em;text-transform:uppercase;color:var(--txt3);margin-bottom:8px">GEO-Branding-Effekt</div>
-        <div style="font-size:12px;color:var(--txt2);line-height:1.7">
+        <div style="font-size:13px;color:var(--txt2);line-height:1.75">
           KI-Erwähnung = kein Klick nötig → <strong style="color:var(--txt)">direkter Vertrauenstransfer</strong><br>
           ChatGPT: 2,5B Anfragen/Tag — <strong style="color:var(--txt)">Beyonity im Kontext = Premium-Positionierung</strong><br>
           94% der B2B-Käufer nutzen KI vor Erstkontakt (LinkedIn, 2025)<br>
@@ -474,14 +474,14 @@ footer{border-top:1px solid var(--bd);padding:32px;text-align:center;font-family
         <div style="width:32px;height:32px;border-radius:var(--r);background:rgba(74,143,255,.1);border:1px solid rgba(74,143,255,.2);display:flex;align-items:center;justify-content:center;font-family:var(--mono);font-size:12px;font-weight:600;color:var(--acc)">01</div>
         <div style="font-size:14px;font-weight:600">Artikel GEO-ready schreiben</div>
       </div>
-      <div style="font-size:12px;color:var(--txt2);line-height:1.7;margin-bottom:14px">
+      <div style="font-size:13px;color:var(--txt2);line-height:1.75;margin-bottom:14px">
         Jeder Beyonity-Artikel wird so strukturiert, dass KI-Systeme ihn direkt zitieren können. KI merkt sich keine Werbung — sondern klare Erklärungen mit konkretem Nutzen.
       </div>
       <div style="display:flex;flex-direction:column;gap:6px">
-        <div style="font-size:11px;color:var(--txt2);padding:7px 10px;background:var(--bg);border-radius:var(--r);border-left:2px solid var(--red)">
+        <div style="font-size:12px;color:var(--txt2);padding:7px 10px;background:var(--bg);border-radius:var(--r);border-left:2px solid var(--red)">
           <span style="color:var(--red);font-weight:500">Schlecht:</span> „Beyonity ist Ihr innovativer Partner für digitale Immobilienlösungen."
         </div>
-        <div style="font-size:11px;color:var(--txt2);padding:7px 10px;background:var(--bg);border-radius:var(--r);border-left:2px solid var(--grn)">
+        <div style="font-size:12px;color:var(--txt2);padding:7px 10px;background:var(--bg);border-radius:var(--r);border-left:2px solid var(--grn)">
           <span style="color:var(--grn);font-weight:500">GEO-ready:</span> „Beyonity hilft Immobilienunternehmen in DACH, ihre Vertriebsprozesse mit KI-gestütztem CRM um 25–40% zu beschleunigen."
         </div>
       </div>
@@ -498,13 +498,13 @@ footer{border-top:1px solid var(--bd);padding:32px;text-align:center;font-family
         <div style="width:32px;height:32px;border-radius:var(--r);background:rgba(167,139,250,.1);border:1px solid rgba(167,139,250,.2);display:flex;align-items:center;justify-content:center;font-family:var(--mono);font-size:12px;font-weight:600;color:var(--pu)">02</div>
         <div style="font-size:14px;font-weight:600">Brand Context Optimization</div>
       </div>
-      <div style="font-size:12px;color:var(--txt2);line-height:1.7;margin-bottom:14px">
+      <div style="font-size:13px;color:var(--txt2);line-height:1.75;margin-bottom:14px">
         KI-Systeme extrahieren strukturierte Fakten aus Texten. Wie Beyonity beschrieben wird, bestimmt direkt wie Claude, ChatGPT und Gemini über Beyonity „denken" und wann sie Beyonity empfehlen.
       </div>
       <div style="display:flex;flex-direction:column;gap:5px">
-        <div style="font-size:11px;color:var(--txt2);display:flex;align-items:flex-start;gap:7px"><span style="color:var(--pu);flex-shrink:0">→</span>Die 5 KI-Fragen klar beantworten: Was macht ihr? Für wen? Welches Problem? In welcher Branche? In welcher Region?</div>
-        <div style="font-size:11px;color:var(--txt2);display:flex;align-items:flex-start;gap:7px"><span style="color:var(--pu);flex-shrink:0">→</span>Alle Beyonity-Texte (Website, Blog, LinkedIn) konsistent mit denselben Kernaussagen</div>
-        <div style="font-size:11px;color:var(--txt2);display:flex;align-items:flex-start;gap:7px"><span style="color:var(--pu);flex-shrink:0">→</span>Beyonity-Kernfakt als Prompt-Bibliothek in Confluence hinterlegen</div>
+        <div style="font-size:12px;color:var(--txt2);display:flex;align-items:flex-start;gap:7px"><span style="color:var(--pu);flex-shrink:0">→</span>Die 5 KI-Fragen klar beantworten: Was macht ihr? Für wen? Welches Problem? In welcher Branche? In welcher Region?</div>
+        <div style="font-size:12px;color:var(--txt2);display:flex;align-items:flex-start;gap:7px"><span style="color:var(--pu);flex-shrink:0">→</span>Alle Beyonity-Texte (Website, Blog, LinkedIn) konsistent mit denselben Kernaussagen</div>
+        <div style="font-size:12px;color:var(--txt2);display:flex;align-items:flex-start;gap:7px"><span style="color:var(--pu);flex-shrink:0">→</span>Beyonity-Kernfakt als Prompt-Bibliothek in Confluence hinterlegen</div>
       </div>
       <div style="margin-top:12px;display:flex;flex-wrap:wrap;gap:4px">
         <span class="chip c-pu">Entity-Attribute-Value</span>
@@ -518,23 +518,23 @@ footer{border-top:1px solid var(--bd);padding:32px;text-align:center;font-family
         <div style="width:32px;height:32px;border-radius:var(--r);background:rgba(52,211,153,.1);border:1px solid rgba(52,211,153,.2);display:flex;align-items:center;justify-content:center;font-family:var(--mono);font-size:12px;font-weight:600;color:var(--grn)">03</div>
         <div style="font-size:14px;font-weight:600">Schema Markup auf beyonity.com</div>
       </div>
-      <div style="font-size:12px;color:var(--txt2);line-height:1.7;margin-bottom:14px">
+      <div style="font-size:13px;color:var(--txt2);line-height:1.75;margin-bottom:14px">
         Strukturierte Daten helfen KI-Systemen, Beyonity korrekt einzuordnen. Schema.org-Markup ist der direkteste technische Hebel um in KI-Antworten zitiert zu werden.
       </div>
       <div style="display:grid;grid-template-columns:1fr 1fr;gap:6px">
-        <div style="font-size:11px;color:var(--txt2);padding:7px 10px;background:var(--bg);border-radius:6px">
+        <div style="font-size:12px;color:var(--txt2);padding:7px 10px;background:var(--bg);border-radius:6px">
           <div style="color:var(--grn);font-weight:500;margin-bottom:2px">Organization Schema</div>
           Name, Branche, Region, Services, LinkedIn-URL als sameAs
         </div>
-        <div style="font-size:11px;color:var(--txt2);padding:7px 10px;background:var(--bg);border-radius:6px">
+        <div style="font-size:12px;color:var(--txt2);padding:7px 10px;background:var(--bg);border-radius:6px">
           <div style="color:var(--grn);font-weight:500;margin-bottom:2px">FAQPage Schema</div>
           Höchste KI-Sichtbarkeit — jede FAQ-Sektion wird direkt extrahiert
         </div>
-        <div style="font-size:11px;color:var(--txt2);padding:7px 10px;background:var(--bg);border-radius:6px">
+        <div style="font-size:12px;color:var(--txt2);padding:7px 10px;background:var(--bg);border-radius:6px">
           <div style="color:var(--grn);font-weight:500;margin-bottom:2px">Article Schema</div>
           Author, dateModified, headline — Frische + Glaubwürdigkeit signalisieren
         </div>
-        <div style="font-size:11px;color:var(--txt2);padding:7px 10px;background:var(--bg);border-radius:6px">
+        <div style="font-size:12px;color:var(--txt2);padding:7px 10px;background:var(--bg);border-radius:6px">
           <div style="color:var(--grn);font-weight:500;margin-bottom:2px">BreadcrumbList</div>
           Thematische Hierarchie für KI-Crawler sichtbar machen
         </div>
@@ -546,19 +546,19 @@ footer{border-top:1px solid var(--bd);padding:32px;text-align:center;font-family
         <div style="width:32px;height:32px;border-radius:var(--r);background:rgba(45,212,191,.1);border:1px solid rgba(45,212,191,.2);display:flex;align-items:center;justify-content:center;font-family:var(--mono);font-size:12px;font-weight:600;color:var(--tl)">04</div>
         <div style="font-size:14px;font-weight:600">KI-Erwähnungen tracken</div>
       </div>
-      <div style="font-size:12px;color:var(--txt2);line-height:1.7;margin-bottom:14px">
+      <div style="font-size:13px;color:var(--txt2);line-height:1.75;margin-bottom:14px">
         Klassisches SEO misst Rankings und Klicks. GEO misst ob Beyonity in KI-Antworten vorkommt wenn potenzielle Kunden relevante Fragen stellen.
       </div>
       <div style="display:flex;flex-direction:column;gap:6px">
-        <div style="font-size:11px;color:var(--txt2);display:flex;align-items:center;gap:7px;padding:6px 10px;background:var(--bg);border-radius:6px">
+        <div style="font-size:12px;color:var(--txt2);display:flex;align-items:center;gap:7px;padding:6px 10px;background:var(--bg);border-radius:6px">
           <span style="color:var(--tl);font-weight:600;font-family:var(--mono);font-size:10px">Wöchentlich</span>
           10 Testfragen in ChatGPT, Perplexity, Claude → Wird Beyonity genannt?
         </div>
-        <div style="font-size:11px;color:var(--txt2);display:flex;align-items:center;gap:7px;padding:6px 10px;background:var(--bg);border-radius:6px">
+        <div style="font-size:12px;color:var(--txt2);display:flex;align-items:center;gap:7px;padding:6px 10px;background:var(--bg);border-radius:6px">
           <span style="color:var(--tl);font-weight:600;font-family:var(--mono);font-size:10px">Monatlich</span>
           KI-Zitations-Report in Confluence → Trend-Analyse über Zeit
         </div>
-        <div style="font-size:11px;color:var(--txt2);display:flex;align-items:center;gap:7px;padding:6px 10px;background:var(--bg);border-radius:6px">
+        <div style="font-size:12px;color:var(--txt2);display:flex;align-items:center;gap:7px;padding:6px 10px;background:var(--bg);border-radius:6px">
           <span style="color:var(--tl);font-weight:600;font-family:var(--mono);font-size:10px">Tools</span>
           Otterly.ai, Profound, Brand24 (KI-Monitoring) + manuelles Testing
         </div>
@@ -573,27 +573,27 @@ footer{border-top:1px solid var(--bd);padding:32px;text-align:center;font-family
 
   <!-- GEO KPI Box -->
   <div style="margin-top:20px;padding:20px 24px;background:var(--bg1);border:1px solid var(--bd);border-radius:var(--r2)" class="reveal d2">
-    <div style="font-size:13px;font-weight:600;margin-bottom:14px">GEO-KPIs — zusätzlich zu klassischen SEO-KPIs</div>
+    <div style="font-size:14px;font-weight:600;margin-bottom:14px">GEO-KPIs — zusätzlich zu klassischen SEO-KPIs</div>
     <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:10px">
       <div style="text-align:center;padding:12px;background:var(--bg);border-radius:var(--r);border:1px solid var(--bd)">
-        <div style="font-family:var(--mono);font-size:18px;font-weight:500;color:var(--acc);margin-bottom:3px">0 → 8+</div>
-        <div style="font-family:var(--mono);font-size:9px;letter-spacing:.07em;color:var(--txt3);text-transform:uppercase">KI-Zitationen/Mo.</div>
-        <div style="font-size:10px;color:var(--txt3);margin-top:4px">Ziel: Monat 6</div>
+        <div style="font-family:var(--mono);font-size:20px;font-weight:500;color:var(--acc);margin-bottom:3px">0 → 8+</div>
+        <div style="font-family:var(--mono);font-size:11px;letter-spacing:.07em;color:var(--txt3);text-transform:uppercase">KI-Zitationen/Mo.</div>
+        <div style="font-size:11px;color:var(--txt3);margin-top:4px">Ziel: Monat 6</div>
       </div>
       <div style="text-align:center;padding:12px;background:var(--bg);border-radius:var(--r);border:1px solid var(--bd)">
-        <div style="font-family:var(--mono);font-size:18px;font-weight:500;color:var(--pu);margin-bottom:3px">20–35</div>
-        <div style="font-family:var(--mono);font-size:9px;letter-spacing:.07em;color:var(--txt3);text-transform:uppercase">Aktive Keywords Top-10</div>
-        <div style="font-size:10px;color:var(--txt3);margin-top:4px">SEO + GEO kombiniert</div>
+        <div style="font-family:var(--mono);font-size:20px;font-weight:500;color:var(--pu);margin-bottom:3px">20–35</div>
+        <div style="font-family:var(--mono);font-size:11px;letter-spacing:.07em;color:var(--txt3);text-transform:uppercase">Aktive Keywords Top-10</div>
+        <div style="font-size:11px;color:var(--txt3);margin-top:4px">SEO + GEO kombiniert</div>
       </div>
       <div style="text-align:center;padding:12px;background:var(--bg);border-radius:var(--r);border:1px solid var(--bd)">
-        <div style="font-family:var(--mono);font-size:18px;font-weight:500;color:var(--grn);margin-bottom:3px">&gt;80%</div>
-        <div style="font-family:var(--mono);font-size:9px;letter-spacing:.07em;color:var(--txt3);text-transform:uppercase">Positives Sentiment in KI</div>
-        <div style="font-size:10px;color:var(--txt3);margin-top:4px">Ziel: konsistent positiv</div>
+        <div style="font-family:var(--mono);font-size:20px;font-weight:500;color:var(--grn);margin-bottom:3px">&gt;80%</div>
+        <div style="font-family:var(--mono);font-size:11px;letter-spacing:.07em;color:var(--txt3);text-transform:uppercase">Positives Sentiment in KI</div>
+        <div style="font-size:11px;color:var(--txt3);margin-top:4px">Ziel: konsistent positiv</div>
       </div>
       <div style="text-align:center;padding:12px;background:var(--bg);border-radius:var(--r);border:1px solid var(--bd)">
-        <div style="font-family:var(--mono);font-size:18px;font-weight:500;color:var(--amb);margin-bottom:3px">15.600 €</div>
-        <div style="font-family:var(--mono);font-size:9px;letter-spacing:.07em;color:var(--txt3);text-transform:uppercase">Äquiv. Mediawert/Mo.</div>
-        <div style="font-size:10px;color:var(--txt3);margin-top:4px">SEO + GEO kombiniert</div>
+        <div style="font-family:var(--mono);font-size:20px;font-weight:500;color:var(--amb);margin-bottom:3px">15.600 €</div>
+        <div style="font-family:var(--mono);font-size:11px;letter-spacing:.07em;color:var(--txt3);text-transform:uppercase">Äquiv. Mediawert/Mo.</div>
+        <div style="font-size:11px;color:var(--txt3);margin-top:4px">SEO + GEO kombiniert</div>
       </div>
     </div>
   </div>
@@ -618,7 +618,7 @@ footer{border-top:1px solid var(--bd);padding:32px;text-align:center;font-family
   </div>
   <div id="c-filter" style="display:flex;gap:6px;margin-bottom:16px;flex-wrap:wrap" class="reveal d2"></div>
   <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:14px" class="reveal d2">
-    <span id="c-count" style="font-family:var(--mono);font-size:11px;color:var(--txt3)">0 Kommentare</span>
+    <span id="c-count" style="font-family:var(--mono);font-size:12px;color:var(--txt3)">0 Kommentare</span>
     <button onclick="if(confirm('Alle löschen?')){localStorage.removeItem('bey_cmt');renderCmt()}" style="font-family:var(--mono);font-size:10px;color:var(--txt3);background:none;border:none;cursor:pointer" onmouseover="this.style.color='var(--red)'" onmouseout="this.style.color='var(--txt3)'">Alle löschen</button>
   </div>
   <div id="c-list" class="reveal d3" style="display:flex;flex-direction:column;gap:10px"></div>
@@ -834,7 +834,7 @@ function renderCmt(){
   const all=loadCmt(),filtered=cmtFilter==='Alle'?all:all.filter(c=>c.section===cmtFilter);
   const list=document.getElementById('c-list');
   document.getElementById('c-count').textContent=filtered.length+' Kommentar'+(filtered.length!==1?'e':'');
-  if(!filtered.length){list.innerHTML=`<div style="text-align:center;padding:40px;font-family:var(--mono);font-size:11px;color:var(--txt3)">Noch keine Kommentare.</div>`;return}
+  if(!filtered.length){list.innerHTML=`<div style="text-align:center;padding:40px;font-family:var(--mono);font-size:12px;color:var(--txt3)">Noch keine Kommentare.</div>`;return}
   list.innerHTML=filtered.map(c=>{
     const col=cmtColor(c.name),secCol=CMT_SEC_COL[c.section]||'#7080A0';
     const replies=(c.replies||[]).map(r=>`<div style="display:flex;gap:8px;align-items:flex-start"><div style="width:22px;height:22px;border-radius:50%;background:${cmtColor(r.name)}22;color:${cmtColor(r.name)};display:flex;align-items:center;justify-content:center;font-size:9px;font-weight:600;flex-shrink:0;margin-top:2px">${cmtInitials(r.name)}</div><div style="flex:1;background:var(--bg2);border-radius:8px;padding:10px 12px"><div style="font-size:11px;font-weight:500;margin-bottom:3px">${r.name}</div><div style="font-size:12px;color:var(--txt2);line-height:1.5">${r.text}</div><div style="font-family:var(--mono);font-size:9px;color:var(--txt3);margin-top:4px">${cmtTime(r.ts)}</div></div></div>`).join('');
