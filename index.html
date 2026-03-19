@@ -35,10 +35,10 @@ section{padding:96px 0}
 .hero-title{font-size:clamp(36px,5.5vw,66px);font-weight:800;line-height:1.06;letter-spacing:-.03em;margin-bottom:20px}
 .hero-title .dim{color:var(--txt2);font-weight:300}
 .hero-sub{font-size:17px;color:var(--txt2);max-width:540px;margin:0 auto 44px;line-height:1.65;font-weight:400}
-.hero-stats{display:flex;gap:1px;justify-content:center;background:var(--bd);border-radius:var(--r2);border:1px solid var(--bd);overflow:hidden;max-width:600px;margin:0 auto}
-.hstat{flex:1;background:#161B2A;padding:20px 14px;text-align:center}
-.hstat .v{font-family:var(--mono);font-size:30px;font-weight:500;margin-bottom:3px}
-.hstat .l{font-family:var(--mono);font-size:13px;letter-spacing:.08em;color:var(--txt3);text-transform:uppercase}
+.hero-stats{display:flex;gap:1px;justify-content:center;background:var(--bd);border-radius:var(--r2);border:1px solid var(--bd);overflow:hidden;max-width:700px;margin:0 auto}
+.hstat{flex:1;min-width:0;background:#161B2A;padding:20px 16px;text-align:center;white-space:nowrap}
+.hstat .v{font-family:var(--mono);font-size:26px;font-weight:500;margin-bottom:5px;white-space:nowrap}
+.hstat .l{font-family:var(--mono);font-size:11px;letter-spacing:.06em;color:var(--txt3);text-transform:uppercase;white-space:nowrap}
 .eyebrow{font-family:var(--mono);font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:var(--acc);margin-bottom:12px;display:flex;align-items:center;gap:8px}
 .eyebrow::before{content:'';width:18px;height:1px;background:var(--acc)}
 .sec-title{font-size:clamp(24px,3.5vw,38px);font-weight:700;letter-spacing:-.025em;line-height:1.15;margin-bottom:14px}
@@ -185,7 +185,7 @@ footer{border-top:1px solid var(--bd);padding:32px;text-align:center;font-family
     <h1 class="hero-title reveal d1">Agenten-gestützte<br><span class="dim">Marketingabteilung</span></h1>
     <p class="hero-sub reveal d2">Automatisierte Content-Produktion für Blog, LinkedIn und Newsletter — mit Claude, Gemini, 10 KI-Agenten und Jira Premium.</p>
     <div class="hero-stats reveal d3">
-      <div class="hstat"><div class="v" style="color:var(--grn)">3.326 €</div><div class="l">Ersparnis / Mo.</div></div>
+      <div class="hstat"><div class="v" style="color:var(--grn)">3.326 €</div><div class="l">Ersparnis/Mo.</div></div>
       <div class="hstat"><div class="v" style="color:var(--acc)">3 Mo.</div><div class="l">Break-even</div></div>
       <div class="hstat"><div class="v" style="color:var(--amb)">318%</div><div class="l">ROI Jahr 1</div></div>
       <div class="hstat"><div class="v" style="color:var(--pu)">90%</div><div class="l">günstiger/Artikel</div></div>
@@ -607,19 +607,19 @@ footer{border-top:1px solid var(--bd);padding:32px;text-align:center;font-family
   <div class="hdiv"></div>
   <div class="reveal d1" style="background:#161B2A;border:1px solid rgba(255,255,255,.16);border-radius:var(--r2);padding:24px;margin-bottom:20px">
     <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:12px">
-      <div style="display:flex;flex-direction:column;gap:5px"><label style="font-family:var(--mono);font-size:9px;letter-spacing:.1em;text-transform:uppercase;color:var(--txt3)">Dein Name</label><input id="c-name" type="text" placeholder="z.B. Paulo" maxlength="40" style="background:#1C2236;border:1px solid rgba(255,255,255,.2);border-radius:var(--r);padding:9px 12px;color:var(--txt);font-family:var(--mono);font-size:14px;outline:none;transition:border-color .15s" onfocus="this.style.borderColor='var(--acc)'" onblur="this.style.borderColor='var(--bd2)'"></div>
-      <div style="display:flex;flex-direction:column;gap:5px"><label style="font-family:var(--mono);font-size:9px;letter-spacing:.1em;text-transform:uppercase;color:var(--txt3)">Sektion</label><select id="c-section" style="background:var(--bg1);border:1px solid var(--bd2);border-radius:var(--r);padding:9px 12px;color:var(--txt);font-family:var(--mono);font-size:12px;outline:none"><option>Allgemein</option><option>Workflow</option><option>ROI-Rechner</option><option>Todo-Liste</option><option>Zeitplan</option><option>Tool-Stack</option><option>Keyword-Strategie</option><option>Customer Journey</option><option>KI-Bilder</option></select></div>
+      <div style="display:flex;flex-direction:column;gap:5px"><label style="font-family:var(--mono);font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:var(--txt2)">Dein Name</label><input id="c-name" type="text" placeholder="z.B. Paulo" maxlength="40" style="background:#1C2236;border:1px solid rgba(255,255,255,.2);border-radius:var(--r);padding:9px 12px;color:var(--txt);font-family:var(--mono);font-size:14px;outline:none;transition:border-color .15s" onfocus="this.style.borderColor='var(--acc)'" onblur="this.style.borderColor='var(--bd2)'"></div>
+      <div style="display:flex;flex-direction:column;gap:5px"><label style="font-family:var(--mono);font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:var(--txt2)">Sektion</label><select id="c-section" style="background:var(--bg1);border:1px solid var(--bd2);border-radius:var(--r);padding:9px 12px;color:var(--txt);font-family:var(--mono);font-size:12px;outline:none"><option>Allgemein</option><option>Workflow</option><option>ROI-Rechner</option><option>Todo-Liste</option><option>Zeitplan</option><option>Tool-Stack</option><option>Keyword-Strategie</option><option>Customer Journey</option><option>KI-Bilder</option></select></div>
     </div>
-    <div style="display:flex;flex-direction:column;gap:5px;margin-bottom:14px"><label style="font-family:var(--mono);font-size:9px;letter-spacing:.1em;text-transform:uppercase;color:var(--txt3)">Kommentar</label><textarea id="c-text" rows="3" placeholder="Anmerkung, Frage oder Idee..." style="background:var(--bg1);border:1px solid var(--bd2);border-radius:var(--r);padding:9px 12px;color:var(--txt);font-family:var(--mono);font-size:12px;outline:none;resize:none;line-height:1.6;transition:border-color .15s" onfocus="this.style.borderColor='var(--acc)'" onblur="this.style.borderColor='var(--bd2)'"></textarea></div>
+    <div style="display:flex;flex-direction:column;gap:5px;margin-bottom:14px"><label style="font-family:var(--mono);font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:var(--txt2)">Kommentar</label><textarea id="c-text" rows="3" placeholder="Anmerkung, Frage oder Idee..." style="background:#1C2236;border:1px solid rgba(255,255,255,.2);border-radius:var(--r);padding:9px 12px;color:var(--txt);font-family:var(--mono);font-size:14px;outline:none;resize:none;line-height:1.7;transition:border-color .15s" onfocus="this.style.borderColor='var(--acc)'" onblur="this.style.borderColor='var(--bd2)'"></textarea></div>
     <div style="display:flex;align-items:center;gap:12px">
-      <button onclick="addCmt()" style="background:var(--acc);color:#fff;border:none;border-radius:var(--r);padding:9px 20px;font-family:var(--mono);font-size:11px;letter-spacing:.06em;cursor:pointer;font-weight:500;transition:opacity .15s" onmouseover="this.style.opacity='.85'" onmouseout="this.style.opacity='1'">Kommentar hinzufügen</button>
+      <button onclick="addCmt()" style="background:var(--acc);color:#fff;border:none;border-radius:var(--r);padding:9px 20px;font-family:var(--mono);font-size:14px;letter-spacing:.05em;cursor:pointer;font-weight:500;transition:opacity .15s" onmouseover="this.style.opacity='.85'" onmouseout="this.style.opacity='1'">Kommentar hinzufügen</button>
       <span id="c-msg" style="font-family:var(--mono);font-size:10px;color:var(--grn);display:none">✓ Gespeichert</span>
     </div>
   </div>
   <div id="c-filter" style="display:flex;gap:6px;margin-bottom:16px;flex-wrap:wrap" class="reveal d2"></div>
   <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:14px" class="reveal d2">
     <span id="c-count" style="font-family:var(--mono);font-size:14px;color:var(--txt3)">0 Kommentare</span>
-    <button onclick="if(confirm('Alle löschen?')){localStorage.removeItem('bey_cmt');renderCmt()}" style="font-family:var(--mono);font-size:10px;color:var(--txt3);background:none;border:none;cursor:pointer" onmouseover="this.style.color='var(--red)'" onmouseout="this.style.color='var(--txt3)'">Alle löschen</button>
+    <button onclick="if(confirm('Alle löschen?')){localStorage.removeItem('bey_cmt');renderCmt()}" style="font-family:var(--mono);font-size:13px;color:var(--txt3);background:none;border:none;cursor:pointer" onmouseover="this.style.color='var(--red)'" onmouseout="this.style.color='var(--txt3)'">Alle löschen</button>
   </div>
   <div id="c-list" class="reveal d3" style="display:flex;flex-direction:column;gap:10px"></div>
 </div>
@@ -827,7 +827,7 @@ function addCmtReply(id){
 function buildCmtFilter(){
   const bar=document.getElementById('c-filter'),all=loadCmt();
   const used=['Alle',...[...new Set(all.map(c=>c.section))]];
-  bar.innerHTML=used.map(s=>`<button onclick="setCmtFilter('${s}')" style="font-family:var(--mono);font-size:10px;padding:5px 12px;border-radius:20px;border:1px solid ${s===cmtFilter?'rgba(74,143,255,.3)':'var(--bd)'};background:${s===cmtFilter?'rgba(74,143,255,.12)':'transparent'};color:${s===cmtFilter?'var(--acc)':'var(--txt3)'};cursor:pointer;transition:all .15s">${s}${s!=='Alle'?' ('+all.filter(c=>c.section===s).length+')':''}</button>`).join('');
+  bar.innerHTML=used.map(s=>`<button onclick="setCmtFilter('${s}')" style="font-family:var(--mono);font-size:13px;padding:7px 14px;border-radius:20px;border:1px solid ${s===cmtFilter?'rgba(74,143,255,.3)':'var(--bd)'};background:${s===cmtFilter?'rgba(74,143,255,.12)':'transparent'};color:${s===cmtFilter?'var(--acc)':'var(--txt3)'};cursor:pointer;transition:all .15s">${s}${s!=='Alle'?' ('+all.filter(c=>c.section===s).length+')':''}</button>`).join('');
 }
 function setCmtFilter(s){cmtFilter=s;buildCmtFilter();renderCmt()}
 function renderCmt(){
@@ -837,25 +837,25 @@ function renderCmt(){
   if(!filtered.length){list.innerHTML=`<div style="text-align:center;padding:40px;font-family:var(--mono);font-size:14px;color:var(--txt3)">Noch keine Kommentare.</div>`;return}
   list.innerHTML=filtered.map(c=>{
     const col=cmtColor(c.name),secCol=CMT_SEC_COL[c.section]||'#7080A0';
-    const replies=(c.replies||[]).map(r=>`<div style="display:flex;gap:8px;align-items:flex-start"><div style="width:22px;height:22px;border-radius:50%;background:${cmtColor(r.name)}22;color:${cmtColor(r.name)};display:flex;align-items:center;justify-content:center;font-size:9px;font-weight:600;flex-shrink:0;margin-top:2px">${cmtInitials(r.name)}</div><div style="flex:1;background:var(--bg2);border-radius:8px;padding:10px 12px"><div style="font-size:11px;font-weight:500;margin-bottom:3px">${r.name}</div><div style="font-size:14px;color:var(--txt2);line-height:1.5">${r.text}</div><div style="font-family:var(--mono);font-size:9px;color:var(--txt3);margin-top:4px">${cmtTime(r.ts)}</div></div></div>`).join('');
+    const replies=(c.replies||[]).map(r=>`<div style="display:flex;gap:8px;align-items:flex-start"><div style="width:22px;height:22px;border-radius:50%;background:${cmtColor(r.name)}22;color:${cmtColor(r.name)};display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:600;flex-shrink:0;margin-top:2px">${cmtInitials(r.name)}</div><div style="flex:1;background:var(--bg2);border-radius:8px;padding:10px 12px"><div style="font-size:13px;font-weight:500;margin-bottom:3px">${r.name}</div><div style="font-size:14px;color:var(--txt2);line-height:1.5">${r.text}</div><div style="font-family:var(--mono);font-size:12px;color:var(--txt3);margin-top:4px">${cmtTime(r.ts)}</div></div></div>`).join('');
     return`<div style="background:var(--bg);border:1px solid var(--bd);border-radius:12px;padding:18px;transition:border-color .15s" onmouseover="this.style.borderColor='var(--bd2)'" onmouseout="this.style.borderColor='var(--bd)'">
       <div style="display:flex;align-items:center;gap:10px;margin-bottom:10px">
         <div style="width:32px;height:32px;border-radius:50%;background:${col}22;color:${col};display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:600;flex-shrink:0">${cmtInitials(c.name)}</div>
-        <div style="flex:1"><div style="font-size:15px;font-weight:500">${c.name}</div><div style="font-family:var(--mono);font-size:9px;color:var(--txt3);margin-top:2px">${cmtTime(c.ts)}</div></div>
-        <span style="font-family:var(--mono);font-size:9px;padding:2px 9px;border-radius:8px;background:${secCol}18;color:${secCol};border:1px solid ${secCol}40">${c.section}</span>
+        <div style="flex:1"><div style="font-size:15px;font-weight:500">${c.name}</div><div style="font-family:var(--mono);font-size:12px;color:var(--txt3);margin-top:2px">${cmtTime(c.ts)}</div></div>
+        <span style="font-family:var(--mono);font-size:12px;padding:3px 10px;border-radius:8px;background:${secCol}18;color:${secCol};border:1px solid ${secCol}40">${c.section}</span>
       </div>
       <div style="font-size:13px;color:var(--txt2);line-height:1.6;margin-bottom:12px">${c.text}</div>
       <div style="display:flex;gap:12px;padding-top:10px;border-top:1px solid var(--bd)">
-        <button onclick="toggleCmtLike(${c.id})" style="font-family:var(--mono);font-size:10px;color:${c.liked?'var(--acc)':'var(--txt3)'};background:none;border:none;cursor:pointer">♥ ${c.likes>0?c.likes+' ':''} Like</button>
+        <button onclick="toggleCmtLike(${c.id})" style="font-family:var(--mono);font-size:13px;color:${c.liked?'var(--acc)':'var(--txt3)'};background:none;border:none;cursor:pointer">♥ ${c.likes>0?c.likes+' ':''} Like</button>
         <button onclick="toggleCmtReply(${c.id})" style="font-family:var(--mono);font-size:10px;color:var(--txt3);background:none;border:none;cursor:pointer">↩ Antworten</button>
-        <button onclick="deleteCmt(${c.id})" style="font-family:var(--mono);font-size:10px;color:var(--txt3);background:none;border:none;cursor:pointer;margin-left:auto" onmouseover="this.style.color='var(--red)'" onmouseout="this.style.color='var(--txt3)'">× Löschen</button>
+        <button onclick="deleteCmt(${c.id})" style="font-family:var(--mono);font-size:13px;color:var(--txt3);background:none;border:none;cursor:pointer;margin-left:auto" onmouseover="this.style.color='var(--red)'" onmouseout="this.style.color='var(--txt3)'">× Löschen</button>
       </div>
       <div id="crf-${c.id}" style="display:none;margin-top:10px;padding:12px;background:var(--bg1);border-radius:var(--r);border:1px solid var(--bd)">
         <div style="display:grid;grid-template-columns:1fr 2fr;gap:8px;margin-bottom:8px">
-          <input id="crn-${c.id}" type="text" placeholder="Name" style="background:var(--bg);border:1px solid var(--bd2);border-radius:7px;padding:7px 10px;color:var(--txt);font-family:var(--mono);font-size:11px;outline:none">
-          <input id="crt-${c.id}" type="text" placeholder="Antwort..." style="background:var(--bg);border:1px solid var(--bd2);border-radius:7px;padding:7px 10px;color:var(--txt);font-family:var(--mono);font-size:11px;outline:none">
+          <input id="crn-${c.id}" type="text" placeholder="Name" style="background:#1C2236;border:1px solid rgba(255,255,255,.2);border-radius:7px;padding:9px 12px;color:var(--txt);font-family:var(--mono);font-size:14px;outline:none">
+          <input id="crt-${c.id}" type="text" placeholder="Antwort..." style="background:#1C2236;border:1px solid rgba(255,255,255,.2);border-radius:7px;padding:9px 12px;color:var(--txt);font-family:var(--mono);font-size:14px;outline:none">
         </div>
-        <button onclick="addCmtReply(${c.id})" style="background:var(--acc);color:#fff;border:none;border-radius:7px;padding:6px 14px;font-family:var(--mono);font-size:10px;cursor:pointer">Antworten</button>
+        <button onclick="addCmtReply(${c.id})" style="background:var(--acc);color:#fff;border:none;border-radius:7px;padding:8px 16px;font-family:var(--mono);font-size:13px;cursor:pointer">Antworten</button>
       </div>
       ${replies?`<div style="margin-top:10px;padding-top:10px;border-top:1px solid var(--bd);display:flex;flex-direction:column;gap:8px">${replies}</div>`:''}
     </div>`;
