@@ -1141,6 +1141,219 @@ footer{border-top:1px solid var(--bd);padding:32px;text-align:center;font-family
 </div>
 </section>
 
+<!-- RISK & COMPLIANCE -->
+<section id="risk" style="background:#0D1220;padding:96px 0">
+<div class="wide">
+  <div class="reveal"><div class="eyebrow">Risk & Compliance</div><h2 class="sec-title">Risikoklassen, DSGVO und Quality Gates</h2><p class="sec-sub">Strukturiertes Risikomanagement für KI-generierten Content — von Standard-Blog bis regulierter Branchenkommunikation.</p></div>
+  <div class="hdiv"></div>
+
+  <!-- Risikoklassen-Matrix -->
+  <div class="reveal d1" style="margin-bottom:28px">
+    <div style="font-size:17px;font-weight:600;margin-bottom:18px;display:flex;align-items:center;gap:10px">
+      Risikoklassen-Matrix
+      <span style="font-family:var(--mono);font-size:9px;padding:2px 8px;border-radius:8px;background:rgba(52,211,153,.1);border:1px solid rgba(52,211,153,.2);color:var(--grn)">3 Stufen</span>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:12px">
+      <!-- Standard -->
+      <div style="background:#161B2A;border:1px solid rgba(52,211,153,.25);border-radius:var(--r2);padding:20px">
+        <div style="display:flex;align-items:center;gap:8px;margin-bottom:14px">
+          <span style="width:10px;height:10px;border-radius:50%;background:var(--grn)"></span>
+          <span style="font-size:17px;font-weight:600">Standard</span>
+        </div>
+        <div style="font-family:var(--mono);font-size:10px;letter-spacing:.07em;text-transform:uppercase;color:var(--txt3);margin-bottom:6px">Beispiel-Content</div>
+        <div style="font-size:15px;color:var(--txt2);line-height:1.7;margin-bottom:14px">Blog-Artikel, Social Posts, Newsletter-Teaser, interne Zusammenfassungen</div>
+        <div style="font-family:var(--mono);font-size:10px;letter-spacing:.07em;text-transform:uppercase;color:var(--txt3);margin-bottom:6px">Workflow-Tiefe</div>
+        <div style="font-size:15px;color:var(--txt2);line-height:1.7;margin-bottom:14px">Standard-Pipeline (8 Agenten) — Faktencheck optional</div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px">
+          <div style="background:var(--bg);border:1px solid var(--bd);border-radius:var(--r);padding:10px;text-align:center">
+            <div style="font-family:var(--mono);font-size:20px;font-weight:500;color:var(--grn)">15 Min.</div>
+            <div style="font-family:var(--mono);font-size:10px;color:var(--txt3);text-transform:uppercase">Review-Zeit</div>
+          </div>
+          <div style="background:var(--bg);border:1px solid var(--bd);border-radius:var(--r);padding:10px;text-align:center">
+            <div style="font-family:var(--mono);font-size:20px;font-weight:500;color:var(--grn)">Marketing</div>
+            <div style="font-family:var(--mono);font-size:10px;color:var(--txt3);text-transform:uppercase">Sign-off</div>
+          </div>
+        </div>
+      </div>
+      <!-- Sensibel -->
+      <div style="background:#161B2A;border:1px solid rgba(251,191,36,.25);border-radius:var(--r2);padding:20px">
+        <div style="display:flex;align-items:center;gap:8px;margin-bottom:14px">
+          <span style="width:10px;height:10px;border-radius:50%;background:var(--amb)"></span>
+          <span style="font-size:17px;font-weight:600">Sensibel</span>
+        </div>
+        <div style="font-family:var(--mono);font-size:10px;letter-spacing:.07em;text-transform:uppercase;color:var(--txt3);margin-bottom:6px">Beispiel-Content</div>
+        <div style="font-size:15px;color:var(--txt2);line-height:1.7;margin-bottom:14px">Pillar Pages, Case Studies mit Kundendaten, Preisvergleiche, Marktanalysen</div>
+        <div style="font-family:var(--mono);font-size:10px;letter-spacing:.07em;text-transform:uppercase;color:var(--txt3);margin-bottom:6px">Workflow-Tiefe</div>
+        <div style="font-size:15px;color:var(--txt2);line-height:1.7;margin-bottom:14px">Erweiterte Pipeline (11 Agenten) — Faktencheck + E-E-A-T-Score obligatorisch</div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px">
+          <div style="background:var(--bg);border:1px solid var(--bd);border-radius:var(--r);padding:10px;text-align:center">
+            <div style="font-family:var(--mono);font-size:20px;font-weight:500;color:var(--amb)">30 Min.</div>
+            <div style="font-family:var(--mono);font-size:10px;color:var(--txt3);text-transform:uppercase">Review-Zeit</div>
+          </div>
+          <div style="background:var(--bg);border:1px solid var(--bd);border-radius:var(--r);padding:10px;text-align:center">
+            <div style="font-family:var(--mono);font-size:20px;font-weight:500;color:var(--amb)">Team Lead</div>
+            <div style="font-family:var(--mono);font-size:10px;color:var(--txt3);text-transform:uppercase">Sign-off</div>
+          </div>
+        </div>
+      </div>
+      <!-- Kritisch -->
+      <div style="background:#161B2A;border:1px solid rgba(248,113,113,.25);border-radius:var(--r2);padding:20px">
+        <div style="display:flex;align-items:center;gap:8px;margin-bottom:14px">
+          <span style="width:10px;height:10px;border-radius:50%;background:var(--red)"></span>
+          <span style="font-size:17px;font-weight:600">Kritisch</span>
+        </div>
+        <div style="font-family:var(--mono);font-size:10px;letter-spacing:.07em;text-transform:uppercase;color:var(--txt3);margin-bottom:6px">Beispiel-Content</div>
+        <div style="font-size:15px;color:var(--txt2);line-height:1.7;margin-bottom:14px">Rechtliche Aussagen, Compliance-Texte, Investoren-Kommunikation, Datenschutz-Seiten</div>
+        <div style="font-family:var(--mono);font-size:10px;letter-spacing:.07em;text-transform:uppercase;color:var(--txt3);margin-bottom:6px">Workflow-Tiefe</div>
+        <div style="font-size:15px;color:var(--txt2);line-height:1.7;margin-bottom:14px">Volle Pipeline + juristisches Review — KI nur als Entwurfshilfe</div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px">
+          <div style="background:var(--bg);border:1px solid var(--bd);border-radius:var(--r);padding:10px;text-align:center">
+            <div style="font-family:var(--mono);font-size:20px;font-weight:500;color:var(--red)">60 Min.</div>
+            <div style="font-family:var(--mono);font-size:10px;color:var(--txt3);text-transform:uppercase">Review-Zeit</div>
+          </div>
+          <div style="background:var(--bg);border:1px solid var(--bd);border-radius:var(--r);padding:10px;text-align:center">
+            <div style="font-family:var(--mono);font-size:20px;font-weight:500;color:var(--red)">GF / Legal</div>
+            <div style="font-family:var(--mono);font-size:10px;color:var(--txt3);text-transform:uppercase">Sign-off</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- DSGVO / AVV-Status -->
+  <div class="reveal d2" style="background:#161B2A;border:1px solid rgba(255,255,255,.16);border-radius:var(--r2);padding:24px;margin-bottom:28px">
+    <div style="font-size:17px;font-weight:600;margin-bottom:18px;display:flex;align-items:center;gap:10px">
+      DSGVO & AVV-Status pro Tool
+      <span style="font-family:var(--mono);font-size:9px;padding:2px 8px;border-radius:8px;background:rgba(248,113,113,.1);border:1px solid rgba(248,113,113,.2);color:var(--red)">Pflicht</span>
+    </div>
+    <div style="overflow-x:auto">
+      <table style="width:100%;border-collapse:collapse;font-size:14px">
+        <thead>
+          <tr style="border-bottom:1px solid var(--bd)">
+            <th style="text-align:left;padding:10px 12px;font-family:var(--mono);font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:var(--txt3);font-weight:500">Tool</th>
+            <th style="text-align:left;padding:10px 12px;font-family:var(--mono);font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:var(--txt3);font-weight:500">Datenfluss</th>
+            <th style="text-align:left;padding:10px 12px;font-family:var(--mono);font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:var(--txt3);font-weight:500">Hosting</th>
+            <th style="text-align:left;padding:10px 12px;font-family:var(--mono);font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:var(--txt3);font-weight:500">AVV</th>
+            <th style="text-align:left;padding:10px 12px;font-family:var(--mono);font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:var(--txt3);font-weight:500">DPA</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr style="border-bottom:1px solid var(--bd)">
+            <td style="padding:10px 12px;font-weight:500">Claude API</td>
+            <td style="padding:10px 12px;color:var(--txt2)">Prompts + Artikel-Text</td>
+            <td style="padding:10px 12px;color:var(--txt2)">USA (AWS)</td>
+            <td style="padding:10px 12px"><span style="color:var(--grn)">✓ Abgeschlossen</span></td>
+            <td style="padding:10px 12px;font-family:var(--mono);font-size:12px;color:var(--acc)">anthropic.com/dpa</td>
+          </tr>
+          <tr style="border-bottom:1px solid var(--bd)">
+            <td style="padding:10px 12px;font-weight:500">Gemini API</td>
+            <td style="padding:10px 12px;color:var(--txt2)">Recherche-Queries</td>
+            <td style="padding:10px 12px;color:var(--txt2)">EU (Belgium)</td>
+            <td style="padding:10px 12px"><span style="color:var(--grn)">✓ Abgeschlossen</span></td>
+            <td style="padding:10px 12px;font-family:var(--mono);font-size:12px;color:var(--acc)">cloud.google.com/terms</td>
+          </tr>
+          <tr style="border-bottom:1px solid var(--bd)">
+            <td style="padding:10px 12px;font-weight:500">fal.ai</td>
+            <td style="padding:10px 12px;color:var(--txt2)">Bild-Prompts</td>
+            <td style="padding:10px 12px;color:var(--txt2)">USA</td>
+            <td style="padding:10px 12px"><span style="color:var(--amb)">⏳ Ausstehend</span></td>
+            <td style="padding:10px 12px;font-family:var(--mono);font-size:12px;color:var(--txt3)">Anfrage läuft</td>
+          </tr>
+          <tr style="border-bottom:1px solid var(--bd)">
+            <td style="padding:10px 12px;font-weight:500">Perplexity</td>
+            <td style="padding:10px 12px;color:var(--txt2)">Fact-Check-Queries</td>
+            <td style="padding:10px 12px;color:var(--txt2)">USA</td>
+            <td style="padding:10px 12px"><span style="color:var(--amb)">⏳ Ausstehend</span></td>
+            <td style="padding:10px 12px;font-family:var(--mono);font-size:12px;color:var(--txt3)">Anfrage läuft</td>
+          </tr>
+          <tr style="border-bottom:1px solid var(--bd)">
+            <td style="padding:10px 12px;font-weight:500">Helicone</td>
+            <td style="padding:10px 12px;color:var(--txt2)">API-Logs + Kosten</td>
+            <td style="padding:10px 12px;color:var(--txt2)">USA</td>
+            <td style="padding:10px 12px"><span style="color:var(--grn)">✓ Abgeschlossen</span></td>
+            <td style="padding:10px 12px;font-family:var(--mono);font-size:12px;color:var(--acc)">helicone.ai/privacy</td>
+          </tr>
+          <tr style="border-bottom:1px solid var(--bd)">
+            <td style="padding:10px 12px;font-weight:500">LangSmith</td>
+            <td style="padding:10px 12px;color:var(--txt2)">Trace-Daten</td>
+            <td style="padding:10px 12px;color:var(--txt2)">USA</td>
+            <td style="padding:10px 12px"><span style="color:var(--amb)">⏳ Ausstehend</span></td>
+            <td style="padding:10px 12px;font-family:var(--mono);font-size:12px;color:var(--txt3)">Anfrage läuft</td>
+          </tr>
+          <tr style="border-bottom:1px solid var(--bd)">
+            <td style="padding:10px 12px;font-weight:500">HubSpot</td>
+            <td style="padding:10px 12px;color:var(--txt2)">CRM + Lead-Daten</td>
+            <td style="padding:10px 12px;color:var(--txt2)">EU (Frankfurt)</td>
+            <td style="padding:10px 12px"><span style="color:var(--grn)">✓ Abgeschlossen</span></td>
+            <td style="padding:10px 12px;font-family:var(--mono);font-size:12px;color:var(--acc)">hubspot.com/dpa</td>
+          </tr>
+          <tr>
+            <td style="padding:10px 12px;font-weight:500">n8n (Self-hosted)</td>
+            <td style="padding:10px 12px;color:var(--txt2)">Workflow-Orchestrierung</td>
+            <td style="padding:10px 12px;color:var(--txt2)">DE (Hetzner)</td>
+            <td style="padding:10px 12px"><span style="color:var(--grn)">✓ Eigenbetrieb</span></td>
+            <td style="padding:10px 12px;font-family:var(--mono);font-size:12px;color:var(--grn)">Self-hosted</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- Halluzinations-Tracker + Crisis Response -->
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px" class="reveal d3">
+    <!-- Halluzinations-Tracker -->
+    <div style="background:#161B2A;border:1px solid rgba(251,191,36,.25);border-radius:var(--r2);padding:20px">
+      <div style="font-size:17px;font-weight:600;margin-bottom:14px;display:flex;align-items:center;gap:10px">
+        Halluzinations-Tracker
+        <span style="font-family:var(--mono);font-size:9px;padding:2px 8px;border-radius:8px;background:rgba(251,191,36,.1);border:1px solid rgba(251,191,36,.2);color:var(--amb)">KPI</span>
+      </div>
+      <div style="text-align:center;padding:20px;background:var(--bg);border:1px solid var(--bd);border-radius:var(--r);margin-bottom:14px">
+        <div style="font-family:var(--mono);font-size:36px;font-weight:500;color:var(--grn);margin-bottom:4px">&lt; 2</div>
+        <div style="font-family:var(--mono);font-size:11px;letter-spacing:.07em;color:var(--txt3);text-transform:uppercase">Halluzinationen pro 100 Artikel</div>
+      </div>
+      <div style="font-size:15px;color:var(--txt2);line-height:1.8">
+        <strong style="color:var(--txt)">Messung:</strong> Faktencheck-Agent protokolliert jeden Flag in Jira<br>
+        <strong style="color:var(--txt)">Schwelle:</strong> Confidence-Score &lt; 85 % → manuelles Review<br>
+        <strong style="color:var(--txt)">Tracking:</strong> Monatlicher Report in Confluence mit Trend-Analyse<br>
+        <strong style="color:var(--txt)">Eskalation:</strong> 3. Score-Fail → automatische Benachrichtigung Editor-in-Chief
+      </div>
+    </div>
+
+    <!-- Crisis-Response-Plan -->
+    <div style="background:#161B2A;border:1px solid rgba(248,113,113,.25);border-radius:var(--r2);padding:20px">
+      <div style="font-size:17px;font-weight:600;margin-bottom:14px;display:flex;align-items:center;gap:10px">
+        Crisis-Response-Plan
+        <span style="font-family:var(--mono);font-size:9px;padding:2px 8px;border-radius:8px;background:rgba(248,113,113,.1);border:1px solid rgba(248,113,113,.2);color:var(--red)">3 Stufen</span>
+      </div>
+      <!-- Stufe 1 -->
+      <div style="padding:14px;background:var(--bg);border:1px solid rgba(52,211,153,.2);border-radius:var(--r);margin-bottom:10px">
+        <div style="display:flex;align-items:center;gap:8px;margin-bottom:6px">
+          <span style="font-family:var(--mono);font-size:11px;font-weight:500;color:var(--grn);padding:2px 8px;border-radius:6px;background:rgba(52,211,153,.1);border:1px solid rgba(52,211,153,.2)">Stufe 1</span>
+          <span style="font-size:15px;font-weight:500">Faktenfehler entdeckt</span>
+        </div>
+        <div style="font-size:14px;color:var(--txt2);line-height:1.7">Artikel sofort depublizieren → Korrektur binnen 2 Std. → Changelog im Footer → Republish</div>
+      </div>
+      <!-- Stufe 2 -->
+      <div style="padding:14px;background:var(--bg);border:1px solid rgba(251,191,36,.2);border-radius:var(--r);margin-bottom:10px">
+        <div style="display:flex;align-items:center;gap:8px;margin-bottom:6px">
+          <span style="font-family:var(--mono);font-size:11px;font-weight:500;color:var(--amb);padding:2px 8px;border-radius:6px;background:rgba(251,191,36,.1);border:1px solid rgba(251,191,36,.2)">Stufe 2</span>
+          <span style="font-size:15px;font-weight:500">DSGVO-Verstoß / Datenleak</span>
+        </div>
+        <div style="font-size:14px;color:var(--txt2);line-height:1.7">Content offline → DSB informieren (72-Std.-Frist) → Betroffene benachrichtigen → Root-Cause-Analyse → Prozess-Update</div>
+      </div>
+      <!-- Stufe 3 -->
+      <div style="padding:14px;background:var(--bg);border:1px solid rgba(248,113,113,.2);border-radius:var(--r)">
+        <div style="display:flex;align-items:center;gap:8px;margin-bottom:6px">
+          <span style="font-family:var(--mono);font-size:11px;font-weight:500;color:var(--red);padding:2px 8px;border-radius:6px;background:rgba(248,113,113,.1);border:1px solid rgba(248,113,113,.2)">Stufe 3</span>
+          <span style="font-size:15px;font-weight:500">Reputationsschaden / Medienanfrage</span>
+        </div>
+        <div style="font-size:14px;color:var(--txt2);line-height:1.7">Alle KI-Inhalte pausieren → GF + Legal einschalten → Offizielles Statement binnen 24 Std. → Externer Audit → Post-Mortem</div>
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+
 <!-- COMMENTS -->
 <section id="comments" style="background:#0D1220;padding:96px 0">
 <div class="wide">
