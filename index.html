@@ -169,9 +169,10 @@ footer{border-top:1px solid var(--bd);padding:32px;text-align:center;font-family
 <nav>
   <div class="nav-logo">beyonity<span>.</span>marketing</div>
   <div class="nav-links">
-    <a href="#workflow">Workflow</a><a href="#roi">ROI</a>
-    <a href="#todo">Todo</a><a href="#gantt">Zeitplan</a>
-    <a href="#tools">Tools</a><a href="#geo">GEO</a><a href="#comments">Kommentare</a>
+    <a href="#workflow">Workflow</a><a href="#cluster">Cluster</a>
+    <a href="#eeat">E-E-A-T</a><a href="#geo">GEO</a>
+    <a href="#risk">Risk</a><a href="#roi">ROI</a>
+    <a href="#tools">Tools</a><a href="#todo">Todo</a>
   </div>
   <a class="nav-cta" href="#roi">ROI berechnen</a>
 </nav>
@@ -181,14 +182,18 @@ footer{border-top:1px solid var(--bd);padding:32px;text-align:center;font-family
   <div class="hero-grid"></div>
   <div class="hero-glow"></div>
   <div class="con hc">
-    <div class="hero-badge reveal">KI Marketing System 2026</div>
+    <div class="hero-badge reveal">KI Marketing System v2 · Mai 2026</div>
     <h1 class="hero-title reveal d1">Agenten-gestützte<br><span class="dim">Marketingabteilung</span></h1>
-    <p class="hero-sub reveal d2">Automatisierte Content-Produktion für Blog, LinkedIn und Newsletter — mit Claude, Gemini, 10 KI-Agenten und Jira Premium.</p>
+    <p class="hero-sub reveal d2">Automatisierte Content-Produktion mit Topic-Cluster-Architektur, E-E-A-T-konformem Workflow und 11 KI-Agenten — Claude, Gemini, Jira Premium.</p>
     <div class="hero-stats reveal d3">
-      <div class="hstat"><div class="v" style="color:var(--grn)">3.326 €</div><div class="l">Ersparnis/Mo.</div></div>
-      <div class="hstat"><div class="v" style="color:var(--acc)">3 Mo.</div><div class="l">Break-even</div></div>
-      <div class="hstat"><div class="v" style="color:var(--amb)">318%</div><div class="l">ROI Jahr 1</div></div>
-      <div class="hstat"><div class="v" style="color:var(--pu)">90%</div><div class="l">günstiger/Artikel</div></div>
+      <div class="hstat"><div class="v" style="color:var(--grn)">2.100–4.500 €</div><div class="l">Ersparnis/Mo. (Range)</div></div>
+      <div class="hstat"><div class="v" style="color:var(--acc)">4–6 Mo.</div><div class="l">Break-even</div></div>
+      <div class="hstat"><div class="v" style="color:var(--amb)">180–320%</div><div class="l">ROI Jahr 1</div></div>
+      <div class="hstat"><div class="v" style="color:var(--pu)">60–80%</div><div class="l">günstiger/Artikel</div></div>
+    </div>
+    <div style="margin-top:18px;display:inline-flex;align-items:center;gap:10px;padding:8px 16px;background:rgba(167,139,250,.08);border:1px solid rgba(167,139,250,.2);border-radius:20px;font-family:var(--mono);font-size:11px;letter-spacing:.05em;color:var(--pu)" class="reveal d3">
+      <span style="width:6px;height:6px;border-radius:50%;background:var(--pu)"></span>
+      3 Szenarien (konservativ · realistisch · optimistisch) · Annahmen transparent ausgewiesen
     </div>
   </div>
 </section>
@@ -240,37 +245,41 @@ footer{border-top:1px solid var(--bd);padding:32px;text-align:center;font-family
 
   <div class="fp" id="fp2">
     <div class="pbox pb-rd">
-      <div class="pbox-title" style="color:#FECACA">Phase 3 — Produktion <span class="pb-badge" style="color:#FECACA">sequenziell + Qualitäts-Loop</span></div>
+      <div class="pbox-title" style="color:#FECACA">Phase 3 — Produktion <span class="pb-badge" style="color:#FECACA">sequenziell + Qualitäts-Loop · 11 Agenten</span></div>
       <div class="aflow">
         <div class="anode an-pu"><div class="an-tag">Agent 07</div><div class="an-title">Autor-Agent</div><div class="an-body">Claude Sonnet — 1.500–2.500 Wörter, SEO + Beyonity-Take</div><div class="an-foot"><span class="chip c-pu">Claude Sonnet</span><span class="chip">15 Min.</span></div></div>
         <div class="arr">→</div>
-        <div class="anode an-pu"><div class="an-tag">Agent 08</div><div class="an-title">Lektorat-Agent</div><div class="an-body">Claude Haiku — SEO-Score, Stil, Qualität</div><div class="an-foot"><span class="chip c-pu">Claude Haiku</span><span class="chip c-rd">Score ≥ 80</span></div></div>
+        <div class="anode an-rd" style="border-color:rgba(248,113,113,.4);background:rgba(248,113,113,.06)"><div class="an-tag" style="color:#FECACA">Agent 08 · NEU</div><div class="an-title">Faktencheck-Agent</div><div class="an-body">Claims gegen Primärquellen verifizieren · Confidence-Score pro Behauptung</div><div class="an-foot"><span class="chip c-rd">Claude Opus + Web</span><span class="chip c-rd">Quellen-Check</span></div></div>
+        <div class="arr">→</div>
+        <div class="anode an-pu"><div class="an-tag">Agent 09</div><div class="an-title">Lektorat-Agent</div><div class="an-body">Claude Haiku — SEO-Score, Stil, Brand Voice, E-E-A-T-Signale</div><div class="an-foot"><span class="chip c-pu">Claude Haiku</span><span class="chip c-rd">Score ≥ 80</span></div></div>
         <div class="arr">→</div>
         <div class="gate-wrap"><div class="gate-d"></div><div class="gate-lbl">Score<br>≥80?</div></div>
         <div class="arr">→</div>
-        <div class="anode an-bl"><div class="an-tag">Agent 09</div><div class="an-title">Bild-Agent</div><div class="an-body">fal.ai FLUX — Hero 16:9 + LinkedIn 1:1, Corporate Stil</div><div class="an-foot"><span class="chip c-bl">fal.ai FLUX</span><span class="chip">0,04 €/Bild</span></div></div>
+        <div class="anode an-bl"><div class="an-tag">Agent 10</div><div class="an-title">Bild-Agent</div><div class="an-body">fal.ai FLUX + Beyonity LoRA — Hero 16:9 + LinkedIn 1:1</div><div class="an-foot"><span class="chip c-bl">fal.ai + LoRA</span><span class="chip">0,04 €/Bild</span></div></div>
         <div class="arr">→</div>
-        <div class="anode an-gy"><div class="an-tag">Human</div><div class="an-title">Freigabe-Check</div><div class="an-body">Inhaltliche Freigabe in Jira Review</div><div class="an-foot"><span class="chip">Jira</span><span class="chip c-am">15–30 Min.</span></div></div>
+        <div class="anode an-gy"><div class="an-tag">Human</div><div class="an-title">Risiko-Gate</div><div class="an-body">Standard / Sensibel / Kritisch — unterschiedlich tiefe Freigabe</div><div class="an-foot"><span class="chip">Jira</span><span class="chip c-am">15–60 Min.</span></div></div>
       </div>
-      <div class="loop-note">↺ Score &lt; 80 → automatische Überarbeitung (max. 2 Loops)</div>
+      <div class="loop-note">↺ Score &lt; 80 → automatische Überarbeitung (max. 2 Loops) · Bei 3. Fail → Eskalation an Editor-in-Chief</div>
     </div>
-    <div class="pmeta"><div class="pmi"><div class="pmv" style="color:var(--pu)">~25 Min.</div><div class="pml">Auto-Laufzeit</div></div><div class="pmsep"></div><div class="pmi"><div class="pmv" style="color:var(--amb)">15–30 Min.</div><div class="pml">Human Review</div></div><div class="pmsep"></div><div class="pmi"><div class="pmv">1.500–2.500</div><div class="pml">Wörter</div></div></div>
+    <div class="pmeta"><div class="pmi"><div class="pmv" style="color:var(--pu)">~32 Min.</div><div class="pml">Auto-Laufzeit</div></div><div class="pmsep"></div><div class="pmi"><div class="pmv" style="color:var(--amb)">15–60 Min.</div><div class="pml">Human Review (risikobasiert)</div></div><div class="pmsep"></div><div class="pmi"><div class="pmv">1.500–2.500</div><div class="pml">Wörter</div></div><div class="pmsep"></div><div class="pmi"><div class="pmv" style="color:var(--red)">Faktencheck</div><div class="pml">vor Lektorat</div></div></div>
   </div>
 
   <div class="fp" id="fp3">
     <div class="pbox pb-gn">
-      <div class="pbox-title" style="color:#6EE7C0">Phase 4 — Distribution <span class="pb-badge" style="color:#6EE7C0">automatisch</span></div>
+      <div class="pbox-title" style="color:#6EE7C0">Phase 4 — Distribution &amp; Repurposing <span class="pb-badge" style="color:#6EE7C0">automatisch · 1 Artikel → 7 Assets</span></div>
       <div class="aflow">
-        <div class="anode an-gn"><div class="an-tag">Agent 10a</div><div class="an-title">Blog-Publish</div><div class="an-body">CMS, SEO-Meta, Bild-Alt-Tags automatisch</div><div class="an-foot"><span class="chip c-gn">CMS API</span><span class="chip">5 Min.</span></div></div>
+        <div class="anode an-gn"><div class="an-tag">Agent 10a</div><div class="an-title">Blog-Publish</div><div class="an-body">CMS, SEO-Meta, Bild-Alt-Tags, Schema-Markup, Author-Box</div><div class="an-foot"><span class="chip c-gn">CMS API</span><span class="chip">5 Min.</span></div></div>
         <div class="arr">→</div>
-        <div class="anode an-gn"><div class="an-tag">Agent 10b</div><div class="an-title">LinkedIn-Copy</div><div class="an-body">3 Varianten + 1:1-Bild → manuell in LinkedIn planen</div><div class="an-foot"><span class="chip c-gn">Claude Sonnet</span></div></div>
+        <div class="anode an-gn"><div class="an-tag">Agent 10b</div><div class="an-title">LinkedIn-Auto</div><div class="an-body">3 Varianten + 1:1-Bild → LinkedIn API direkt veröffentlichen</div><div class="an-foot"><span class="chip c-gn">LinkedIn API</span><span class="chip c-gn">vollautomatisch</span></div></div>
         <div class="arr">→</div>
-        <div class="anode an-gn"><div class="an-tag">Agent 10c</div><div class="an-title">Newsletter-Agent</div><div class="an-body">4 Sektionen, Hubspot-Sync pro Region</div><div class="an-foot"><span class="chip c-gn">Hubspot API</span></div></div>
+        <div class="anode an-tl" style="border-color:rgba(45,212,191,.4);background:rgba(45,212,191,.06)"><div class="an-tag" style="color:#99F6E4">Agent 10c · NEU</div><div class="an-title">Repurposing-Agent</div><div class="an-body">→ Carousel · Newsletter-Snippet · Sales-One-Pager · Reel-Skript</div><div class="an-foot"><span class="chip c-tl">Claude Sonnet</span><span class="chip c-tl">7 Assets</span></div></div>
         <div class="arr">→</div>
-        <div class="anode an-gy"><div class="an-tag">14 Tage post Publish</div><div class="an-title">Performance-Tracking</div><div class="an-body">Rankings + Traffic → Report in Jira</div><div class="an-foot"><span class="chip">Ahrefs</span><span class="chip">GA4</span></div></div>
+        <div class="anode an-gn"><div class="an-tag">Agent 10d</div><div class="an-title">Newsletter-Agent</div><div class="an-body">4 Sektionen, Hubspot-Sync pro Region, A/B-Subject-Lines</div><div class="an-foot"><span class="chip c-gn">Hubspot API</span></div></div>
+        <div class="arr">→</div>
+        <div class="anode an-gy"><div class="an-tag">14 Tage post Publish</div><div class="an-title">Performance-Tracking</div><div class="an-body">Rankings + Traffic + Leads + KI-Zitationen → Report in Jira</div><div class="an-foot"><span class="chip">Ahrefs</span><span class="chip">GA4</span><span class="chip">HubSpot</span></div></div>
       </div>
     </div>
-    <div class="pmeta"><div class="pmi"><div class="pmv" style="color:var(--grn)">~20 Min.</div><div class="pml">Laufzeit</div></div><div class="pmsep"></div><div class="pmi"><div class="pmv">Blog + LinkedIn + NL</div><div class="pml">Kanäle</div></div><div class="pmsep"></div><div class="pmi"><div class="pmv">2–4 Tage</div><div class="pml">Idee → Publish</div></div></div>
+    <div class="pmeta"><div class="pmi"><div class="pmv" style="color:var(--grn)">~25 Min.</div><div class="pml">Laufzeit</div></div><div class="pmsep"></div><div class="pmi"><div class="pmv">Blog + LinkedIn + NL + 4 Repurposing</div><div class="pml">Kanäle</div></div><div class="pmsep"></div><div class="pmi"><div class="pmv">2–4 Tage</div><div class="pml">Idee → Publish</div></div></div>
   </div>
 
   <div class="fp" id="fp4">
@@ -279,9 +288,9 @@ footer{border-top:1px solid var(--bd);padding:32px;text-align:center;font-family
       <div style="display:flex;justify-content:center;align-items:center;height:28px;background:linear-gradient(rgba(74,143,255,.04),rgba(251,191,36,.04));border-left:1.5px solid rgba(255,255,255,.07);border-right:1.5px solid rgba(255,255,255,.07)"><span style="color:var(--txt3);font-size:11px">↓</span></div>
       <div class="pbox pb-am" style="border-radius:0;border-top:none;border-bottom:none"><div class="pbox-title" style="color:#FDE68A;font-size:13px">Phase 2 — Briefing <span style="opacity:.5;font-weight:400;font-size:12px">Claude Opus · In Confluence</span></div><div style="display:flex;gap:7px;flex-wrap:wrap"><span class="chip c-am">SERP-Agent</span><span style="color:var(--txt3)">→</span><span class="chip c-am">Briefing-Agent (Opus)</span><span style="color:var(--txt3)">→</span><span class="chip c-am">Persona-Agent</span><span style="color:var(--txt3)">→</span><span class="chip">Confluence</span></div></div>
       <div style="display:flex;justify-content:center;align-items:center;height:28px;background:linear-gradient(rgba(251,191,36,.04),rgba(248,113,113,.04));border-left:1.5px solid rgba(255,255,255,.07);border-right:1.5px solid rgba(255,255,255,.07)"><span style="color:var(--txt3);font-size:11px">↓</span></div>
-      <div class="pbox pb-rd" style="border-radius:0;border-top:none;border-bottom:none"><div class="pbox-title" style="color:#FECACA;font-size:13px">Phase 3 — Produktion <span style="opacity:.5;font-weight:400;font-size:12px">Claude Sonnet + Haiku + fal.ai</span></div><div style="display:flex;gap:7px;flex-wrap:wrap"><span class="chip c-pu">Autor (Sonnet)</span><span style="color:var(--txt3)">→</span><span class="chip c-pu">Lektorat (Haiku)</span><span style="color:var(--txt3)">→</span><span class="chip c-rd">Score ≥ 80?</span><span style="color:var(--txt3)">→</span><span class="chip c-bl">Bild fal.ai</span><span style="color:var(--txt3)">→</span><span class="chip c-am">Jira Review</span></div></div>
+      <div class="pbox pb-rd" style="border-radius:0;border-top:none;border-bottom:none"><div class="pbox-title" style="color:#FECACA;font-size:13px">Phase 3 — Produktion <span style="opacity:.5;font-weight:400;font-size:12px">11 Agenten · Faktencheck vor Lektorat · risikobasierte Freigabe</span></div><div style="display:flex;gap:7px;flex-wrap:wrap"><span class="chip c-pu">Autor (Sonnet)</span><span style="color:var(--txt3)">→</span><span class="chip c-rd">Faktencheck (Opus)</span><span style="color:var(--txt3)">→</span><span class="chip c-pu">Lektorat (Haiku)</span><span style="color:var(--txt3)">→</span><span class="chip c-rd">Score ≥ 80?</span><span style="color:var(--txt3)">→</span><span class="chip c-bl">Bild fal.ai+LoRA</span><span style="color:var(--txt3)">→</span><span class="chip c-am">Risiko-Gate</span></div></div>
       <div style="display:flex;justify-content:center;align-items:center;height:28px;background:linear-gradient(rgba(248,113,113,.04),rgba(52,211,153,.04));border-left:1.5px solid rgba(255,255,255,.07);border-right:1.5px solid rgba(255,255,255,.07)"><span style="color:var(--txt3);font-size:11px">↓</span></div>
-      <div class="pbox pb-gn" style="border-radius:0 0 14px 14px;border-top:none"><div class="pbox-title" style="color:#6EE7C0;font-size:13px">Phase 4 — Distribution <span style="opacity:.5;font-weight:400;font-size:12px">automatisch</span></div><div style="display:flex;gap:7px;flex-wrap:wrap"><span class="chip c-gn">Blog-Publish</span><span style="color:var(--txt3)">→</span><span class="chip c-gn">LinkedIn-Copy (3 Varianten)</span><span style="color:var(--txt3)">→</span><span class="chip c-gn">Newsletter (Hubspot)</span><span style="color:var(--txt3)">→</span><span class="chip">Performance (14 Tage)</span></div></div>
+      <div class="pbox pb-gn" style="border-radius:0 0 14px 14px;border-top:none"><div class="pbox-title" style="color:#6EE7C0;font-size:13px">Phase 4 — Distribution &amp; Repurposing <span style="opacity:.5;font-weight:400;font-size:12px">vollautomatisch · 1 Artikel → 7 Assets</span></div><div style="display:flex;gap:7px;flex-wrap:wrap"><span class="chip c-gn">Blog-Publish</span><span style="color:var(--txt3)">→</span><span class="chip c-gn">LinkedIn API (3 Varianten)</span><span style="color:var(--txt3)">→</span><span class="chip c-tl">Repurposing (4 Assets)</span><span style="color:var(--txt3)">→</span><span class="chip c-gn">Newsletter (Hubspot)</span><span style="color:var(--txt3)">→</span><span class="chip">Performance + KI-Zitationen</span></div></div>
     </div>
     <div style="margin-top:14px;padding:11px 16px;background:rgba(74,143,255,.06);border:1px solid rgba(74,143,255,.2);border-radius:var(--r);font-family:var(--mono);font-size:10px;color:rgba(74,143,255,.8);text-align:center;letter-spacing:.04em">
       JIRA PREMIUM + CONFLUENCE — Orchestrator aktualisiert alle Issues via n8n · Briefings und Prompts in Confluence gespeichert
@@ -325,6 +334,72 @@ footer{border-top:1px solid var(--bd);padding:32px;text-align:center;font-family
       <span style="display:flex;align-items:center;gap:5px"><span style="width:12px;height:2px;background:#F87171;display:inline-block;border-radius:1px"></span>Ohne KI</span>
       <span style="display:flex;align-items:center;gap:5px"><span style="width:12px;height:2px;background:#34D399;display:inline-block;border-radius:1px"></span>Mit KI</span>
       <span style="display:flex;align-items:center;gap:5px"><span style="width:12px;height:2px;background:#4A8FFF;display:inline-block;border-radius:1px"></span>Kumulierte Ersparnis</span>
+    </div>
+  </div>
+
+  <!-- 3 SZENARIEN -->
+  <div style="margin-top:36px" class="reveal d3">
+    <div style="display:flex;align-items:center;gap:10px;margin-bottom:14px">
+      <div style="font-size:18px;font-weight:600">3 Szenarien — transparent gerechnet</div>
+      <span style="font-family:var(--mono);font-size:9px;padding:2px 8px;border-radius:8px;background:rgba(167,139,250,.1);border:1px solid rgba(167,139,250,.2);color:var(--pu)">Annahmen sichtbar</span>
+    </div>
+    <div style="font-size:14px;color:var(--txt2);margin-bottom:18px;line-height:1.7">Statt einer optimistischen Punktschätzung zeigen wir die Spanne. So bleibt die Rechnung gegen Einwände belastbar.</div>
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:12px">
+
+      <div style="background:#161B2A;border:1px solid rgba(248,113,113,.25);border-radius:var(--r2);padding:22px">
+        <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:14px">
+          <div style="font-family:var(--mono);font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--red)">Konservativ</div>
+          <span style="font-family:var(--mono);font-size:9px;padding:2px 8px;border-radius:8px;background:rgba(248,113,113,.1);color:var(--red)">Worst Case</span>
+        </div>
+        <div style="font-family:var(--mono);font-size:30px;font-weight:500;color:var(--red);margin-bottom:4px">~2.100 €</div>
+        <div style="font-size:14px;color:var(--txt3);margin-bottom:18px">Ersparnis/Monat</div>
+        <div style="display:flex;flex-direction:column;gap:7px;font-size:13px;color:var(--txt2);line-height:1.6">
+          <div style="display:flex;justify-content:space-between"><span>Stundensatz Vollkosten</span><span style="font-family:var(--mono);color:var(--txt)">75 €</span></div>
+          <div style="display:flex;justify-content:space-between"><span>Std./Mo. ohne KI</span><span style="font-family:var(--mono);color:var(--txt)">50 h</span></div>
+          <div style="display:flex;justify-content:space-between"><span>Std./Mo. mit KI</span><span style="font-family:var(--mono);color:var(--txt)">18 h</span></div>
+          <div style="display:flex;justify-content:space-between"><span>Tool-Kosten + Hosting</span><span style="font-family:var(--mono);color:var(--txt)">320 €</span></div>
+          <div style="display:flex;justify-content:space-between;padding-top:8px;border-top:1px solid var(--bd)"><span>Break-even</span><span style="font-family:var(--mono);color:var(--red)">~6 Mo.</span></div>
+          <div style="display:flex;justify-content:space-between"><span>ROI Jahr 1</span><span style="font-family:var(--mono);color:var(--red)">~180%</span></div>
+        </div>
+      </div>
+
+      <div style="background:rgba(74,143,255,.06);border:1.5px solid rgba(74,143,255,.4);border-radius:var(--r2);padding:22px">
+        <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:14px">
+          <div style="font-family:var(--mono);font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--acc)">Realistisch</div>
+          <span style="font-family:var(--mono);font-size:9px;padding:2px 8px;border-radius:8px;background:rgba(74,143,255,.15);color:var(--acc)">Planungsbasis</span>
+        </div>
+        <div style="font-family:var(--mono);font-size:30px;font-weight:500;color:var(--acc);margin-bottom:4px">~3.200 €</div>
+        <div style="font-size:14px;color:var(--txt3);margin-bottom:18px">Ersparnis/Monat</div>
+        <div style="display:flex;flex-direction:column;gap:7px;font-size:13px;color:var(--txt2);line-height:1.6">
+          <div style="display:flex;justify-content:space-between"><span>Stundensatz Vollkosten</span><span style="font-family:var(--mono);color:var(--txt)">85 €</span></div>
+          <div style="display:flex;justify-content:space-between"><span>Std./Mo. ohne KI</span><span style="font-family:var(--mono);color:var(--txt)">60 h</span></div>
+          <div style="display:flex;justify-content:space-between"><span>Std./Mo. mit KI</span><span style="font-family:var(--mono);color:var(--txt)">15 h</span></div>
+          <div style="display:flex;justify-content:space-between"><span>Tool-Kosten + Hosting</span><span style="font-family:var(--mono);color:var(--txt)">290 €</span></div>
+          <div style="display:flex;justify-content:space-between;padding-top:8px;border-top:1px solid var(--bd)"><span>Break-even</span><span style="font-family:var(--mono);color:var(--acc)">~5 Mo.</span></div>
+          <div style="display:flex;justify-content:space-between"><span>ROI Jahr 1</span><span style="font-family:var(--mono);color:var(--acc)">~245%</span></div>
+        </div>
+      </div>
+
+      <div style="background:#161B2A;border:1px solid rgba(52,211,153,.25);border-radius:var(--r2);padding:22px">
+        <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:14px">
+          <div style="font-family:var(--mono);font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--grn)">Optimistisch</div>
+          <span style="font-family:var(--mono);font-size:9px;padding:2px 8px;border-radius:8px;background:rgba(52,211,153,.1);color:var(--grn)">Best Case</span>
+        </div>
+        <div style="font-family:var(--mono);font-size:30px;font-weight:500;color:var(--grn);margin-bottom:4px">~4.500 €</div>
+        <div style="font-size:14px;color:var(--txt3);margin-bottom:18px">Ersparnis/Monat</div>
+        <div style="display:flex;flex-direction:column;gap:7px;font-size:13px;color:var(--txt2);line-height:1.6">
+          <div style="display:flex;justify-content:space-between"><span>Stundensatz Vollkosten</span><span style="font-family:var(--mono);color:var(--txt)">100 €</span></div>
+          <div style="display:flex;justify-content:space-between"><span>Std./Mo. ohne KI</span><span style="font-family:var(--mono);color:var(--txt)">70 h</span></div>
+          <div style="display:flex;justify-content:space-between"><span>Std./Mo. mit KI</span><span style="font-family:var(--mono);color:var(--txt)">12 h</span></div>
+          <div style="display:flex;justify-content:space-between"><span>Tool-Kosten + Hosting</span><span style="font-family:var(--mono);color:var(--txt)">270 €</span></div>
+          <div style="display:flex;justify-content:space-between;padding-top:8px;border-top:1px solid var(--bd)"><span>Break-even</span><span style="font-family:var(--mono);color:var(--grn)">~4 Mo.</span></div>
+          <div style="display:flex;justify-content:space-between"><span>ROI Jahr 1</span><span style="font-family:var(--mono);color:var(--grn)">~320%</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div style="margin-top:18px;padding:14px 18px;background:var(--bg1);border:1px solid var(--bd);border-radius:var(--r);font-size:13px;color:var(--txt2);line-height:1.7">
+      <strong style="color:var(--txt)">Hinweis zu Vollkosten:</strong> Der bisherige Pauschalsatz von 50 €/Std. unterschätzt reale Mitarbeiterkosten. Echte Vollkosten (inkl. Sozialabgaben, Overhead, Urlaub, Krankheit) liegen bei intern 75–100 €, extern 80–150 €. Das macht die Realisten-Variante eher zur unteren Schätzgrenze.
     </div>
   </div>
 </div>
@@ -373,6 +448,472 @@ footer{border-top:1px solid var(--bd);padding:32px;text-align:center;font-family
     <div class="tc" style="border-color:rgba(248,113,113,.2);opacity:.6"><div class="tc-cat">Gestrichen</div><div class="tc-name" style="text-decoration:line-through">Whisper API</div><div class="tc-desc">Nicht mehr nötig — Gemini 1.5 Pro transkribiert YouTube-Videos nativ</div><div class="tc-cost" style="color:var(--red)">−10 € gespart</div></div>
     <div class="tc" style="border-color:rgba(248,113,113,.2);opacity:.6"><div class="tc-cat">Gestrichen</div><div class="tc-name" style="text-decoration:line-through">Make Core</div><div class="tc-desc">Nicht mehr nötig — n8n übernimmt alle Automatisierungen vollständig</div><div class="tc-cost" style="color:var(--red)">−9 € gespart</div></div>
     <div class="tc" style="background:rgba(52,211,153,.04);border-color:rgba(52,211,153,.2)"><div class="tc-cat" style="color:var(--grn)">Gesamt laufend</div><div class="tc-name">Tool-Stack Total</div><div class="tc-desc">Whisper −10 € · Make −9 € · Atlassian 0 € · Gemini Free Tier · Claude.ai Abo bereits vorhanden</div><div class="tc-cost" style="color:var(--grn);font-size:20px">249 € / Mo.</div></div>
+  </div>
+</div>
+</section>
+
+<!-- ══════════════════════════════════════════════════════════ -->
+<!-- TOPIC CLUSTER ARCHITECTURE — Strategische SEO-Foundation -->
+<!-- ══════════════════════════════════════════════════════════ -->
+<section id="cluster" style="background:var(--bg)">
+<div class="wide">
+  <div class="reveal">
+    <div class="eyebrow">Content-Architektur</div>
+    <h2 class="sec-title">Topic Cluster — die SEO-Architektur, die alles trägt</h2>
+    <p class="sec-sub">Statt 50 isolierter Artikel pro Jahr: 3–5 Pillar-Themen mit jeweils 5–10 Cluster-Artikeln, die intern dicht verlinkt sind. Das ist der Hebel, der Beyonity zur thematischen Autorität in PropTech DACH macht — und der Faktor, der KI-Systeme dazu bringt, Beyonity als „Quelle für X" zu zitieren.</p>
+  </div>
+  <div class="hdiv"></div>
+
+  <!-- Was ist Topic Cluster + Warum es wirkt -->
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:32px" class="reveal d1">
+    <div style="background:#161B2A;border:1px solid rgba(255,255,255,.16);border-radius:var(--r2);padding:24px">
+      <div style="font-family:var(--mono);font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--txt3);margin-bottom:10px">Klassisches Content Marketing</div>
+      <div style="font-size:17px;font-weight:600;margin-bottom:14px">Einzelne SEO-Artikel</div>
+      <div style="display:flex;flex-direction:column;gap:8px;font-size:14px;color:var(--txt2);line-height:1.7">
+        <div style="display:flex;gap:8px"><span style="color:var(--red);flex-shrink:0">✗</span> Jeder Artikel kämpft allein um Rankings</div>
+        <div style="display:flex;gap:8px"><span style="color:var(--red);flex-shrink:0">✗</span> Interne Verlinkung zufällig, nicht strategisch</div>
+        <div style="display:flex;gap:8px"><span style="color:var(--red);flex-shrink:0">✗</span> Keine erkennbare thematische Tiefe für Google</div>
+        <div style="display:flex;gap:8px"><span style="color:var(--red);flex-shrink:0">✗</span> KI-Systeme finden kein „Thema" — nur einzelne Texte</div>
+        <div style="display:flex;gap:8px"><span style="color:var(--amb);flex-shrink:0">→</span> Resultat: Plateau bei mittelmäßigen Rankings</div>
+      </div>
+    </div>
+    <div style="background:rgba(74,143,255,.06);border:1.5px solid rgba(74,143,255,.4);border-radius:var(--r2);padding:24px">
+      <div style="font-family:var(--mono);font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--acc);margin-bottom:10px">Topic Cluster Strategy</div>
+      <div style="font-size:17px;font-weight:600;margin-bottom:14px">Pillar &amp; Spoke Architektur</div>
+      <div style="display:flex;flex-direction:column;gap:8px;font-size:14px;color:var(--txt2);line-height:1.7">
+        <div style="display:flex;gap:8px"><span style="color:var(--grn);flex-shrink:0">✓</span> Pillar bündelt Autorität — Spokes verlinken zurück</div>
+        <div style="display:flex;gap:8px"><span style="color:var(--grn);flex-shrink:0">✓</span> Internal Linking systematisch nach Cluster-Logik</div>
+        <div style="display:flex;gap:8px"><span style="color:var(--grn);flex-shrink:0">✓</span> Google erkennt: Beyonity ist Autorität für „X"</div>
+        <div style="display:flex;gap:8px"><span style="color:var(--grn);flex-shrink:0">✓</span> KI extrahiert: Beyonity = Top-Quelle für „X"</div>
+        <div style="display:flex;gap:8px"><span style="color:var(--acc);flex-shrink:0">→</span> Resultat: Topical Authority + KI-Zitation</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Visualisierung: Hub & Spoke -->
+  <div style="background:#161B2A;border:1px solid rgba(255,255,255,.16);border-radius:var(--r2);padding:32px;margin-bottom:32px" class="reveal d1">
+    <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:18px;flex-wrap:wrap;gap:10px">
+      <div>
+        <div style="font-size:17px;font-weight:600;margin-bottom:4px">Pillar &amp; Spoke — wie es konkret aussieht</div>
+        <div style="font-size:14px;color:var(--txt3);font-family:var(--mono)">Der Pillar ist der Hub. Die Spokes verlinken zurück. Spokes verlinken untereinander wenn thematisch passend.</div>
+      </div>
+      <span style="font-family:var(--mono);font-size:9px;padding:4px 12px;border-radius:8px;background:rgba(74,143,255,.1);border:1px solid rgba(74,143,255,.2);color:var(--acc)">Schematisch</span>
+    </div>
+    <div style="display:flex;justify-content:center;padding:20px 0">
+      <svg viewBox="0 0 700 400" style="width:100%;max-width:700px;height:auto" xmlns="http://www.w3.org/2000/svg">
+        <!-- Connection lines (Spokes → Pillar) -->
+        <line x1="350" y1="200" x2="120" y2="80" stroke="#4A8FFF" stroke-width="1.5" opacity="0.4"/>
+        <line x1="350" y1="200" x2="350" y2="60" stroke="#4A8FFF" stroke-width="1.5" opacity="0.4"/>
+        <line x1="350" y1="200" x2="580" y2="80" stroke="#4A8FFF" stroke-width="1.5" opacity="0.4"/>
+        <line x1="350" y1="200" x2="60" y2="200" stroke="#4A8FFF" stroke-width="1.5" opacity="0.4"/>
+        <line x1="350" y1="200" x2="640" y2="200" stroke="#4A8FFF" stroke-width="1.5" opacity="0.4"/>
+        <line x1="350" y1="200" x2="120" y2="320" stroke="#4A8FFF" stroke-width="1.5" opacity="0.4"/>
+        <line x1="350" y1="200" x2="350" y2="340" stroke="#4A8FFF" stroke-width="1.5" opacity="0.4"/>
+        <line x1="350" y1="200" x2="580" y2="320" stroke="#4A8FFF" stroke-width="1.5" opacity="0.4"/>
+
+        <!-- Cross-spoke links (zwei beispielhaft) -->
+        <line x1="120" y1="80" x2="350" y2="60" stroke="#A78BFA" stroke-width="1" opacity="0.3" stroke-dasharray="3,3"/>
+        <line x1="640" y1="200" x2="580" y2="320" stroke="#A78BFA" stroke-width="1" opacity="0.3" stroke-dasharray="3,3"/>
+
+        <!-- Pillar (center) -->
+        <circle cx="350" cy="200" r="58" fill="#4A8FFF" opacity="0.15"/>
+        <circle cx="350" cy="200" r="50" fill="#161B2A" stroke="#4A8FFF" stroke-width="2"/>
+        <text x="350" y="195" text-anchor="middle" fill="#4A8FFF" font-family="DM Mono, monospace" font-size="9" font-weight="600">PILLAR</text>
+        <text x="350" y="210" text-anchor="middle" fill="#F2F4F8" font-family="Bricolage Grotesque, sans-serif" font-size="11" font-weight="600">KI-CRM für</text>
+        <text x="350" y="223" text-anchor="middle" fill="#F2F4F8" font-family="Bricolage Grotesque, sans-serif" font-size="11" font-weight="600">Immobilien</text>
+
+        <!-- Spokes -->
+        <g>
+          <circle cx="120" cy="80" r="40" fill="#161B2A" stroke="#34D399" stroke-width="1.5" opacity="0.9"/>
+          <text x="120" y="78" text-anchor="middle" fill="#B0BAC8" font-family="Bricolage Grotesque" font-size="10" font-weight="500">CRM-Auswahl</text>
+          <text x="120" y="92" text-anchor="middle" fill="#7080A0" font-family="DM Mono" font-size="8">Spoke</text>
+        </g>
+        <g>
+          <circle cx="350" cy="60" r="40" fill="#161B2A" stroke="#34D399" stroke-width="1.5" opacity="0.9"/>
+          <text x="350" y="58" text-anchor="middle" fill="#B0BAC8" font-family="Bricolage Grotesque" font-size="10" font-weight="500">Lead-Qual.</text>
+          <text x="350" y="72" text-anchor="middle" fill="#7080A0" font-family="DM Mono" font-size="8">Spoke</text>
+        </g>
+        <g>
+          <circle cx="580" cy="80" r="40" fill="#161B2A" stroke="#34D399" stroke-width="1.5" opacity="0.9"/>
+          <text x="580" y="78" text-anchor="middle" fill="#B0BAC8" font-family="Bricolage Grotesque" font-size="10" font-weight="500">Datenmodelle</text>
+          <text x="580" y="92" text-anchor="middle" fill="#7080A0" font-family="DM Mono" font-size="8">Spoke</text>
+        </g>
+        <g>
+          <circle cx="60" cy="200" r="40" fill="#161B2A" stroke="#34D399" stroke-width="1.5" opacity="0.9"/>
+          <text x="60" y="198" text-anchor="middle" fill="#B0BAC8" font-family="Bricolage Grotesque" font-size="10" font-weight="500">Integration</text>
+          <text x="60" y="212" text-anchor="middle" fill="#7080A0" font-family="DM Mono" font-size="8">Spoke</text>
+        </g>
+        <g>
+          <circle cx="640" cy="200" r="40" fill="#161B2A" stroke="#34D399" stroke-width="1.5" opacity="0.9"/>
+          <text x="640" y="198" text-anchor="middle" fill="#B0BAC8" font-family="Bricolage Grotesque" font-size="10" font-weight="500">DSGVO</text>
+          <text x="640" y="212" text-anchor="middle" fill="#7080A0" font-family="DM Mono" font-size="8">Spoke</text>
+        </g>
+        <g>
+          <circle cx="120" cy="320" r="40" fill="#161B2A" stroke="#34D399" stroke-width="1.5" opacity="0.9"/>
+          <text x="120" y="318" text-anchor="middle" fill="#B0BAC8" font-family="Bricolage Grotesque" font-size="10" font-weight="500">ROI-Cases</text>
+          <text x="120" y="332" text-anchor="middle" fill="#7080A0" font-family="DM Mono" font-size="8">Spoke</text>
+        </g>
+        <g>
+          <circle cx="350" cy="340" r="40" fill="#161B2A" stroke="#34D399" stroke-width="1.5" opacity="0.9"/>
+          <text x="350" y="338" text-anchor="middle" fill="#B0BAC8" font-family="Bricolage Grotesque" font-size="10" font-weight="500">Onboarding</text>
+          <text x="350" y="352" text-anchor="middle" fill="#7080A0" font-family="DM Mono" font-size="8">Spoke</text>
+        </g>
+        <g>
+          <circle cx="580" cy="320" r="40" fill="#161B2A" stroke="#34D399" stroke-width="1.5" opacity="0.9"/>
+          <text x="580" y="318" text-anchor="middle" fill="#B0BAC8" font-family="Bricolage Grotesque" font-size="10" font-weight="500">Reporting</text>
+          <text x="580" y="332" text-anchor="middle" fill="#7080A0" font-family="DM Mono" font-size="8">Spoke</text>
+        </g>
+      </svg>
+    </div>
+    <div style="display:flex;justify-content:center;gap:24px;margin-top:14px;flex-wrap:wrap;font-family:var(--mono);font-size:10px;color:var(--txt3)">
+      <span style="display:flex;align-items:center;gap:6px"><span style="width:14px;height:2px;background:#4A8FFF"></span>Spoke → Pillar (jeder Cluster verlinkt zum Pillar)</span>
+      <span style="display:flex;align-items:center;gap:6px"><span style="width:14px;height:1px;background:#A78BFA;border-top:1px dashed #A78BFA"></span>Spoke ↔ Spoke (thematisch verwandt)</span>
+    </div>
+  </div>
+
+  <!-- 3 konkrete Pillar für Beyonity -->
+  <div style="font-size:17px;font-weight:600;margin-bottom:18px" class="reveal">3 Pillar-Themen für Beyonity — konkret geplant</div>
+  <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:14px" class="reveal d1">
+
+    <div style="background:#161B2A;border:1.5px solid rgba(74,143,255,.3);border-radius:var(--r2);padding:22px">
+      <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:14px">
+        <div style="display:flex;align-items:center;gap:10px">
+          <div style="width:32px;height:32px;border-radius:var(--r);background:rgba(74,143,255,.12);border:1px solid rgba(74,143,255,.3);display:flex;align-items:center;justify-content:center;font-family:var(--mono);font-size:11px;font-weight:600;color:var(--acc)">P1</div>
+          <div style="font-size:15px;font-weight:600">KI-CRM für Immobilien</div>
+        </div>
+        <span class="chip c-bl">Q2/2026</span>
+      </div>
+      <div style="font-size:13px;color:var(--txt3);font-family:var(--mono);margin-bottom:12px">Pillar: ~3.000 Wörter · 8 Cluster-Artikel</div>
+      <div style="display:flex;flex-direction:column;gap:5px;margin-bottom:14px">
+        <div style="font-size:13px;color:var(--txt2);padding:6px 10px;background:var(--bg);border-radius:6px;border-left:2px solid var(--acc)">CRM-Auswahl für Makler</div>
+        <div style="font-size:13px;color:var(--txt2);padding:6px 10px;background:var(--bg);border-radius:6px;border-left:2px solid var(--acc)">Lead-Qualifizierung mit KI</div>
+        <div style="font-size:13px;color:var(--txt2);padding:6px 10px;background:var(--bg);border-radius:6px;border-left:2px solid var(--acc)">Datenmodelle für Immobilien-CRM</div>
+        <div style="font-size:13px;color:var(--txt2);padding:6px 10px;background:var(--bg);border-radius:6px;border-left:2px solid var(--acc)">CRM-Integration mit Portalen</div>
+        <div style="font-size:13px;color:var(--txt2);padding:6px 10px;background:var(--bg);border-radius:6px;border-left:2px solid var(--acc)">DSGVO im Immobilien-CRM</div>
+        <div style="font-size:13px;color:var(--txt2);padding:6px 10px;background:var(--bg);border-radius:6px;border-left:2px solid var(--acc)">+ 3 weitere</div>
+      </div>
+      <div style="display:flex;justify-content:space-between;padding-top:10px;border-top:1px solid var(--bd);font-family:var(--mono);font-size:10px;color:var(--txt3)">
+        <span>Search Volume</span><span style="color:var(--grn)">~6.400/Mo.</span>
+      </div>
+    </div>
+
+    <div style="background:#161B2A;border:1.5px solid rgba(167,139,250,.3);border-radius:var(--r2);padding:22px">
+      <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:14px">
+        <div style="display:flex;align-items:center;gap:10px">
+          <div style="width:32px;height:32px;border-radius:var(--r);background:rgba(167,139,250,.12);border:1px solid rgba(167,139,250,.3);display:flex;align-items:center;justify-content:center;font-family:var(--mono);font-size:11px;font-weight:600;color:var(--pu)">P2</div>
+          <div style="font-size:15px;font-weight:600">Vertriebsdigitalisierung</div>
+        </div>
+        <span class="chip c-pu">Q3/2026</span>
+      </div>
+      <div style="font-size:13px;color:var(--txt3);font-family:var(--mono);margin-bottom:12px">Pillar: ~2.500 Wörter · 6 Cluster-Artikel</div>
+      <div style="display:flex;flex-direction:column;gap:5px;margin-bottom:14px">
+        <div style="font-size:13px;color:var(--txt2);padding:6px 10px;background:var(--bg);border-radius:6px;border-left:2px solid var(--pu)">Sales Pipeline für Makler</div>
+        <div style="font-size:13px;color:var(--txt2);padding:6px 10px;background:var(--bg);border-radius:6px;border-left:2px solid var(--pu)">Automatisierte Exposé-Erstellung</div>
+        <div style="font-size:13px;color:var(--txt2);padding:6px 10px;background:var(--bg);border-radius:6px;border-left:2px solid var(--pu)">Digitale Besichtigungen</div>
+        <div style="font-size:13px;color:var(--txt2);padding:6px 10px;background:var(--bg);border-radius:6px;border-left:2px solid var(--pu)">KI-gestützte Preisanalyse</div>
+        <div style="font-size:13px;color:var(--txt2);padding:6px 10px;background:var(--bg);border-radius:6px;border-left:2px solid var(--pu)">Sales Enablement Tools</div>
+        <div style="font-size:13px;color:var(--txt2);padding:6px 10px;background:var(--bg);border-radius:6px;border-left:2px solid var(--pu)">+ 1 weiterer</div>
+      </div>
+      <div style="display:flex;justify-content:space-between;padding-top:10px;border-top:1px solid var(--bd);font-family:var(--mono);font-size:10px;color:var(--txt3)">
+        <span>Search Volume</span><span style="color:var(--grn)">~4.100/Mo.</span>
+      </div>
+    </div>
+
+    <div style="background:#161B2A;border:1.5px solid rgba(45,212,191,.3);border-radius:var(--r2);padding:22px">
+      <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:14px">
+        <div style="display:flex;align-items:center;gap:10px">
+          <div style="width:32px;height:32px;border-radius:var(--r);background:rgba(45,212,191,.12);border:1px solid rgba(45,212,191,.3);display:flex;align-items:center;justify-content:center;font-family:var(--mono);font-size:11px;font-weight:600;color:var(--tl)">P3</div>
+          <div style="font-size:15px;font-weight:600">PropTech in DACH</div>
+        </div>
+        <span class="chip c-tl">Q4/2026</span>
+      </div>
+      <div style="font-size:13px;color:var(--txt3);font-family:var(--mono);margin-bottom:12px">Pillar: ~2.800 Wörter · 5 Cluster-Artikel</div>
+      <div style="display:flex;flex-direction:column;gap:5px;margin-bottom:14px">
+        <div style="font-size:13px;color:var(--txt2);padding:6px 10px;background:var(--bg);border-radius:6px;border-left:2px solid var(--tl)">PropTech Trends DACH 2026</div>
+        <div style="font-size:13px;color:var(--txt2);padding:6px 10px;background:var(--bg);border-radius:6px;border-left:2px solid var(--tl)">PropTech-Investoren in DACH</div>
+        <div style="font-size:13px;color:var(--txt2);padding:6px 10px;background:var(--bg);border-radius:6px;border-left:2px solid var(--tl)">Smart Building &amp; IoT</div>
+        <div style="font-size:13px;color:var(--txt2);padding:6px 10px;background:var(--bg);border-radius:6px;border-left:2px solid var(--tl)">Regulatorik &amp; PropTech</div>
+        <div style="font-size:13px;color:var(--txt2);padding:6px 10px;background:var(--bg);border-radius:6px;border-left:2px solid var(--tl)">PropTech Adoption Mittelstand</div>
+      </div>
+      <div style="display:flex;justify-content:space-between;padding-top:10px;border-top:1px solid var(--bd);font-family:var(--mono);font-size:10px;color:var(--txt3)">
+        <span>Search Volume</span><span style="color:var(--grn)">~3.200/Mo.</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Internal Linking Regeln -->
+  <div style="background:#161B2A;border:1px solid rgba(255,255,255,.16);border-radius:var(--r2);padding:24px;margin-top:28px" class="reveal d2">
+    <div style="font-size:16px;font-weight:600;margin-bottom:14px">Internal-Linking-Regeln (verbindlich für Autor-Agent)</div>
+    <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:12px">
+      <div style="background:var(--bg);border:1px solid var(--bd);border-radius:var(--r);padding:14px;font-size:13px;line-height:1.7;color:var(--txt2)">
+        <div style="color:var(--acc);font-weight:600;margin-bottom:6px;font-family:var(--mono);font-size:11px;letter-spacing:.05em">REGEL 1 · Pillar-Verlinkung</div>
+        Jeder Spoke verlinkt mindestens 2× auf den Pillar — einmal früh im Text, einmal als Call-to-Action am Ende.
+      </div>
+      <div style="background:var(--bg);border:1px solid var(--bd);border-radius:var(--r);padding:14px;font-size:13px;line-height:1.7;color:var(--txt2)">
+        <div style="color:var(--acc);font-weight:600;margin-bottom:6px;font-family:var(--mono);font-size:11px;letter-spacing:.05em">REGEL 2 · Reverse-Verlinkung</div>
+        Pillar verlinkt am Ende auf alle Spokes als „Vertiefende Themen" — wird halbjährlich aktualisiert.
+      </div>
+      <div style="background:var(--bg);border:1px solid var(--bd);border-radius:var(--r);padding:14px;font-size:13px;line-height:1.7;color:var(--txt2)">
+        <div style="color:var(--acc);font-weight:600;margin-bottom:6px;font-family:var(--mono);font-size:11px;letter-spacing:.05em">REGEL 3 · Cross-Linking</div>
+        Spokes verlinken untereinander nur bei thematischer Relevanz — nicht erzwingen. Max. 3 Cross-Links pro Spoke.
+      </div>
+      <div style="background:var(--bg);border:1px solid var(--bd);border-radius:var(--r);padding:14px;font-size:13px;line-height:1.7;color:var(--txt2)">
+        <div style="color:var(--acc);font-weight:600;margin-bottom:6px;font-family:var(--mono);font-size:11px;letter-spacing:.05em">REGEL 4 · Anchor-Text</div>
+        Anchor-Texte sind beschreibend, niemals „hier klicken". Variation der Anchors zur selben Ziel-URL.
+      </div>
+    </div>
+  </div>
+
+  <!-- KPIs -->
+  <div style="margin-top:20px;padding:20px 24px;background:var(--bg1);border:1px solid var(--bd);border-radius:var(--r2)" class="reveal d2">
+    <div style="font-size:16px;font-weight:600;margin-bottom:14px">Cluster-KPIs</div>
+    <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:10px">
+      <div style="text-align:center;padding:14px;background:var(--bg);border-radius:var(--r);border:1px solid var(--bd)">
+        <div style="font-family:var(--mono);font-size:24px;font-weight:500;color:var(--acc);margin-bottom:3px">3 → 5</div>
+        <div style="font-family:var(--mono);font-size:13px;letter-spacing:.07em;color:var(--txt3);text-transform:uppercase">Aktive Pillar</div>
+        <div style="font-size:13px;color:var(--txt3);margin-top:4px">Ziel: Ende 2026</div>
+      </div>
+      <div style="text-align:center;padding:14px;background:var(--bg);border-radius:var(--r);border:1px solid var(--bd)">
+        <div style="font-family:var(--mono);font-size:24px;font-weight:500;color:var(--grn);margin-bottom:3px">25–35</div>
+        <div style="font-family:var(--mono);font-size:13px;letter-spacing:.07em;color:var(--txt3);text-transform:uppercase">Spoke-Artikel</div>
+        <div style="font-size:13px;color:var(--txt3);margin-top:4px">Cluster-Tiefe</div>
+      </div>
+      <div style="text-align:center;padding:14px;background:var(--bg);border-radius:var(--r);border:1px solid var(--bd)">
+        <div style="font-family:var(--mono);font-size:24px;font-weight:500;color:var(--pu);margin-bottom:3px">≥85%</div>
+        <div style="font-family:var(--mono);font-size:13px;letter-spacing:.07em;color:var(--txt3);text-transform:uppercase">Cluster-Coverage</div>
+        <div style="font-size:13px;color:var(--txt3);margin-top:4px">Spokes pro Pillar gefüllt</div>
+      </div>
+      <div style="text-align:center;padding:14px;background:var(--bg);border-radius:var(--r);border:1px solid var(--bd)">
+        <div style="font-family:var(--mono);font-size:24px;font-weight:500;color:var(--amb);margin-bottom:3px">+45%</div>
+        <div style="font-family:var(--mono);font-size:13px;letter-spacing:.07em;color:var(--txt3);text-transform:uppercase">Topical Authority</div>
+        <div style="font-size:13px;color:var(--txt3);margin-top:4px">Ahrefs Topic Score</div>
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+
+<!-- ══════════════════════════════════════════════════════════ -->
+<!-- E-E-A-T STRATEGY — Trust Foundation für AI-Era SEO -->
+<!-- ══════════════════════════════════════════════════════════ -->
+<section id="eeat" style="background:#0D1220">
+<div class="wide">
+  <div class="reveal">
+    <div class="eyebrow">Experience · Expertise · Authoritativeness · Trustworthiness</div>
+    <h2 class="sec-title">E-E-A-T — wie KI-Content trotzdem rankt</h2>
+    <p class="sec-sub">Google straft generischen KI-Content seit dem March-2024-Helpful-Content-Update systematisch ab. KI-generierte Texte ohne Experience &amp; Expertise verschwinden aus den SERPs. E-E-A-T ist kein Nice-to-have — es ist die Bedingung dafür, dass die Content-Pipeline überhaupt SEO-Wirkung entfaltet.</p>
+  </div>
+  <div class="hdiv"></div>
+
+  <!-- Warum E-E-A-T jetzt -->
+  <div style="background:rgba(248,113,113,.06);border:1px solid rgba(248,113,113,.2);border-radius:var(--r2);padding:20px 24px;margin-bottom:32px;display:flex;gap:16px;align-items:flex-start" class="reveal d1">
+    <div style="font-family:var(--mono);font-size:9px;letter-spacing:.1em;text-transform:uppercase;color:var(--red);background:rgba(248,113,113,.15);padding:4px 10px;border-radius:6px;flex-shrink:0">Risiko</div>
+    <div style="font-size:14px;color:var(--txt2);line-height:1.7">
+      Ohne E-E-A-T-Maßnahmen läuft die Pipeline ins Leere: Google erkennt KI-Texte ohne Author-Profile, ohne Originaldaten und ohne überprüfbare Expertise — und stuft sie als „mass-produced content" ein. Die 60–80% Cost-per-Article-Ersparnis verpufft, wenn die Artikel nicht ranken.
+    </div>
+  </div>
+
+  <!-- 4 Säulen Modell -->
+  <div style="font-size:17px;font-weight:600;margin-bottom:18px" class="reveal">Die 4 Säulen — was Beyonity konkret tut</div>
+  <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin-bottom:32px" class="reveal d1">
+
+    <!-- E1 — Experience -->
+    <div style="background:#161B2A;border:1.5px solid rgba(74,143,255,.3);border-radius:var(--r2);padding:24px">
+      <div style="display:flex;align-items:center;gap:12px;margin-bottom:14px">
+        <div style="width:42px;height:42px;border-radius:var(--r);background:rgba(74,143,255,.15);border:1px solid rgba(74,143,255,.3);display:flex;align-items:center;justify-content:center;font-family:var(--mono);font-size:18px;font-weight:600;color:var(--acc)">E</div>
+        <div>
+          <div style="font-size:17px;font-weight:600">Experience</div>
+          <div style="font-size:13px;color:var(--txt3);font-family:var(--mono)">Erste-Hand-Erfahrung sichtbar machen</div>
+        </div>
+      </div>
+      <div style="font-size:14px;color:var(--txt2);line-height:1.7;margin-bottom:14px">
+        Google's neueste Säule (2023): Hat der Autor das Thema selbst erlebt? Bei Beyonity: echte Kunden-Cases, eigene Plattform-Daten, Mitarbeiter-Erfahrungsberichte.
+      </div>
+      <div style="display:flex;flex-direction:column;gap:6px">
+        <div style="display:flex;gap:8px;font-size:13px;color:var(--txt2);padding:8px 12px;background:var(--bg);border-radius:6px;line-height:1.5"><span style="color:var(--acc);flex-shrink:0">→</span>Mind. 1 Original-Datenpunkt aus Beyonity-Plattform pro Artikel (anonymisiert)</div>
+        <div style="display:flex;gap:8px;font-size:13px;color:var(--txt2);padding:8px 12px;background:var(--bg);border-radius:6px;line-height:1.5"><span style="color:var(--acc);flex-shrink:0">→</span>Mitarbeiter-Quotes mit Funktion + Foto („Vertriebsleiter Markus K., 8 Jahre Immobilien")</div>
+        <div style="display:flex;gap:8px;font-size:13px;color:var(--txt2);padding:8px 12px;background:var(--bg);border-radius:6px;line-height:1.5"><span style="color:var(--acc);flex-shrink:0">→</span>Pro Quartal 1 Original-Studie aus Plattformdaten („Beyonity Index Q3")</div>
+        <div style="display:flex;gap:8px;font-size:13px;color:var(--txt2);padding:8px 12px;background:var(--bg);border-radius:6px;line-height:1.5"><span style="color:var(--acc);flex-shrink:0">→</span>Echte Screenshots, keine Stockfotos für Produkt-Erklärungen</div>
+      </div>
+    </div>
+
+    <!-- E2 — Expertise -->
+    <div style="background:#161B2A;border:1.5px solid rgba(167,139,250,.3);border-radius:var(--r2);padding:24px">
+      <div style="display:flex;align-items:center;gap:12px;margin-bottom:14px">
+        <div style="width:42px;height:42px;border-radius:var(--r);background:rgba(167,139,250,.15);border:1px solid rgba(167,139,250,.3);display:flex;align-items:center;justify-content:center;font-family:var(--mono);font-size:18px;font-weight:600;color:var(--pu)">E</div>
+        <div>
+          <div style="font-size:17px;font-weight:600">Expertise</div>
+          <div style="font-size:13px;color:var(--txt3);font-family:var(--mono)">Fachliche Tiefe + verifizierbare Personen</div>
+        </div>
+      </div>
+      <div style="font-size:14px;color:var(--txt2);line-height:1.7;margin-bottom:14px">
+        Wer hat den Text geschrieben? Welche Qualifikation? Bei KI-generiertem Content kritisch: Es muss eine reale Person als verantwortlicher Autor signieren — nicht „Beyonity Team".
+      </div>
+      <div style="display:flex;flex-direction:column;gap:6px">
+        <div style="display:flex;gap:8px;font-size:13px;color:var(--txt2);padding:8px 12px;background:var(--bg);border-radius:6px;line-height:1.5"><span style="color:var(--pu);flex-shrink:0">→</span>Author-Pages für 3–5 Beyonity-Köpfe mit Bio, Foto, LinkedIn, Erfahrung</div>
+        <div style="display:flex;gap:8px;font-size:13px;color:var(--txt2);padding:8px 12px;background:var(--bg);border-radius:6px;line-height:1.5"><span style="color:var(--pu);flex-shrink:0">→</span>Jeder Artikel hat 1 namentlichen Autor + 1 Reviewer („Reviewed by …")</div>
+        <div style="display:flex;gap:8px;font-size:13px;color:var(--txt2);padding:8px 12px;background:var(--bg);border-radius:6px;line-height:1.5"><span style="color:var(--pu);flex-shrink:0">→</span>Author-Schema mit sameAs-Links zu LinkedIn, XING, Speaker-Profilen</div>
+        <div style="display:flex;gap:8px;font-size:13px;color:var(--txt2);padding:8px 12px;background:var(--bg);border-radius:6px;line-height:1.5"><span style="color:var(--pu);flex-shrink:0">→</span>„KI-unterstützt verfasst, redigiert von [Name]" als Transparenz-Disclaimer</div>
+      </div>
+    </div>
+
+    <!-- A — Authoritativeness -->
+    <div style="background:#161B2A;border:1.5px solid rgba(45,212,191,.3);border-radius:var(--r2);padding:24px">
+      <div style="display:flex;align-items:center;gap:12px;margin-bottom:14px">
+        <div style="width:42px;height:42px;border-radius:var(--r);background:rgba(45,212,191,.15);border:1px solid rgba(45,212,191,.3);display:flex;align-items:center;justify-content:center;font-family:var(--mono);font-size:18px;font-weight:600;color:var(--tl)">A</div>
+        <div>
+          <div style="font-size:17px;font-weight:600">Authoritativeness</div>
+          <div style="font-size:13px;color:var(--txt3);font-family:var(--mono)">Externe Anerkennung der Domain</div>
+        </div>
+      </div>
+      <div style="font-size:14px;color:var(--txt2);line-height:1.7;margin-bottom:14px">
+        Backlinks, Erwähnungen, Co-Citations. Wenn Branchenmedien, Verbände und andere PropTech-Anbieter Beyonity zitieren, steigt die Domain-Autorität — und damit das Ranking-Potenzial aller Cluster-Artikel.
+      </div>
+      <div style="display:flex;flex-direction:column;gap:6px">
+        <div style="display:flex;gap:8px;font-size:13px;color:var(--txt2);padding:8px 12px;background:var(--bg);border-radius:6px;line-height:1.5"><span style="color:var(--tl);flex-shrink:0">→</span>Linkable Assets pro Pillar (Original-Studien, interaktive Tools, ROI-Rechner)</div>
+        <div style="display:flex;gap:8px;font-size:13px;color:var(--txt2);padding:8px 12px;background:var(--bg);border-radius:6px;line-height:1.5"><span style="color:var(--tl);flex-shrink:0">→</span>Outreach an PropTech-Newsletter (Inman, BIIA, ZIA-Verband)</div>
+        <div style="display:flex;gap:8px;font-size:13px;color:var(--txt2);padding:8px 12px;background:var(--bg);border-radius:6px;line-height:1.5"><span style="color:var(--tl);flex-shrink:0">→</span>HARO/SourceBottle: Beyonity-Experten als Quellen anbieten</div>
+        <div style="display:flex;gap:8px;font-size:13px;color:var(--txt2);padding:8px 12px;background:var(--bg);border-radius:6px;line-height:1.5"><span style="color:var(--tl);flex-shrink:0">→</span>Gastbeiträge in 4–6 PropTech-Publikationen pro Jahr</div>
+      </div>
+    </div>
+
+    <!-- T — Trustworthiness -->
+    <div style="background:#161B2A;border:1.5px solid rgba(52,211,153,.3);border-radius:var(--r2);padding:24px">
+      <div style="display:flex;align-items:center;gap:12px;margin-bottom:14px">
+        <div style="width:42px;height:42px;border-radius:var(--r);background:rgba(52,211,153,.15);border:1px solid rgba(52,211,153,.3);display:flex;align-items:center;justify-content:center;font-family:var(--mono);font-size:18px;font-weight:600;color:var(--grn)">T</div>
+        <div>
+          <div style="font-size:17px;font-weight:600">Trustworthiness</div>
+          <div style="font-size:13px;color:var(--txt3);font-family:var(--mono)">Wichtigster Faktor — Vertrauen technisch belegen</div>
+        </div>
+      </div>
+      <div style="font-size:14px;color:var(--txt2);line-height:1.7;margin-bottom:14px">
+        Google nennt Trust den „most important member of the E-E-A-T family". Konkret: Quellen, Aktualität, korrekte Fakten, Impressum, klare Identität. Hier setzt der Faktencheck-Agent direkt an.
+      </div>
+      <div style="display:flex;flex-direction:column;gap:6px">
+        <div style="display:flex;gap:8px;font-size:13px;color:var(--txt2);padding:8px 12px;background:var(--bg);border-radius:6px;line-height:1.5"><span style="color:var(--grn);flex-shrink:0">→</span>Jede Statistik mit Primärquelle (Studie, Verband, Originalpublikation)</div>
+        <div style="display:flex;gap:8px;font-size:13px;color:var(--txt2);padding:8px 12px;background:var(--bg);border-radius:6px;line-height:1.5"><span style="color:var(--grn);flex-shrink:0">→</span>„Last reviewed: Datum" + „Originally published: Datum" sichtbar im Artikel</div>
+        <div style="display:flex;gap:8px;font-size:13px;color:var(--txt2);padding:8px 12px;background:var(--bg);border-radius:6px;line-height:1.5"><span style="color:var(--grn);flex-shrink:0">→</span>Halbjährliches Refresh aller Top-20 Artikel (Faktencheck-Agent re-runs)</div>
+        <div style="display:flex;gap:8px;font-size:13px;color:var(--txt2);padding:8px 12px;background:var(--bg);border-radius:6px;line-height:1.5"><span style="color:var(--grn);flex-shrink:0">→</span>Klare Trennung: Eigene Meinung · Belegte Fakten · Vermutung („wir nehmen an")</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Author-Persona-System -->
+  <div style="background:#161B2A;border:1px solid rgba(255,255,255,.16);border-radius:var(--r2);padding:24px;margin-bottom:24px" class="reveal d1">
+    <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:18px;flex-wrap:wrap;gap:10px">
+      <div style="font-size:17px;font-weight:600">Author-Persona-System — wer signiert was?</div>
+      <span style="font-family:var(--mono);font-size:9px;padding:4px 12px;border-radius:8px;background:rgba(167,139,250,.1);border:1px solid rgba(167,139,250,.2);color:var(--pu)">verbindlich</span>
+    </div>
+    <div style="font-size:14px;color:var(--txt2);margin-bottom:18px;line-height:1.7">
+      Der Briefing-Agent ordnet jedem Artikel auf Basis von Thema und Cluster automatisch einen Author + einen Reviewer aus dem Beyonity-Team zu. So entsteht Konsistenz, ohne dass Autor:innen jeden Text manuell schreiben müssen.
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:10px">
+      <div style="background:var(--bg);border:1px solid var(--bd);border-radius:var(--r);padding:14px">
+        <div style="display:flex;align-items:center;gap:10px;margin-bottom:8px">
+          <div style="width:32px;height:32px;border-radius:50%;background:rgba(74,143,255,.2);color:var(--acc);display:flex;align-items:center;justify-content:center;font-weight:600;font-size:13px">P.F.</div>
+          <div>
+            <div style="font-size:14px;font-weight:600">Paulo F.</div>
+            <div style="font-family:var(--mono);font-size:10px;color:var(--txt3)">Founder &amp; Strategy</div>
+          </div>
+        </div>
+        <div style="font-size:13px;color:var(--txt2);line-height:1.6">Strategie, Markt, Trends, PropTech DACH</div>
+        <div style="margin-top:8px;display:flex;gap:4px;flex-wrap:wrap"><span class="chip c-bl">P3 Lead-Author</span></div>
+      </div>
+      <div style="background:var(--bg);border:1px solid var(--bd);border-radius:var(--r);padding:14px">
+        <div style="display:flex;align-items:center;gap:10px;margin-bottom:8px">
+          <div style="width:32px;height:32px;border-radius:50%;background:rgba(167,139,250,.2);color:var(--pu);display:flex;align-items:center;justify-content:center;font-weight:600;font-size:13px">N.N.</div>
+          <div>
+            <div style="font-size:14px;font-weight:600">Tech-Lead</div>
+            <div style="font-family:var(--mono);font-size:10px;color:var(--txt3)">Engineering &amp; Produkt</div>
+          </div>
+        </div>
+        <div style="font-size:13px;color:var(--txt2);line-height:1.6">Datenmodelle, Integration, DSGVO, Architektur</div>
+        <div style="margin-top:8px;display:flex;gap:4px;flex-wrap:wrap"><span class="chip c-pu">P1 Lead-Author</span></div>
+      </div>
+      <div style="background:var(--bg);border:1px solid var(--bd);border-radius:var(--r);padding:14px">
+        <div style="display:flex;align-items:center;gap:10px;margin-bottom:8px">
+          <div style="width:32px;height:32px;border-radius:50%;background:rgba(45,212,191,.2);color:var(--tl);display:flex;align-items:center;justify-content:center;font-weight:600;font-size:13px">N.N.</div>
+          <div>
+            <div style="font-size:14px;font-weight:600">Sales-Lead</div>
+            <div style="font-family:var(--mono);font-size:10px;color:var(--txt3)">Customer Success</div>
+          </div>
+        </div>
+        <div style="font-size:13px;color:var(--txt2);line-height:1.6">Vertrieb, Cases, Onboarding, ROI-Stories</div>
+        <div style="margin-top:8px;display:flex;gap:4px;flex-wrap:wrap"><span class="chip c-tl">P2 Lead-Author</span></div>
+      </div>
+    </div>
+    <div style="margin-top:14px;padding:12px 16px;background:rgba(74,143,255,.06);border:1px solid rgba(74,143,255,.2);border-radius:var(--r);font-family:var(--mono);font-size:11px;color:rgba(74,143,255,.85);line-height:1.7">
+      Workflow-Integration: Author leistet Sign-off (10 Min.) und ergänzt 1 persönliches Insight pro Artikel. Reviewer prüft fachliche Korrektheit (5 Min.). Dadurch entsteht echte Expertise-Signatur ohne dass Personen Texte selbst schreiben.
+    </div>
+  </div>
+
+  <!-- E-E-A-T Schema Markup -->
+  <div style="background:#161B2A;border:1px solid rgba(255,255,255,.16);border-radius:var(--r2);padding:24px;margin-bottom:24px" class="reveal d2">
+    <div style="font-size:17px;font-weight:600;margin-bottom:14px">E-E-A-T Schema Markup — technische Umsetzung</div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:14px">
+      <div>
+        <div style="font-family:var(--mono);font-size:10px;letter-spacing:.07em;text-transform:uppercase;color:var(--txt3);margin-bottom:8px">Article Schema mit Author</div>
+        <pre style="background:var(--bg);border:1px solid var(--bd);border-radius:var(--r);padding:14px;font-family:var(--mono);font-size:11px;color:var(--txt2);overflow-x:auto;line-height:1.6;margin:0">{
+  "@type": "Article",
+  "headline": "...",
+  "datePublished": "...",
+  "dateModified": "...",
+  "author": {
+    "@type": "Person",
+    "name": "Paulo F.",
+    "url": "/team/paulo",
+    "sameAs": ["https://linkedin.com/..."],
+    "jobTitle": "Founder",
+    "worksFor": "Beyonity"
+  },
+  "reviewedBy": { ... }
+}</pre>
+      </div>
+      <div>
+        <div style="font-family:var(--mono);font-size:10px;letter-spacing:.07em;text-transform:uppercase;color:var(--txt3);margin-bottom:8px">Person + Organization Schema</div>
+        <pre style="background:var(--bg);border:1px solid var(--bd);border-radius:var(--r);padding:14px;font-family:var(--mono);font-size:11px;color:var(--txt2);overflow-x:auto;line-height:1.6;margin:0">{
+  "@type": "Person",
+  "name": "...",
+  "knowsAbout": [
+    "Real Estate CRM",
+    "PropTech",
+    "Sales Automation"
+  ],
+  "alumniOf": "...",
+  "memberOf": "ZIA Verband",
+  "sameAs": [
+    "linkedin.com/...",
+    "xing.com/..."
+  ]
+}</pre>
+      </div>
+    </div>
+    <div style="font-family:var(--mono);font-size:11px;color:var(--txt3);line-height:1.7">
+      → Wird vom Blog-Publish-Agenten automatisch beim Veröffentlichen generiert · validiert mit schema.org Validator vor Live-Gang
+    </div>
+  </div>
+
+  <!-- Workflow Integration -->
+  <div style="margin-top:20px;padding:20px 24px;background:var(--bg1);border:1px solid var(--bd);border-radius:var(--r2)" class="reveal d2">
+    <div style="font-size:16px;font-weight:600;margin-bottom:14px">E-E-A-T-Checks im Pipeline-Workflow — wer prüft was</div>
+    <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:10px">
+      <div style="text-align:left;padding:14px;background:var(--bg);border-radius:var(--r);border-left:2px solid var(--acc)">
+        <div style="font-family:var(--mono);font-size:10px;letter-spacing:.05em;text-transform:uppercase;color:var(--acc);margin-bottom:5px">Briefing-Agent</div>
+        <div style="font-size:13px;color:var(--txt2);line-height:1.5">Ordnet Author + Reviewer zu · plant Original-Datenpunkt</div>
+      </div>
+      <div style="text-align:left;padding:14px;background:var(--bg);border-radius:var(--r);border-left:2px solid var(--red)">
+        <div style="font-family:var(--mono);font-size:10px;letter-spacing:.05em;text-transform:uppercase;color:var(--red);margin-bottom:5px">Faktencheck-Agent</div>
+        <div style="font-size:13px;color:var(--txt2);line-height:1.5">Verifiziert Statistiken · ergänzt fehlende Quellen · Confidence-Score</div>
+      </div>
+      <div style="text-align:left;padding:14px;background:var(--bg);border-radius:var(--r);border-left:2px solid var(--pu)">
+        <div style="font-family:var(--mono);font-size:10px;letter-spacing:.05em;text-transform:uppercase;color:var(--pu);margin-bottom:5px">Lektorat-Agent</div>
+        <div style="font-size:13px;color:var(--txt2);line-height:1.5">E-E-A-T-Score (Quellen, Author, Datum, Schema) · Teil der 80er-Schwelle</div>
+      </div>
+      <div style="text-align:left;padding:14px;background:var(--bg);border-radius:var(--r);border-left:2px solid var(--grn)">
+        <div style="font-family:var(--mono);font-size:10px;letter-spacing:.05em;text-transform:uppercase;color:var(--grn);margin-bottom:5px">Author Sign-off</div>
+        <div style="font-size:13px;color:var(--txt2);line-height:1.5">10 Min. Review · 1 persönliches Insight ergänzen · Freigabe-Klick</div>
+      </div>
+    </div>
   </div>
 </div>
 </section>
